@@ -6,6 +6,7 @@ body {
   color: #333;
   font-size: 1em;
   background-color: #eaeaea;
+  font-family: Trebuchet MS, Lucida Grande, sans-serif;
 }
 
 a:link,
@@ -22,6 +23,109 @@ a:hover {
 .wrapper {
   width: 960px;
   margin: 0 auto;
+}
+
+h1, h2, h3, h4 {
+  @include aliasing;
+}
+
+p, li {
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+em {
+  font-style: italic;
+}
+
+/*
+
+         888          888               888 
+         888          888               888 
+         888          888               888 
+ .d88b.  888  .d88b.  88888b.   8888b.  888 
+d88P"88b 888 d88""88b 888 "88b     "88b 888 
+888  888 888 888  888 888  888 .d888888 888 
+Y88b 888 888 Y88..88P 888 d88P 888  888 888 
+ "Y88888 888  "Y88P"  88888P"  "Y888888 888 
+     888                                    
+Y8b d88P                                    
+ "Y88P"                                     
+                                                               
+*/
+
+#container {
+  position: relative;
+  z-index: 3;
+
+  &.readability {
+    background: #fdfdfd;
+
+    h1, h2, h3, h4 {
+      font-family: Arbutus Slab;
+    }
+  }
+
+  &.reuters {
+    background-color: #eaeaea;
+
+    h1, h2, h3, h4 {
+      font-family: Amaranth;
+    }
+  }
+
+  &.arc90 {
+    h1, h2, h3, h4 {
+      font-family: Kite One;
+    }
+
+    .letter-spacing-fix {
+      display: inline-block;
+      margin-right: -0.1em;
+    }
+  }
+}
+
+section {
+  @include overflowfix;
+  padding: 8em 0;
+  text-align: center;
+
+  h2 {
+    font-size: 4.4em;
+  }
+
+  .main-text {
+    width: 70%;
+    font-size: 1.2em;
+  }
+
+  &.align-left {
+    h2, p {
+      text-align: left;
+    }
+
+    p {
+      width: 80%;
+      margin: .5em 0 2em;
+    }
+  }
+
+  &.last {
+    margin-bottom: 300px;
+  }
+}
+
+/* Arc90 specific */
+.arc90 section {
+  background-color: #eaeaea;
+
+  &.no-bg {
+    background-color: transparent;
+  }
 }
 
 footer {
@@ -58,62 +162,185 @@ footer {
   }
 }
 
-p, li {
-  line-height: 1.5;
+/* Intros --*/
+#reuters-intro,
+#arc90-background,
+#rdd-background {
+  border-top: 10px solid #de8024;
+
+  p {
+    margin: 1em auto 0;
+  }
+
+  ul {
+    float: left;
+    width: 100%;
+
+    li {
+      position: relative;
+      list-style: none;
+      display: inline-block;
+      margin: -1em 0 4em;
+      padding-left: 50px;
+      width: 15%;
+      text-align: left;
+    }
+
+    span {
+      margin-top: .5em;
+      font-size: .9em;
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    img {
+      display: inline-block;
+      width: 40px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }
 
-li {
-  list-style: none;
+.divider {
+  text-align: center;
+  display: block;
+  margin: 3em 0 4em;
+
+  span {
+    @include border-radius(50%);
+    border: 2px solid;
+    width: 6px;
+    height: 6px;
+    margin: 0 10px;
+    display: inline-block;
+  }
+
+  &.arc span {
+    border-color: #a9c1d1;
+    height: 0px;
+    width: 2px;
+    @include border-radius(0);
+  }
+
+  &.reuters span {
+    border-color: #d1baa9;
+  }
+
+  &.readability span {
+    border-color: #d1a9af;
+    background: #d1a9af;
+  }
 }
 
-/*
-
-888    888  .d88888b.  888b     d888 8888888888 8888888b.     d8888  .d8888b.  8888888888 
-888    888 d88P" "Y88b 8888b   d8888 888        888   Y88b   d88888 d88P  Y88b 888        
-888    888 888     888 88888b.d88888 888        888    888  d88P888 888    888 888        
-8888888888 888     888 888Y88888P888 8888888    888   d88P d88P 888 888        8888888    
-888    888 888     888 888 Y888P 888 888        8888888P" d88P  888 888  88888 888        
-888    888 888     888 888  Y8P  888 888        888      d88P   888 888    888 888        
-888    888 Y88b. .d88P 888   "   888 888        888     d8888888888 Y88b  d88P 888        
-888    888  "Y88888P"  888       888 8888888888 888    d88P     888  "Y8888P88 8888888888 
-                                                                                          
-*/
-
-#homepage-intro {
-  background: #903d99;
+/* Header ---*/
+.header {
+  padding: 0;
+  height: 440px;
   position: relative;
-  font-family: Trebuchet MS, Lucida Grande, sans-serif;
-  height: 600px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+
+  .icon {
+    font-size: 2em;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 2.4em;
+  }
+
+  &.readability {
+    background: #820015;
+  }
+
+  &.reuters {
+    h1 {
+      margin-top: .2em;
+    }
+
+    background: #37220b url(../images/reuters_bg.png) top left repeat;
+  }
+
+  &.arc90 {
+    background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
+    background-size: 100%;
+
+    #title-card {
+      width: 140px;
+      margin-left: -70px;
+    }
+  }
 }
 
 #title-card {
   position: absolute;
-  top: 40%;
-  left: 0;
-  height: 140px;
-  margin-top: -70px;
-  width: 100%;
+  top: 38%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
   text-align: center;
 
   img {
-    width: 50px;
     display: inline-block;
   }
-
-  h1 {
-    font-weight: normal;
-    font-size: 4em;
-    color: white;
-    margin: .2em 0 .1em;
-    font-family: Sue Ellen Francisco;
-  }
-
-  h2 {
-    font-size: .8em;
-    color: #2f0635;
-    text-transform: uppercase;
-  }
 }
+
+/*
+
+888                                                                          
+888                                                                          
+888                                                                          
+88888b.   .d88b.  88888b.d88b.   .d88b.  88888b.   8888b.   .d88b.   .d88b.  
+888 "88b d88""88b 888 "888 "88b d8P  Y8b 888 "88b     "88b d88P"88b d8P  Y8b 
+888  888 888  888 888  888  888 88888888 888  888 .d888888 888  888 88888888 
+888  888 Y88..88P 888  888  888 Y8b.     888 d88P 888  888 Y88b 888 Y8b.     
+888  888  "Y88P"  888  888  888  "Y8888  88888P"  "Y888888  "Y88888  "Y8888  
+                                         888                    888          
+                                         888               Y8b d88P          
+                                         888                "Y88P"            
+                                                                                          
+*/
+
+#homepage-intro {
+  // background: #903d99;
+  position: relative;
+  font-family: Trebuchet MS, Lucida Grande, sans-serif;
+  width: 100%;
+  padding: 2em 0;
+}
+
+// #title-card {
+//   text-align: left;
+
+//   img {
+//     width: 50px;
+//     display: inline-block;
+//     display: none;
+//   }
+
+//   h1 {
+//     font-weight: normal;
+//     font-size: 2em;
+//     color: 903d99;
+//     border-bottom: 1px solid #dadada;
+//     padding: .2em 0 .3em;
+//     font-family: Sue Ellen Francisco;
+//   }
+
+//   h2 {
+//     font-size: .8em;
+//     color: #2f0635;
+//     display: none;
+//     text-transform: uppercase;
+//   }
+// }
 
 #selected-work {
   padding: 4em 0 5em;
@@ -174,384 +401,327 @@ li {
   }
 }
 
-
-#reuters {
-    background-color: #eaeaea;
-  font-family: Lucida Grande, Trebuchet MS, sans-serif;
-  font-size: .9em;
-
-  h1, h2, h3, h4 {
-    font-family: Amaranth;
-  }
-}
-
-#arc90 {
-  > div {
-    background-color: #eaeaea;
-  }
-  font-size: .9em;
-  position: relative;
-  z-index: 2;
-  font-family: Trebuchet MS, Lucida Grande, sans-serif;
-
-  h1, h2, h3, h4 {
-    font-family: Kite One;
-  }
-
-  .letter-spacing-fix {
-    display: inline-block;
-    margin-right: -0.1em;
-  }
-}
+/*
+                              888          888      d8b 888 d8b 888             
+                              888          888      Y8P 888 Y8P 888             
+                              888          888          888     888             
+888d888 .d88b.   8888b.   .d88888  8888b.  88888b.  888 888 888 888888 888  888 
+888P"  d8P  Y8b     "88b d88" 888     "88b 888 "88b 888 888 888 888    888  888 
+888    88888888 .d888888 888  888 .d888888 888  888 888 888 888 888    888  888 
+888    Y8b.     888  888 Y88b 888 888  888 888 d88P 888 888 888 Y88b.  Y88b 888 
+888     "Y8888  "Y888888  "Y88888 "Y888888 88888P"  888 888 888  "Y888  "Y88888 
+                                                                            888 
+                                                                       Y8b d88P 
+                                                                        "Y88P"  
+*/
 
 .icon {
   @include readabilicons;
-
-  -webkit-font-smoothing:antialiased;
-
-  &:before {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
+  @include aliasing;
 }
 
-#readability {
-        background: #fdfdfd;
-    margin-bottom: 300px;
-
-  font-family: Lora;
-  font-size: .9em;
-    position: relative;
-  z-index: 2;
-    font-family: Trebuchet MS, Lucida Grande, sans-serif;
-
-
-  h1, h2, h3, h4 {
-    font-family: Arbutus Slab;
-  }
-}
-
-
-h1, h2, h3, h4, nav li {
-  font-weight: bold;
-  -webkit-font-smoothing:antialiased;
-
-  &:before {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-}
-
-.screenshots {
-  img {
-    width: 980px;
-    margin: 0 auto;
-    z-index: 2;
-    position: relative;
-    display: block;
-  }
-
-  width: 100%;
-  padding: 3em 0;
-  position: relative;
-}
-
-#reuters {
-  margin-bottom: 300px;
-  position: relative;
-  z-index: 2;
-
-  .screenshots {
-    background: #4c3e31;
-  }
-
-  .overview {
-    background: #de8024;
-    padding: 3em 0;
-  }
-}
-
-.divider {
-  text-align: center;
-  display: block;
-  margin: 3em 0 4em;
-
-  span {
-    @include border-radius(50%);
-    border: 2px solid;
-    width: 6px;
-    height: 6px;
-    margin: 0 10px;
-    display: inline-block;
-  }
-
-  &.arc span {
-    border-color: #a9c1d1;
-    height: 0px;
-    width: 2px;
-    @include border-radius(0);
-  }
-
-  &.reuters span {
-    border-color: #d1baa9;
-  }
-
-  &.readability span {
-    border-color: #d1a9af;
-    background: #d1a9af;
-    @include border-radius(0);
-  }
-}
-
-#data-strategy,
-#arc90-background,
 #rdd-background {
-    border-top: 10px solid #de8024;
-
-  padding: 6em 0 4em;
-  @include overflowfix;
-  text-align: center;
-
-  img {
-    width: 100%;
+  border-top: 10px solid #a6001b;
+  h2 {
+    line-height: 1.2;
   }
-  #devices-img {
-    float: left;
-    width: 400px;
-    margin: 0 0 4em 0;
-  }
+}
 
-  h2,
-  p {
-    margin:0;
-  }
+#thoughtful-design {
+  background: #a6001b;
+  color: white;
 
   h2 {
-    font-size: 4.2em;
-  }
-
-  p {
-    margin: 1em auto 0;
-    width: 70%;
-    font-size: 1.4em;
-  }
-
-  ul {
-    float: left;
-    width: 100%;
-
-    li {
-      position: relative;
-      list-style: none;
-      display: inline-block;
-      margin: -1em 0 4em;
-      padding-left: 50px;
-      width: 15%;
-      text-align: left;
-    }
-
-    span {
-      margin-top: .5em;
-      font-size: .9em;
-      display: block;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-    img {
-      display: inline-block;
-      width: 40px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
-#devices {
-  text-align: center;
-  margin-top: 5em;
-
-  li {
-    display: inline-block;
-    width: 20%;
-    background: yellow;
-    height: 100px;
-  }
-}
-
-#design-screens {
-  position: relative;
-  height: 600px;
-
-  img {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 700px;
-  }
-
-  #article {
-    top: 100px;
-    margin-left: -200px;
-  }
-
-  #streams {
-    margin-left: -500px;
-  }
-
-}
-
-#cms-icon {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  margin-left: -50px;
-  margin-top: -30px;
-  img {
-    width: 100px;
-  }   
-}
-
-
-#design {
-  @include overflowfix;
-      background: #de8024 url(../images/reutersbg.png) top left repeat;
-
-  padding: 8em 0 12em;
-  img {
-    width: 100%;
-  }
-    h2,
-  p {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-  h2 {
-    color: #4c2903;
-    font-size: 4.2em;
-  }
-
-  p {
-    margin-top: 1em;
-    font-size: 1.4em;
-      color: #ffead6;
-      width: 85%;
-}
-
-  ul {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  li {
-    list-style: none;
-    position: relative;
-    padding-left: 35%;
-    padding: 2.5em 0 .5em 35%;
-    text-align: left;
-
-    @include box-sizing;
-    img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    h3 {
-      margin-top: 0;
-      color: #4c2903;
-      font-size: 2.5em;
-    }
-    
-    text-align:left;
-    margin-top: 6em;
-
-    p {
-      width: 100%;
-      font-size: 1.2em;
-      text-align: left;
-    }
-
-    &.even {
-          text-align:right;
-      img {
-        left: auto;
-        right: 0;
-      }
-              padding-left: 0;
-        padding-right: 35%;
-
-         p {
-                    text-align:right;
-         }
-    }
-  }
-}
-
-#design-features {
-  padding: 7em 0 8em;
-  text-align: center;
-  margin: 0 auto;
-  border-bottom: 1px solid #dadada;
-  @include overflowfix;
-
-  h2 {
-    font-size: 2.4em;
     margin-bottom: 1em;
   }
 
-  li {
-    float:left;
-    width: 30%;
-    margin-left: 5%;
-    list-style: none;
+  .main-text {
+    margin: 3em auto 3em;
+    width: 85%;
+  }
+}
 
-    &:first-child {
-      margin-left: 0;
+#rdd-feature-rundown {
+  @include border-radius(10px);
+  background: #890016;
+  padding: 3em 0;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  font-size: .8em;
+
+  img {
+    width: 40px;
+  }
+
+  li {
+    position: relative;
+    display: inline-block;
+    width: 30%;
+    margin:0;
+    color: #f8aeaf;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.screens {
+  li {
+    display: inline-block;
+    list-style: none;
+    width: 25%;
+    margin: 0 4%;
+    text-align: center;
+
+    &.left,
+    &.right {
+      margin-top: -150px;
+      margin: 0 5% 0 19%;
+    }
+
+    &.right {
+      margin: 0 19% 0 5%;
     }
 
     img {
-      width: 100%;
-      height: 300px;
-    }
-
-    h3 {
-      text-align: center;
-      font-size: 1.6em;
-      display: block;
-      margin-top: .5em;
-    }
-
-    p {
-      margin-top: .3em;
-      font-size: 1em;
+      width: 80%;
     }
   }
 }
 
-#strategy {
+#iconography {
+  h2 {
+    color: #a6001b;
+  }
+
+  li {
+    list-style: none;
+    text-align: center;
+    width: 14%;
+    float: left;
+    background: #f1f1f1;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    padding: .8em 0 2em;
+    @include box-sizing;
+    color: #777;
+    font-size: .8em;
+
+    .icon {
+      font-size: 4em;
+      display: block;
+    }
+  }
+}
+
+#typography {
+  background: #a6001b;
   position: relative;
-    height: 440px;
-  background: #37220b url(../images/reuters_bg.png) top left repeat;
-  overflow: hidden;
+  color: white;
+  height: 1080px;
+
+  img {
+    position: absolute;
+    left: 50%;
+  }
+}
+
+#landscape  {
+  margin-left: -950px;
+  width: 800px;
+  top: 476px;
+}
+
+#portrait {
+  top: 380px;
+  margin-left: -130px;
+  height: 800px;
+}
+
+#portrait-iphone {
+  width: 240px;
+  top: 640px;
+  margin-left: 424px;
+}
+
+#rdd-ux {
+  #ux-hero-video {
+    float: left;
+    width: 340px;
+  }
+
+  .right {
+    position: relative;
+    width: 50%;
+    float: left;
+    margin-left: 10%;
+    margin-top: 100px;
+  }
+}
+
+#rdd-love {
+  border-top: 1px solid #dadada;
 
   h2 {
-    position: absolute;
-    top: 54%;
-    color: white;
-    text-align: center;
-    width: 100%;
+    span {
+      color: #a6001b;
+    }
+  }
+
+  ul {
+    float: left; 
+    width: 80%;
+  }
+
+  li {
+    display: inline-block;
+    list-style: none;
+    width: 114px;
+    position: relative;
+    padding-left: 50px;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+    }
+
+    span {
+      display: block;
+      margin-top: .3em;
+      font-size: 1.2em;
+    }
+
+    &:first-child {
+      img {
+        width: 35px;
+        top: -5px;
+      }
+    }
+  }
+}
+
+#screen-holder {
+  height: 540px;
+  margin-top: 50px;
+  position: relative;
+  padding-top: 80px;
+
+  blockquote {
     font-size: 2em;
+    width: 30%;
+    margin-bottom: 2em;
+    line-height: 1.2;
+
+    span {
+      margin-top: .5em;
+      font-size: .5em;
+      color: #999;
+      display: block;
+      text-align: right;
+      text-transform: uppercase;
+
+      a:link,
+      a:visited {
+        color: #a6001b;
+      }
+
+      a:hover {
+        color: #555;
+      }
+    }
   }
-  .data {
+}
+
+#iphone {
+  position: absolute;
+  top: 70px;
+  width: 230px;
+  left: 50%;
+  z-index: 3;
+  margin-left: -100px;
+}
+
+#ipad {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 800px;
+  z-index: 2;
+  margin-left: 10px;
+}
+
+#featured-badge,
+#featured-news {
+  float:left;
+  display: inline-block;
+  width: 240px;
+  margin: 0 20px;
+}
+
+#featured-badge {
+  margin-left: 130px;
+}
+
+#dl-rdd {
+  float: left;
+  margin:30px 20px 0 20px;
+}
+
+.video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  margin: -27px 0 0 -27px;
+  border: 4px solid white;
+  background: #999;
+  background: rgba(15,15,15,0.4);
+  @include border-radius(50px);
+  @include transition(background, 150ms, ease-in-out);
+
+  .arrow-icon {
+    border-color: #fff;
+    border-width: 4px;
+    display: block;
+    width: 15px;
+    height: 15px;
     position: absolute;
-    border: 2px solid #8c5825;
-    width: 30px;
-    height: 30px;
-    margin-left: -15px;
-    @include border-radius(50%);
+    top: 15px;
+    left: 12px;
   }
+}
+
+
+/*
+                         888                             
+                         888                             
+                         888                             
+888d888 .d88b.  888  888 888888 .d88b.  888d888 .d8888b  
+888P"  d8P  Y8b 888  888 888   d8P  Y8b 888P"   88K      
+888    88888888 888  888 888   88888888 888     "Y8888b. 
+888    Y8b.     Y88b 888 Y88b. Y8b.     888          X88 
+888     "Y8888   "Y88888  "Y888 "Y8888  888      88888P' 
+                                                         
+*/
+
+.data {
+  position: absolute;
+  border: 2px solid #8c5825;
+  width: 30px;
+  height: 30px;
+  margin-left: -15px;
+  @include border-radius(50%);
 }
 
 .circle {
@@ -567,7 +737,6 @@ h1, h2, h3, h4, nav li {
   margin-left: -200px;
   margin-top: -200px;
 }
-
 
 #data01,
 #data11,
@@ -697,46 +866,93 @@ h1, h2, h3, h4, nav li {
   }
 }
 
-#reusable-components {
-  padding: 8em 0 8em;
-  text-align: center;
-  border-bottom: 1px solid #dadada;
-  @include overflowfix;
-
-    h2,
-  p {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-  h2 {
-    font-size: 4.2em;
-  }
-
-  p {
-    margin-top: 1em;
-    font-size: 1.4em;
-      width: 85%;
-}
-
-.hero {
-  margin-top: 5em;
-}
+#data-strategy {
+  background: #de8024 url(../images/reutersbg.png) top left repeat;
 
   img {
     width: 100%;
   }
-  h3 {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin: 3.2em 0 1.2em;
-  text-transform: uppercase;
+
+  h2 {
+    width: 100%;
+  }
+
+  .main-text {
+    margin: 1em auto 0em;
+  }
 }
 
-ul {
-  margin-top: 5em;
+#feature-rundown {
+  width: 80%;
+  margin: 0 auto;
+
+  li {
+    list-style: none;
+    position: relative;
+    padding-left: 35%;
+    padding: 2.5em 0 .5em 35%;
+    text-align: left;
+    margin-top: 5em;
+    @include box-sizing;
+
+    img {
+      width: 30%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #4c2903;
+      font-size: 2.5em;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1.2em;
+      text-align: left;
+    }
+
+    &.even {
+      text-align:right;
+      padding-left: 0;
+      padding-right: 35%;
+
+      img {
+        left: auto;
+        right: 0;
+      }
+    
+      p {
+        text-align:right;
+      }
+    }
+  }
 }
+
+#reusable-components {
+  border-bottom: 1px solid #dadada;
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 3.2em 0 1.2em;
+    text-transform: uppercase;
+  }
+
+  .main-text {
+    margin: 1em auto 2em;
+  }
+
+  ul {
+    margin-top: 5em;
+  }
+  
   li {
     float: left;
     list-style: none;
@@ -761,650 +977,38 @@ ul {
 }
 
 #proven-design {
-  padding: 8em 0;
-  @include overflowfix;
-  text-align: center;
-  
   img {
     width: 130px;
     margin: 0 auto;
   }
 
-  h2 {
-    font-size: 4em;
-    margin: .2em 0 .3em;
-  }
-
-  p {
-    font-size: 1.4em;
-    width: 60%;
-    margin: 0 auto;
+  .main-text {
+    width: 64%;
+    margin: .5em auto 3em;
   }
 
   #web {
-  width: 100%;
-  margin-top: 4em;
-}
-}
-
-#see-more {
-  border-top: 1px solid #dadada;
-  padding: 7em 0;
-  text-align: center;
-  width: 960px;
-    margin: 0 auto;
-
-  p {
-    font-size: 2em;
-  }
-
-  p.contact {
-
-    a:link,
-    a:visited {
-      border: 1px solid #a6001b;
-      padding: .1em .3em;
-      font-size: .8em;
-    }
-  }
-}
-
-
-// #circle1 {
-//   @include animation(rotate, 40s, infinite, linear, none);
-// }
-
-// #circle2 {
-//   @include animation(reverserotate, 90s, infinite, linear, none);
-// }
-
-// #circle3 {
-//   @include animation(rotate, 120s, infinite, linear, none);
-// }
-
-// #circle4 {
-//   @include animation(reverserotate, 360s, infinite, linear, none);
-// }
-
-/* Readability */
-
-#rdd {
-  background: #820015;
-    color: white;
-    position: relative;
-    height: 440px;
-
-  .icon {
-    font-size: 2em;
-  }
-
-  h1 {
-    margin-top: 0em;
-    font-size: 2.4em;
-  }
-}
-
-#heading {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  width: 400px;
-  margin-left: -200px;
-  text-align: center;
-
-}
-#rdd-intro {
-  border-top: 1px solid #dadada;
-  padding: 8em 0;
-  @include overflowfix;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  text-align: center;
-  h2 {
-    font-size: 5.2em;
-    text-align: center;
-
-    span {
-          color: #a6001b;
-
-    }
-  }
-
-  ul {
-    float: left; 
-    width: 80%;
-  }
-  li {
-    display: inline-block;
-    list-style: none;
-    width: 114px;
-    &:first-child {
-      margin-right: 20px;
-    }
-    position: relative;
-    padding-left: 50px;
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 40px;
-    }
-
-    span {
-      display: block;
-      margin-top: .3em;
-      font-size: 1.2em;
-    }
-
-    &:first-child {
-      img {
-        width: 35px;
-        top: -5px;
-      }
-    }
-  }
-
-  p {
-    margin: 1em 0 2em;
-    font-size: 1.2em;
-    width: 50%;
-  }
-
-  overflow: hidden;
-}
-
-#about {
-clear: both;
-  @include overflowfix;
-margin-top: 3em;
-background: #f1f1f1;
-padding: 1em 1.6em 1.5em;
-border-radius: 10px;
-float: left;
-width:46%;
-margin-left: -1em;
-}
-
-
-#promotion {
-  @include overflowfix;
-  padding: 4em 0 8em;
-}
-
-#featured-badge,
-#featured-news {
-  float:left;
-  display: inline-block;
-  width: 240px;
-  margin: 0 20px;
-}
-
-#featured-badge {
-  margin-left: 130px;
-}
-
-
-#dl-rdd {
-  float: left;
-  margin:30px 20px 0 20px;
-}
-
-#screen-holder {
-  height: 540px;
-  margin-top: 50px;
-  position: relative;
-  padding-top: 80px;
-
-  blockquote {
-    font-size: 2em;
-    width: 30%;
-    margin-bottom: 2em;
-    line-height: 1.2;
-
-    span {
-      margin-top: .5em;
-      font-size: .5em;
-      color: #999;
-      display: block;
-      text-align: right;
-      text-transform: uppercase;
-
-      a:link,
-      a:visited {
-        color: #a6001b;
-      }
-
-      a:hover {
-        color: #555;
-      }
-    }
-  }
-}
-
-
-
-#iphone {
-  position: absolute;
-  top: 70px;
-  width: 230px;
-  left: 50%;
-  z-index: 3;
-  margin-left: -100px;
-}
-
-#ipad {
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  width: 800px;
-  z-index: 2;
-  margin-left: 10px;
-}
-
-
-#ios-icon {
-  float: left;
-  width: 140px;
-}
-
-
-#screenshots {
-    background: #a6001b;
-
-  @include overflowfix;
-  padding: 7em 0 8em;
-
-
-#feature-rundown {
-  background: #890016;
-  @include border-radius(10px);
-  padding: 3em 0;
-  text-align: center;
-  img {
-    width: 40px;
-  }
-
-  width: 90%;
-  margin: 0 auto;
-
-  li {
-      position: relative;
-      display: inline-block;
-      width: 30%;
-   margin:0;
-   color: #f8aeaf;
-  }
-
-  p {
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-
-  font-size: .8em;
-
-}
-
-.screens {
-  li {
-    display: inline-block;
-    list-style: none;
-    width: 25%;
-    margin: 0 4%;
-    text-align: center;
-
-    &.left,
-    &.right {
-      margin-top: -150px;
-      margin: 0 5% 0 19%;
-    }
-
-    &.right {
-      margin: 0 19% 0 5%;
-    }
-    img {
-      width: 80%;
-    }
-  }
-}
-
-      h2,
-  p {
     width: 100%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-  h2 {
-    color: white;
-    font-size: 4.2em;
-    margin-bottom: 1em;
-  }
-
-  p {
-    margin: 3em auto 3em;
-    font-size: 1.4em;
-      color: #ffe1e6;
-      width: 85%;
-}
-}
-
-.videos {
-  li {
-    float: left;
-    width: 28%;
-    margin-left: 5%;
-    list-style: none;
-    text-align: center;
-    position: relative;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    .label {
-      display: block;
-    }
-
-    .video-icon {
-      display: block;
-      z-index: 9999;
-      position: absolute;
-      top: 24px;
-      left: 50%;
-      width: 30px;
-      height: 30px;
-      margin-left: -15px;
-      border: 2px solid #fff;
-      @include border-radius(50%);
-
-      &::after {
-        position: absolute;
-        top: 40%;
-        left: 40%;
-        border: 20px solid #fff;
-        border-left-color: transparent;
-        border-bottom-color: transparent;
-      }
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-.video-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  width: 50px;
-  height: 50px;
-  margin: -27px 0 0 -27px;
-  border: 4px solid white;
-  background: #999;
-  background: rgba(15,15,15,0.4);
-  @include border-radius(50px);
-  @include transition(background, 150ms, ease-in-out);
-
-  .arrow-icon {
-    border-color: #fff;
-    border-width: 4px;
-    display: block;
-    width: 15px;
-    height: 15px;
-    position: absolute;
-    top: 15px;
-    left: 12px;
   }
 }
 
 
-#iconography {
-  padding: 8em 0;
-
-  @include overflowfix;
-        h2,
-  p {
-    width: 100%;
-    margin: 0 auto;
-}
-
-  h2 {
-    font-size: 4.2em;
-    color: #a6001b;
-  }
-
-  p {
-    margin: 1em 0 2em;
-    font-size: 1.4em;
-      width: 85%;
-}
-
-li {
-  list-style: none;
-  text-align: center;
-  width: 14%;
-  float: left;
-  background: #f1f1f1;
-  margin-right: 2px;
-  margin-bottom: 3px;
-  padding: .8em 0 2em;
-  @include box-sizing;
-
-  .icon {
-    font-size: 4em;
-    display: block;
-  }
-
-  font-family: Tahoma, Myriad Pro, Trebuchet MS, sans-serif;
-  color: #777;
-  font-size: .8em;
-}
-
-}
-
-#typography {
-      background: #a6001b;
-color: white;
-overflow: hidden;
-          h2,
-  p {
-    width: 100%;
-    margin: 0 auto;
-}
-
-  h2 {
-    font-size: 4.2em;
-  }
-
-  p {
-    margin: 2em 0 2em;
-    font-size: 1.2em;
-      width: 75%;
-}
-  @include overflowfix;
-  border-top: 1px solid #dadada;
-  padding: 8em 0;
-  position: relative;
-  height: 1080px;
-
-  img {
-    position: absolute;
-    left: 50%;
-  }
-}
-
-#landscape  {
-  margin-left: -950px;
-  width: 800px;
-  top: 476px;
-}
-
-#portrait {
-      top: 380px;
-  margin-left: -130px;
-  height: 800px;
-}
-
-#portrait-iphone {
-  width: 240px;
-  top: 640px;
-  margin-left: 424px;
-}
 
 
-#rdd-ux {
+/*
+                          .d8888b.   .d8888b.  
+                         d88P  Y88b d88P  Y88b 
+                         888    888 888    888 
+ 8888b.  888d888 .d8888b Y88b. d888 888    888 
+    "88b 888P"  d88P"     "Y888P888 888    888 
+.d888888 888    888             888 888    888 
+888  888 888    Y88b.    Y88b  d88P Y88b  d88P 
+"Y888888 888     "Y8888P  "Y8888P"   "Y8888P"  
+                                               
+*/
 
-  video {
-    width: 500px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  padding: 8em 0 8em;
-            h2,
-  p {
-    width: 100%;
-    margin: 0 auto;
-}
-
-  h2 {
-    font-size: 4.6em;
-  }
-
-  p {
-    margin: 1em 0 2em;
-    font-size: 1.4em;
-      width: 85%;
-}
-  @include overflowfix;
-  #ux-hero-video {
-    float: left;
-    width: 340px;
-  }
-
-  .right {
-        position: relative;
-
-    width: 50%;
-    float: left;
-    margin-left: 10%;
-    margin-top: 100px;
-  }
-}
-
-#rdd-videos {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  left: 0;
-  background: #eaeaea;
-}
-
-/* Arc90 */
-
-#arc-intro {
-  background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
-  background-size: 100%;
-  @include overflowfix;
-    height: 440px;
-  z-index: 2;
-  position: relative;
-}
-
-#logos {
-  position: absolute;
-  top: 41%;
-  width: 100px;
-  left: 50%;
-  margin-left: -50px;
-}
-
-em {
-  font-style: italic;
-}
-
-#arc-logo {
-  width: 100px;
-  display: block;
-}
-
-#arc {
-  width: 80px;
-  display: block;
-  margin: 0 auto;
-}
-
-#people {
-overflow: hidden;
-
-h2, h3, p {
-  margin: 0 auto;
-  text-align: center;
-}
-  h2 {
-    font-size: 4.6em;
-  }
-
-h3 {
-  font-size: 1.4em;
-  font-weight: bold;
-  margin: 3.2em auto 1.2em;
-  text-transform: uppercase;
-}
-  p {
-    margin: 0 auto 0;
-    width: 70%;
-    font-size: 1.4em;
-  }
-  
-  padding: 8em 0em;
-  ul {
-    text-align: center;
-    width: 1600px;
-    margin: 4em 0 4em -320px;
-  }
-  li {
-    margin: 0 5px;
-
-    img {
-      width: 100%;
-      border: 4px solid #fff;
-    @include border-radius(50%);
-      @include box-sizing;
-    }
-
-    width: 120px;
-    height: 120px;
-    overflow: hidden;
-    border: 4px solid #c2d8e7;
-    @include border-radius(50%);
-    display: inline-block;
-  }
-
-}
-
-#me #arrow {
-  position: absolute;
-  top: 10%;
-  left: 60%;
-  width:120px;
-  border: none;
-}
-
-#how-done{
-    position: absolute;
-  top: 24%;
-  left: 70%;
-  width: 300px;
-  font-size: 1.7em;
-  letter-spacing: 0.05em;
-  line-height: 1;
-  color: #777;
-  font-family: Waiting for the Sunrise;
+#arc90-background {
+  border-top: 10px solid #3d80af;
 }
 
 #me {
@@ -1423,13 +1027,14 @@ h3 {
     margin-left: -350px;
     width: 700px;
     text-align: center;
+
     h2 {
       color: white;
       font-size: 4em;
       width: 100%;
       float: left;
       margin-top: .2em;
-    font-family: Kite One;
+      font-family: Kite One;
     }
 
     p {
@@ -1441,68 +1046,108 @@ h3 {
       font-family: Trebuchet MS, Lucida Grande, sans-serif;
     }
   }
-  img {
-    display: inline-block;
-    width: 160px;
-    height: 160px;
-    border: 8px solid #5b8aab;
-        @include border-radius(50%);
+}
+
+#bg-portrait {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  border: 8px solid #5b8aab;
+  @include border-radius(50%);
+}
+
+#arrow {
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  width:120px;
+  border: none;
+}
+
+#how-done{
+  position: absolute;
+  top: 24%;
+  left: 70%;
+  width: 300px;
+  font-size: 1.7em;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  color: #777;
+  font-family: Waiting for the Sunrise;
+}
+
+#arc-logo {
+  width: 100px;
+  display: block;
+}
+
+#arc {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+#arc-details {
+  background: #316c96;
+  color: white;
+
+  p {
+    margin: 1.5em auto 1em;
+  }
+
+  #feature-rundown {
+    h3 {
+      color: #91cef1;
+    }
+
+    li {
+      padding-top: 2em;
+    }
   }
 }
 
-#reuters-parallax {
-  img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  position: relative;
-  overflow: hidden;
-  height: 600px;
-}
-
-#arc90 #peek-through {
+#peek-through {
   width: 100%;
-  background: none;
   height: 500px;
+  padding: 0;
 }
 
-#arc90-background {
-  border-top: 10px solid #3d80af;
-}
+#people {
+  overflow: hidden;
 
-#rdd-background {
-  border-top: 10px solid #a6001b;
-  h2 {
-    line-height: 1.2;
+  p {
+    margin: 0 auto;
+  }
+
+  ul {
+    text-align: center;
+    width: 1600px;
+    margin: 4em 0 4em -320px;
+  }
+  
+  li {
+    margin: 0 5px;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border: 4px solid #c2d8e7;
+    @include border-radius(50%);
+    display: inline-block;
+    
+    img {
+      width: 100%;
+      border: 4px solid #fff;
+      @include border-radius(50%);
+      @include box-sizing;
+    }
   }
 }
 
 #narratives {
-    @include overflowfix;
-  padding: 8em 0;
-  h2, p {
-  margin: 0 auto;
-  text-align: center;
-}
-  h2 {
-    font-size: 4.6em;
-    margin-bottom: .5em;
+  .main-text {
+    margin: 1em auto 2em;
   }
 
-  p {
-    margin: 1em auto 0;
-    width: 70%;
-    font-size: 1.4em;
-  }
-
-  #homepage {
-    width: 100%;
-    margin: 4em auto 0;
-    display: block;
-  }
   ul {
     width: 95%;
     margin: 8em auto 0em;
@@ -1513,6 +1158,7 @@ h3 {
       float: left;
       width: 50%;
       margin-bottom: 20px;
+
       img {
         width: 110%;
         margin-left: -5%;
@@ -1525,120 +1171,10 @@ h3 {
   }
 }
 
-#arc90 #branding {
-  @include overflowfix;
-  background: #444;
+#homepage {
   width: 100%;
-  img {
-    width: 50%;
-  }
-}
-
-
-#arc90 #arc-details {
-    @include overflowfix;
-background: #316c96;
-color: white;
-  padding: 7em 0 9em;
-  text-align: center;
-
-  h2, p {
-  margin: 0 auto;
-}
-  h2 {
-    font-size: 4.6em;
-    margin-bottom: .5em;
-  }
-
-h3 {
-  width: 100%;
-  font-size: 1.4em;
-  margin: 1em auto 0em;
-  text-transform: uppercase;
-}
-  p {
-    margin: 1em auto 0;
-    width: 70%;
-    font-size: 1.4em;
-  }
-
-  ul {
-    width: 76%;
-    margin: 0 auto;
-  }
-
-  li {
-    list-style: none;
-    position: relative;
-    padding-left: 40%;
-    padding-top: 3.3em;
-
-    @include box-sizing;
-    img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    h3 {
-      margin-top: 0;
-    }
-    
-    text-align:left;
-    margin-top: 6em;
-
-    p {
-      width: 100%;
-      font-size: 1.2em;
-    }
-
-    &.even {
-          text-align:right;
-      img {
-        left: auto;
-        right: 0;
-      }
-              padding-left: 0;
-        padding-right: 40%;
-    }
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes rotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes reverserotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
-
-@-webkit-keyframes reverserotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-  }
+  margin: 4em auto 0;
+  display: block;
 }
 
 

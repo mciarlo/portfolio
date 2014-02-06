@@ -16,12 +16,13 @@
     <![endif]-->
   </head>
   <body>
-    <div id="reuters">
+    <div id="container" class="reuters">
+      <section class="header reuters">
+        <div id="title-card">
+          <img src="/images/icon.svg" />
+          <h1>Reuters</h2>
+        </div>
 
-      <div id="strategy">
-                          <h2>Thomson Reuters</h2>
-
-        <div id="cms-icon"><img src="/images/icon.svg" /></div>
         <div id="circle1" class="circle">
           <span id="data01" class="data"></span>
           <span id="data02" class="data"></span>
@@ -34,6 +35,7 @@
           <span id="data09" class="data"></span>
           <span id="data10" class="data"></span>
        </div>
+
        <div id="circle2" class="circle">
           <span id="data11" class="data"></span>
           <span id="data12" class="data"></span>
@@ -72,127 +74,99 @@
           <span id="data39" class="data"></span>
           <span id="data40" class="data"></span>
         </div>
-      </div>
+      </section>
 
-      <div id="data-strategy">
+      <section id="reuters-intro">
         <div class="wrapper">
-          <div id="intro">
-<!--           <img id="devices-img" src="images/devices.png" />
- -->            
+            <h2>Content management<br/>designed for the future.</h2>
+            <p class="main-text">How do you reinvent news? You design a powerful content management system at the heart of a robust API. The result is an editorial breakthrough that provides a consistently beautiful and performant experience.</p>
 
-          <h2>Content management<br/>designed for the future.</h2>
-          <p>How do you reinvent news? You design a powerful content management system at the heart of a robust API. The result is an editorial breakthrough that provides a consistently beautiful and performant experience.</p>
+            <span class="divider reuters">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
 
-<span class="divider reuters">
-  <span></span>
-  <span></span>
-  <span></span>
-</span>
-                     <ul>
+            <ul>
               <li><img src="/images/creative_icon.svg" /><span>Creative Lead</span></li>
               <li><img src="/images/development_icon.svg" /><span>Front-end Lead</span></li>
               <li><img src="/images/api_icon.svg" /><span>API Architect</span></li>
-            </ul>
+            </ul> 
         </div>
- 
-        </div>
-      </div>
+      </section>
 
-      <div id="design">
+      <section id="data-strategy">
         <div class="wrapper">
           <h2>A purely data driven interface.</h2>
-          <p>The unique structue maintained strict separation between data structures and design. Editors could focus on curating content based on relevance, not looks. The top section represented the data for the active template and the bottom would appear chronologically below.</p>
+          <p class="main-text">The unique structue maintained strict separation between data structures and design. Editors could focus on curating content based on relevance, not looks. The top section represented the data for the active template and the bottom would appear chronologically below.</p>
 
+          <ul id="feature-rundown">
+            <li>
+              <img src="/images/data.png"/>
+              <h3>Invisible Data</h3>
+              <p>Pages are built using a single list of content. Editors simply place the most important things at the top and templates do the heavy lifting.</p>
+            </li><li class="even">
+              <img src="/images/controls.png"/>
+              <h3>Smart Controls</h3>
+              <p>The API requires certain attributes on content. These requirements are revealed as editors work and not in an error message.</p>
+            </li><li>
+              <img src="/images/images.png"/>
+              <h3>Simple Formatting</h3>
+              <p>Creating beutiful articles or picture essays is a breeze. Add photos, videos, and tweets inline without worrying about layout. Just select a size and save.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <section id="reusable-components">
+        <div class="wrapper">
+          <h2>More than a text editor.</h2>
+          <p class="main-text">When a story breaks, the right tools make all the difference. The CMS includes a fully-featured text editor and photo essay tool capable of complex formatting, inline media and links, and story management &mdash; all inside a beatiful and intuitive interface.</p>
 
+          <img class="hero" src="/images/reuters_cms_slide_02.jpg" />
 
           <ul>
-
-            <li>            <img src="/images/data.png"/>
-
-
-                            <h3>Invisible Data</h3>
-          <p>Pages are built using a single list of content. Editors simply place the most important things at the top and templates do the heavy lifting.</p></li><li class="even">
-
-            <img src="/images/controls.png"/>
-        <h3>Smart Controls</h3>
-          <p>The API requires certain attributes on content. These requirements are revealed as editors work and not in an error message.</p>
-        </li><li>            <img src="/images/images.png"/>
-
-
-                            <h3>Simple Formatting</h3>
-          <p>Creating beutiful articles or picture essays is a breeze. Add photos, videos, and tweets inline without worrying about layout. Just select a size and save.</p></li>
-</ul>
-
-
-
-
-
-<!--                       <img src="images/reuters_cms_slide_01.jpg" />
- -->
+            <li>
+              <img src="/images/reusable_icon.svg" />
+              <strong>Reusable UI</strong>
+              <p>The main components of the CMS - pages, media, articles, and photo essays - can be shown with a single click no matter what path the editor took.</p>
+            </li><li>
+              <img src="/images/dragicon.svg" />
+              <strong>Drag and Drop Uploads</strong>
+              <p>Media uploads are done with drag and drop and users are prompted after upload to complete any missing metadata. Why can't everything be that easy?</p>
+            </li><li>
+              <img src="/images/template_icon.svg" />
+              <strong>Templating Done Right</strong>
+              <p>Page data is presentation agnostic so editors can choose whatever layout they'd like without worrying about data loss or organization.</p>
+            </li><li>
+              <img src="/images/testicon.svg" />
+              <strong>Full Test Suite</strong>
+              <p>The CMS owes its stability and speed to a front-end suite of over 250 unit tests that cover everything from API calls to user interactions.</p>
+            </li>
+          </ul>
         </div>
-</div>
+      </section>
 
+      <section id="proven-design" class="last">
+        <div class="wrapper">
+          <img src="/images/timeicon.svg" />
+          <h2>Time-tested.</h2>
+          <p class="main-text">Reuters editors were able to fully populate the new web experience in under four hours. That&rsquo;s a productivity increase of over 400%.</p>
+        
+          <img id="web" src="/images/reuters_home.png" />
+        </div>
+      </section>
+    </div>
 
- <div id="reusable-components">
-  <div class="wrapper">
-                <h2>More than a text editor.</h2>
-          <p>When a story breaks, the right tools make all the difference. The CMS includes a fully-featured text editor and photo essay tool capable of complex formatting, inline media and links, and story management &mdash; all inside a beatiful and intuitive interface.</p>            <img class="hero" src="/images/reuters_cms_slide_02.jpg" />
-
-
-  <ul>
-    <li>
-      <img src="/images/reusable_icon.svg" />
-      <strong>Reusable UI</strong>
-      <p>The main components of the CMS - pages, media, articles, and photo essays - can be shown with a single click no matter what path the editor took.</p>
-    </li>
-
-    <li>
-      <img src="/images/dragicon.svg" />
-      <strong>Drag and Drop Uploads</strong>
-      <p>Media uploads are done with drag and drop and users are prompted after upload to complete any missing metadata. Why can't everything be that easy?</p>
-    </li>
-
-    <li>
-      <img src="/images/template_icon.svg" />
-      <strong>Templating Done Right</strong>
-      <p>Page data is presentation agnostic so editors can choose whatever layout they'd like without worrying about data loss or organization.</p>
-    </li>
-
-    <li>
-      <img src="/images/testicon.svg" />
-      <strong>Full Test Suite</strong>
-      <p>The CMS owes its stability and speed to a front-end suite of over 250 unit tests that cover everything from API calls to user interactions.</p>
-    </li>
-  </ul>
-</div>
-</div>
-
-<div id="proven-design">
-  <div class="wrapper">
-
-      <img src="/images/timeicon.svg" />
-    <h2>Time-tested.</h2>
-    <p>Reuters editors were able to fully populate the new web experience in under four hours. That&rsquo;s a productivity increase of over 400%.</p>
-  
-    <img id="web" src="/images/reuters_home.png" />
-
-</div>
-</div>
-</div>
-
-
-<footer class="arc90">
-    <h4>A major tech voice rebranded.</h4>
-    <a href="#">Read more</a>
-</footer>
-
+    <footer class="arc90">
+        <h4>A major tech voice rebranded.</h4>
+        <a href="#">Read more</a>
+    </footer>
 
     <script src="/js/respond.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="j/s/underscore.min.js"></script>
     <script src="/js/backbone.js"></script>
     <script src="/js/warming.js"></script>
-
   </body>
 </html>

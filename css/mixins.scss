@@ -10,6 +10,14 @@
 
 }
 
+@mixin aliasing {
+  -webkit-font-smoothing: antialiased;
+
+  &:before {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
 @mixin readabilicons {
   font-family: 'readabiliconsregular';
 }
