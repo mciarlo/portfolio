@@ -1,0 +1,165 @@
+/* Reset ----------------------------------------------------------------------*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+
+/* Basic Elements  ----------------------------------------------------------------------*/
+   
+body {
+  background: #f1f1f1;
+  color: #454545;
+  font: 15px Domine, Arial, serif;
+  line-height: 1;
+}
+
+a:link, a:visited {
+  color: #373535;
+  text-decoration: none;
+  font-weight: normal;
+  transition: all ease-in-out 100ms;
+  -webkit-transition: all ease-in-out 100ms;
+  -moz-transition: all ease-in-out 100ms;
+}
+
+a:hover {
+  color: #5d260e;
+}
+
+ul li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 5em auto;
+}
+
+.wrapper img {
+  width: 100%;
+}
+
+.intro {
+  position: relative;
+}
+
+.intro .headings {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+}
+
+.intro h2 {
+  width: 100%;
+  color: white;
+  font-size: 4em;
+  text-align: center;
+}
+
+.intro h3 {
+  width: 100%;
+  color: white;
+  margin-top: 1em;
+  font-size: 1em;
+  text-align: center;
+  font-weight: normal;
+  font-family: Josefin Sans;
+  text-transform: uppercase;
+}
+
+#reuters-data h4 {
+  margin-top: 3em;
+}
+
+#reuters-data h4,
+#reuters-data p {
+  width: 45%;
+  float: left;
+  clear: left;
+}
+
+#reuters-data h4 {
+  font-size: 2.2em;
+}
+
+#reuters-data p {
+  margin-top: .5em;
+  line-height: 1.4;
+}
+
+#reuters-data {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 600px;
+  position: relative;
+}
+
+#data-list {
+  position: absolute;
+  top: 4em;
+  right: 0;
+  width: 50%;
+}
+
+#data-list li {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  position: relative;
+}
+
+#data-list li:first-child {
+  border-top: 1px solid #d1d1d1;
+}
+
+#data-list span {
+  display: block;
+  position: absolute;
+  border: 1px solid #d1d1d1;
+}
+
+#data-list .btn {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  top: 20px;
+  left: 10px;
+}
+
+#data-list .image {
+  width: 60px;
+  height: 40px;
+  top: 3px;
+  left: 30px;
+}
+
+#data-list .headline {
+  width: 60%;
+  height: 2px;
+  top: 15px;
+  left: 100px;
+}
+
+#data-list .subhead {
+  width: 30%;
+  height: 2px;
+  top: 35px;
+  left: 100px;
+}
+
+
+#reuters .intro {
+  background: #f26d25;
+}
+
+@media screen and (min-width: 970px) {
+  
+}
+
+@media screen and (min-width: 1280px) {
+
+}
