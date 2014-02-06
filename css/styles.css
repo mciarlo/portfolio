@@ -89,13 +89,6 @@ a:hover {
   width: 960px;
   margin: 0 auto; }
 
-.logo {
-  height: 50px; }
-  .logo img {
-    width: 30px;
-    float: left;
-    display: inline-block; }
-
 footer {
   font-family: Duru Sans;
   position: fixed;
@@ -129,7 +122,98 @@ p, li {
   line-height: 1.5; }
 
 li {
-  list-style: disc inside; }
+  list-style: none; }
+
+/*
+
+888    888  .d88888b.  888b     d888 8888888888 8888888b.     d8888  .d8888b.  8888888888 
+888    888 d88P" "Y88b 8888b   d8888 888        888   Y88b   d88888 d88P  Y88b 888        
+888    888 888     888 88888b.d88888 888        888    888  d88P888 888    888 888        
+8888888888 888     888 888Y88888P888 8888888    888   d88P d88P 888 888        8888888    
+888    888 888     888 888 Y888P 888 888        8888888P" d88P  888 888  88888 888        
+888    888 888     888 888  Y8P  888 888        888      d88P   888 888    888 888        
+888    888 Y88b. .d88P 888   "   888 888        888     d8888888888 Y88b  d88P 888        
+888    888  "Y88888P"  888       888 8888888888 888    d88P     888  "Y8888P88 8888888888 
+                                                                                          
+*/
+#homepage-intro {
+  background: #903d99;
+  position: relative;
+  font-family: Trebuchet MS, Lucida Grande, sans-serif;
+  height: 600px; }
+
+#title-card {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  height: 140px;
+  margin-top: -70px;
+  width: 100%;
+  text-align: center; }
+  #title-card img {
+    width: 50px;
+    display: inline-block; }
+  #title-card h1 {
+    font-weight: normal;
+    font-size: 4em;
+    color: white;
+    margin: .2em 0 .1em;
+    font-family: Sue Ellen Francisco; }
+  #title-card h2 {
+    font-size: .8em;
+    color: #2f0635;
+    text-transform: uppercase; }
+
+#selected-work {
+  padding: 4em 0 5em; }
+  #selected-work:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #selected-work h3 {
+    font-family: Sue Ellen Francisco;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em; }
+  #selected-work ul {
+    width: 76%;
+    margin: 0 auto; }
+  #selected-work a:link,
+  #selected-work a:visited {
+    float: left;
+    width: 29%;
+    margin: 0 2%;
+    height: 50px;
+    padding: 3em 0;
+    text-align: center;
+    background: #f1f1f1;
+    border-right: 1px solid #dadada;
+    border-bottom: 1px solid #dadada; }
+    #selected-work a:link .icon,
+    #selected-work a:visited .icon {
+      font-size: 2.4em;
+      line-height: 1.1; }
+    #selected-work a:link img,
+    #selected-work a:visited img {
+      width: 120px; }
+
+#about-me {
+  padding: 4em 0; }
+  #about-me:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #about-me h3 {
+    font-family: Sue Ellen Francisco;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1em; }
+  #about-me p {
+    font-family: Trebuchet MS, Lucida Grande, sans-serif;
+    width: 76%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 1em; }
 
 #reuters {
   background-color: #eaeaea;
@@ -195,6 +279,38 @@ h1, h2, h3, h4, nav li {
     background: #de8024;
     padding: 3em 0; }
 
+.divider {
+  text-align: center;
+  display: block;
+  margin: 3em 0 4em; }
+  .divider span {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border: 2px solid;
+    width: 6px;
+    height: 6px;
+    margin: 0 10px;
+    display: inline-block; }
+  .divider.arc span {
+    border-color: #a9c1d1;
+    height: 0px;
+    width: 2px;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0; }
+  .divider.reuters span {
+    border-color: #d1baa9; }
+  .divider.readability span {
+    border-color: #d1a9af;
+    background: #d1a9af;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -ms-border-radius: 0; }
+
 #data-strategy,
 #arc90-background,
 #rdd-background {
@@ -228,13 +344,6 @@ h1, h2, h3, h4, nav li {
   #arc90-background h2,
   #rdd-background h2 {
     font-size: 4.2em; }
-  #data-strategy h3,
-  #arc90-background h3,
-  #rdd-background h3 {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin: 3.2em 0 1.2em;
-    text-transform: uppercase; }
   #data-strategy p,
   #arc90-background p,
   #rdd-background p {
@@ -249,16 +358,18 @@ h1, h2, h3, h4, nav li {
     #data-strategy ul li,
     #arc90-background ul li,
     #rdd-background ul li {
+      position: relative;
       list-style: none;
       display: inline-block;
       margin: -1em 0 4em;
+      padding-left: 50px;
       width: 15%;
-      text-align: center; }
+      text-align: left; }
     #data-strategy ul span,
     #arc90-background ul span,
     #rdd-background ul span {
       margin-top: .5em;
-      font-size: .8em;
+      font-size: .9em;
       display: block;
       text-transform: uppercase;
       font-weight: bold; }
@@ -266,7 +377,10 @@ h1, h2, h3, h4, nav li {
     #arc90-background ul img,
     #rdd-background ul img {
       display: inline-block;
-      width: 80px; }
+      width: 40px;
+      position: absolute;
+      top: 0;
+      left: 0; }
 
 #devices {
   text-align: center;
