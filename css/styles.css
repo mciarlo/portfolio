@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
     -webkit-font-smoothing: subpixel-antialiased; }
 
 p, li {
-  line-height: 1.5; }
+  line-height: 1.6; }
 
 li {
   list-style: none; }
@@ -125,7 +125,8 @@ Y8b d88P
   #container.readability {
     background: #fdfdfd; }
     #container.readability h1, #container.readability h2, #container.readability h3, #container.readability h4 {
-      font-family: Arbutus Slab; }
+      font-family: Arbutus Slab;
+      letter-spacing: -0.04em; }
   #container.reuters {
     background-color: #eaeaea; }
     #container.reuters h1, #container.reuters h2, #container.reuters h3, #container.reuters h4 {
@@ -137,7 +138,7 @@ Y8b d88P
     margin-right: -0.1em; }
 
 section {
-  padding: 8em 0;
+  padding: 7em 0 6em;
   text-align: center; }
   section:after {
     content: "";
@@ -196,10 +197,10 @@ footer {
 #arc90-background,
 #rdd-background {
   border-top: 10px solid #de8024; }
-  #reuters-intro p,
-  #arc90-background p,
-  #rdd-background p {
-    margin: 1em auto 0; }
+  #reuters-intro .main-text,
+  #arc90-background .main-text,
+  #rdd-background .main-text {
+    margin: 1.5em auto 0; }
   #reuters-intro ul,
   #arc90-background ul,
   #rdd-background ul {
@@ -382,6 +383,9 @@ footer {
                                                                        Y8b d88P 
                                                                         "Y88P"  
 */
+.rdd-red {
+  color: #a6001b; }
+
 .icon {
   font-family: 'readabiliconsregular';
   -webkit-font-smoothing: antialiased; }
@@ -425,22 +429,30 @@ footer {
     width: 70%;
     margin: 0 auto; }
 
+.screens:after {
+  content: "";
+  clear: both;
+  display: block; }
 .screens li {
-  display: inline-block;
+  float: left;
   list-style: none;
-  width: 25%;
-  margin: 0 4%;
+  width: 20%;
   text-align: center; }
-  .screens li.left, .screens li.right {
-    margin-top: -150px;
-    margin: 0 5% 0 19%; }
-  .screens li.right {
-    margin: 0 19% 0 5%; }
+  .screens li.higher {
+    margin-top: -10px; }
+  .screens li.highest {
+    margin-top: -20px; }
+  .screens li.high {
+    margin-top: -5px; }
   .screens li img {
-    width: 80%; }
+    width: 90%; }
 
 #iconography h2 {
   color: #a6001b; }
+  #iconography h2 .icon {
+    margin-right: 0.2em; }
+#iconography p {
+  margin: 2em auto 3em; }
 #iconography li {
   list-style: none;
   text-align: center;
@@ -464,26 +476,31 @@ footer {
   background: #a6001b;
   position: relative;
   color: white;
-  height: 1080px; }
+  height: 1130px;
+  overflow: hidden; }
   #typography img {
     position: absolute;
     left: 50%; }
+  #typography .main-text {
+    margin: 2em 0 3em; }
 
 #landscape {
   margin-left: -950px;
   width: 800px;
-  top: 476px; }
+  top: 526px; }
 
 #portrait {
-  top: 380px;
+  top: 430px;
   margin-left: -130px;
   height: 800px; }
 
 #portrait-iphone {
   width: 240px;
-  top: 640px;
+  top: 690px;
   margin-left: 424px; }
 
+#rdd-ux .main-text {
+  margin: 2em 0 3em; }
 #rdd-ux #ux-hero-video {
   float: left;
   width: 340px; }
@@ -492,12 +509,10 @@ footer {
   width: 50%;
   float: left;
   margin-left: 10%;
-  margin-top: 100px; }
+  margin-top: 70px; }
 
 #rdd-love {
   border-top: 1px solid #dadada; }
-  #rdd-love h2 span {
-    color: #a6001b; }
   #rdd-love ul {
     float: left;
     width: 80%; }

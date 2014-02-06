@@ -30,7 +30,7 @@ h1, h2, h3, h4 {
 }
 
 p, li {
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 li {
@@ -66,6 +66,7 @@ Y8b d88P
 
     h1, h2, h3, h4 {
       font-family: Arbutus Slab;
+      letter-spacing: -0.04em;
     }
   }
 
@@ -91,7 +92,7 @@ Y8b d88P
 
 section {
   @include overflowfix;
-  padding: 8em 0;
+  padding: 7em 0 6em;
   text-align: center;
 
   h2 {
@@ -168,8 +169,8 @@ footer {
 #rdd-background {
   border-top: 10px solid #de8024;
 
-  p {
-    margin: 1em auto 0;
+  .main-text {
+    margin: 1.5em auto 0;
   }
 
   ul {
@@ -415,6 +416,10 @@ footer {
                                                                         "Y88P"  
 */
 
+.rdd-red {
+  color: #a6001b;
+}
+
 .icon {
   @include readabilicons;
   @include aliasing;
@@ -422,6 +427,7 @@ footer {
 
 #rdd-background {
   border-top: 10px solid #a6001b;
+
   h2 {
     line-height: 1.2;
   }
@@ -469,25 +475,28 @@ footer {
 }
 
 .screens {
+  @include overflowfix;
+
   li {
-    display: inline-block;
+    float: left;
     list-style: none;
-    width: 25%;
-    margin: 0 4%;
+    width: 20%;
     text-align: center;
 
-    &.left,
-    &.right {
-      margin-top: -150px;
-      margin: 0 5% 0 19%;
+    &.higher {
+      margin-top: -10px;
     }
 
-    &.right {
-      margin: 0 19% 0 5%;
+    &.highest {
+      margin-top: -20px;
+    }
+
+    &.high {
+      margin-top: -5px;
     }
 
     img {
-      width: 80%;
+      width: 90%;
     }
   }
 }
@@ -495,6 +504,14 @@ footer {
 #iconography {
   h2 {
     color: #a6001b;
+
+    .icon {
+      margin-right: 0.2em;
+    }
+  }
+
+  p {
+    margin: 2em auto 3em;
   }
 
   li {
@@ -521,33 +538,42 @@ footer {
   background: #a6001b;
   position: relative;
   color: white;
-  height: 1080px;
+  height: 1130px;
+  overflow: hidden;
 
   img {
     position: absolute;
     left: 50%;
+  }
+
+  .main-text {
+    margin: 2em 0 3em;
   }
 }
 
 #landscape  {
   margin-left: -950px;
   width: 800px;
-  top: 476px;
+  top: 526px;
 }
 
 #portrait {
-  top: 380px;
+  top: 430px;
   margin-left: -130px;
   height: 800px;
 }
 
 #portrait-iphone {
   width: 240px;
-  top: 640px;
+  top: 690px;
   margin-left: 424px;
 }
 
 #rdd-ux {
+  .main-text {
+    margin: 2em 0 3em;
+  }
+
   #ux-hero-video {
     float: left;
     width: 340px;
@@ -558,18 +584,12 @@ footer {
     width: 50%;
     float: left;
     margin-left: 10%;
-    margin-top: 100px;
+    margin-top: 70px;
   }
 }
 
 #rdd-love {
   border-top: 1px solid #dadada;
-
-  h2 {
-    span {
-      color: #a6001b;
-    }
-  }
 
   ul {
     float: left; 
