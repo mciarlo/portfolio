@@ -92,8 +92,7 @@ a:hover {
   color: #555; }
 
 .wrapper {
-  width: 960px;
-  margin: 0 auto; }
+  width: 100%; }
 
 h1, h2, h3, h4 {
   -webkit-font-smoothing: antialiased; }
@@ -149,17 +148,17 @@ Y8b d88P
     margin-right: -0.1em; }
 
 section {
-  padding: 7em 0 6em;
+  padding: 4em 0 3.5em;
   text-align: center; }
   section:after {
     content: "";
     clear: both;
     display: block; }
   section h2 {
-    font-size: 5em; }
+    font-size: 3em; }
   section .main-text {
-    width: 70%;
-    font-size: 1.2em; }
+    width: 90%;
+    font-size: 1em; }
   section.align-left h2, section.align-left p {
     text-align: left; }
   section.align-left p {
@@ -180,12 +179,14 @@ footer {
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 8em 0 0;
-  height: 200px;
+  padding: 6em 0 0;
+  height: 210px;
   text-align: center; }
   footer h3 {
     color: white;
-    font-size: 3em; }
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8em; }
   footer a:link,
   footer a:visited {
     display: inline-block;
@@ -261,10 +262,10 @@ footer {
     #rdd-background ul li {
       position: relative;
       display: inline-block;
-      margin: -1em 0 4em;
-      padding-left: 50px;
-      width: 17%;
-      text-align: left; }
+      padding-left: 0px;
+      text-align: center;
+      margin: 1em auto 1em;
+      width: 80%; }
     #reuters-intro ul span,
     #arc90-background ul span,
     #rdd-background ul span {
@@ -276,11 +277,11 @@ footer {
     #reuters-intro ul img,
     #arc90-background ul img,
     #rdd-background ul img {
-      display: inline-block;
-      width: 40px;
-      position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      display: inline-block;
+      width: 60px;
+      position: relative; }
 
 .divider {
   text-align: center;
@@ -313,7 +314,7 @@ footer {
 /* Header ---*/
 .header {
   padding: 0;
-  height: 440px;
+  height: 300px;
   position: relative;
   color: white;
   text-align: center;
@@ -332,14 +333,14 @@ footer {
       margin-top: .2em; }
   .header.arc90 {
     background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
-    background-size: 100%; }
+    background-size: 200%; }
     .header.arc90 #title-card {
       width: 140px;
       margin-left: -70px; }
 
 #title-card {
   position: absolute;
-  top: 38%;
+  top: 35%;
   left: 50%;
   width: 400px;
   margin-left: -200px;
@@ -348,25 +349,24 @@ footer {
     display: inline-block; }
 
 #contact-me {
-  padding: 4em 0 5em;
+  padding: 3em 0 4em;
   font-size: 1.2em; }
   #contact-me li {
-    width: 45%;
-    display: inline-block;
-    padding-left: 5%;
+    width: 90%;
+    display: block;
+    margin: 5% auto 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    text-align: left; }
+    text-align: center; }
     #contact-me li h4 {
       font-size: 1.8em;
       margin-bottom: .3em; }
     #contact-me li:first-child {
-      padding-left: 0%;
-      padding-right: 5%;
-      text-align: right;
-      border-right: 1px solid #d4d4d4; }
+      margin-top: 0;
+      padding-bottom: 5%;
+      border-bottom: 1px solid #d4d4d4; }
   #contact-me.arc90 {
     background: #dee6ec;
     border-top: 1px solid #c5d7e3; }
@@ -413,7 +413,8 @@ footer {
   left: 16px;
   width: 30px;
   padding: 10px;
-  z-index: 9999; }
+  z-index: 9999;
+  display: none; }
   #nav-toggle:hover span {
     background: #444; }
   #nav-toggle span {
@@ -431,7 +432,7 @@ footer {
   width: 100%;
   height: 110px;
   background: #DEE9D4;
-  padding: 3.5em 0 6em;
+  padding: 5em 0 6em;
   border-bottom: 10px solid #c0e0a3; }
   #introduction:after {
     content: "";
@@ -448,11 +449,11 @@ footer {
     font-family: Sue Ellen Francisco;
     letter-spacing: -0.03em; }
   #introduction h1, #introduction h2 {
-    font-size: 5.1em;
+    font-size: 4em;
     text-align: center; }
   #introduction h2 {
     margin-top: .5em;
-    font-size: 1.4em; }
+    font-size: 1em; }
 
 #michael-brandon {
   font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
@@ -461,11 +462,9 @@ footer {
     font-family: Contrail One;
     letter-spacing: -0.05em;
     font-size: 2.2em;
-    margin: 5em 0 0; }
-    #michael-brandon h3:first-child {
-      margin-top: 4em; }
+    margin: 2em 0 0; }
   #michael-brandon .main-text {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     margin: 1.5em auto 3em;
     width: 70%; }
@@ -478,10 +477,8 @@ footer {
     display: block; }
   #work a:link,
   #work a:visited {
-    float: left;
-    display: inline-block;
-    width: 29%;
-    margin: 0 2%;
+    display: block;
+    width: 100%;
     height: 200px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -500,12 +497,12 @@ footer {
 #hobbies {
   text-align: center; }
   #hobbies li {
-    margin: 0 20px;
+    margin: 0 10px;
     padding: 1em;
-    width: 70px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     background: #f5f5f5;
-    height: 70px;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -546,6 +543,7 @@ footer {
   font-size: 1.3em; }
   #resume-pitch a:link,
   #resume-pitch a:visited {
+    display: block;
     color: #789c57;
     border: 1px solid #789c57;
     border-radius: 0.4em;
@@ -553,17 +551,18 @@ footer {
     -webkit-border-radius: 0.4em;
     -ms-border-radius: 0.4em;
     padding: .6em .8em;
-    margin-left: .4em;
-    font-size: .8em; }
+    margin: .5em auto 0;
+    font-size: .8em;
+    width: 60%; }
   #resume-pitch a:hover {
     color: #486b29;
     border-color: #486b29; }
 
 #finale {
   text-align: center;
-  font-size: 3em;
-  padding: 2em 0;
-  margin-top: 4em;
+  font-size: 2.4em;
+  padding: 1.4em 0;
+  margin-top: 2em;
   background: #dfdfdf;
   font-family: Sue Ellen Francisco; }
   #finale p {
@@ -576,7 +575,7 @@ footer {
     -webkit-mask-origin: padding; }
   #finale img {
     display: block;
-    width: 30px;
+    width: 40px;
     margin: .2em auto 0; }
 
 #resume {
@@ -691,7 +690,8 @@ footer {
 
 #thoughtful-design {
   background: #a6001b;
-  color: white; }
+  color: white;
+  padding-bottom: 0; }
   #thoughtful-design h2 {
     margin-top: .8em; }
   #thoughtful-design .main-text {
@@ -699,14 +699,9 @@ footer {
     width: 85%; }
 
 #rdd-feature-rundown {
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -ms-border-radius: 10px;
   background: #890016;
   padding: 2.6em 0 2.4em;
   text-align: center;
-  width: 90%;
   margin: 0 auto;
   font-size: .8em; }
   #rdd-feature-rundown img {
@@ -741,108 +736,96 @@ footer {
       width: 90%; }
 
 #iconography h2 {
-  color: #a6001b; }
+  color: #a6001b;
+  font-size: 2.6em; }
   #iconography h2 .icon {
-    margin-right: 0.2em; }
+    display: block;
+    margin: 0 auto .2em; }
 #iconography p {
   margin: 1.8em auto 3em; }
 #iconography li {
   text-align: center;
-  width: 14%;
-  float: left;
-  background: #f1f1f1;
+  width: 29%;
   margin-right: 2px;
   margin-bottom: 3px;
-  padding: .8em 0 2em;
+  padding: .4em 0 1em;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   color: #777;
-  font-size: .8em; }
+  font-size: .8em;
+  display: inline-block; }
   #iconography li .icon {
-    font-size: 4em;
+    font-size: 3em;
     display: block; }
 
 #typography {
   background: #a6001b;
   position: relative;
   color: white;
-  height: 1130px;
+  height: 880px;
   overflow: hidden; }
+  #typography h2 {
+    text-align: center; }
   #typography img {
     position: absolute;
     left: 50%; }
   #typography .main-text {
-    margin: 1.8em 0 3em; }
+    text-align: center;
+    width: 90%;
+    margin: 1.8em auto 3em; }
 
 #landscape {
-  margin-left: -900px;
-  width: 800px;
-  top: 526px; }
+  margin-left: -450px;
+  width: 400px;
+  top: 263px;
+  display: none; }
 
 #portrait {
-  top: 430px;
-  margin-left: -80px;
-  height: 800px; }
+  top: 525px;
+  margin-left: -140px;
+  width: 280px; }
 
 #portrait-iphone {
-  width: 240px;
-  top: 690px;
-  margin-left: 474px; }
+  width: 120px;
+  top: 345px;
+  display: none;
+  margin-left: 237px; }
 
+#rdd-ux h2 {
+  margin-top: 1em;
+  text-align: center; }
 #rdd-ux .main-text {
-  margin: 2em 0 3em; }
+  margin: 2em auto 3em;
+  width: 90%;
+  text-align: center; }
 #rdd-ux .rdd-red {
   font-style: italic; }
 #rdd-ux #ux-hero-video {
-  float: left;
-  width: 340px;
-  margin-left: 10%; }
+  width: 280px;
+  margin: 0 auto;
+  display: block; }
 #rdd-ux .right {
   position: relative;
-  width: 45%;
-  float: left;
-  margin-left: 9%;
-  margin-top: 115px; }
+  width: 90%;
+  margin: 0 auto; }
 
 #rdd-love {
-  text-align: right;
-  padding: 5em 0 8em; }
-  #rdd-love ul {
-    float: left;
-    width: 80%; }
-  #rdd-love li {
-    display: inline-block;
-    width: 114px;
-    position: relative;
-    padding-left: 50px; }
-    #rdd-love li:first-child {
-      margin-right: 20px; }
-    #rdd-love li img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 40px; }
-    #rdd-love li span {
-      display: block;
-      margin-top: .3em;
-      font-size: 1.2em; }
-    #rdd-love li:first-child img {
-      width: 35px;
-      top: -5px; }
+  text-align: center;
+  padding: 2em 0 0; }
 
 #screen-holder {
-  height: 560px;
+  height: 920px;
   position: relative;
   overflow: hidden; }
   #screen-holder h2 {
-    width: 40%;
-    margin: .4em 0 .7em; }
+    width: 80%;
+    margin: .4em auto .7em; }
   #screen-holder blockquote {
-    font-size: 1.8em;
-    width: 40%;
-    margin-bottom: 1.5em;
+    font-size: 1.4em;
+    width: 90%;
+    margin: 0 auto 1.5em;
     line-height: 1.2; }
     #screen-holder blockquote span {
       margin-top: .5em;
@@ -858,12 +841,7 @@ footer {
         color: #555; }
 
 #iphone {
-  position: absolute;
-  top: 70px;
-  width: 230px;
-  left: 50%;
-  z-index: 3;
-  margin-left: 0px; }
+  width: 280px; }
 
 #ipad {
   position: absolute;
@@ -871,17 +849,17 @@ footer {
   left: 50%;
   width: 800px;
   z-index: 2;
+  display: none;
   margin-left: 110px; }
 
 #featured-badge {
-  float: left;
   display: inline-block;
   width: 200px;
-  margin-left: 20px; }
+  margin: 0px auto; }
 
 #dl-rdd {
-  float: left;
-  margin: 20px 20px 0 30px; }
+  display: inline-block;
+  margin: 40px auto; }
 
 /* Videos ------- */
 #rdd-videos {
@@ -1100,7 +1078,7 @@ footer {
 
 #data-strategy {
   background: #e8892d url(../images/reutersbg.png) top left repeat;
-  padding-bottom: 9em; }
+  padding-bottom: 3em; }
   #data-strategy h2, #data-strategy h3 {
     color: #5b3001; }
   #data-strategy img {
@@ -1111,76 +1089,73 @@ footer {
     margin: 1.5em auto 0em; }
 
 #feature-rundown {
-  width: 80%;
+  width: 90%;
   margin: 0 auto; }
   #feature-rundown li {
     position: relative;
-    padding-left: 35%;
-    padding: 2.5em 0 .5em 35%;
-    text-align: left;
-    margin-top: 5em;
+    padding: 2em 0;
+    text-align: center;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box; }
     #feature-rundown li img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0; }
+      width: 70%;
+      display: inline-block;
+      margin: 0 auto; }
     #feature-rundown li h3 {
-      margin-top: 0;
-      font-size: 2.5em; }
+      margin-top: .5em;
+      font-size: 2em; }
     #feature-rundown li p {
       width: 100%;
-      font-size: 1.2em;
-      text-align: left;
+      font-size: 1em;
+      text-align: center;
       margin-top: 1em; }
     #feature-rundown li.even {
-      text-align: right;
-      padding-left: 0;
-      padding-right: 35%; }
+      text-align: center; }
       #feature-rundown li.even img {
         left: auto;
         right: 0; }
       #feature-rundown li.even p {
-        text-align: right; }
+        text-align: center; }
 
 #reusable-components {
-  border-bottom: 1px solid #dadada; }
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 1em; }
   #reusable-components img {
-    width: 100%; }
+    width: 90%;
+    margin: 0 auto; }
   #reusable-components h3 {
     font-size: 1.4em;
     font-weight: bold;
     margin: 3.2em 0 1.2em;
     text-transform: uppercase; }
   #reusable-components .main-text {
-    margin: 1.5em auto 3em; }
+    margin: 1.5em auto 2em; }
   #reusable-components ul {
     margin-top: 5em; }
   #reusable-components li {
-    float: left;
-    width: 21%;
-    margin: 0 2%; }
+    width: 90%;
+    margin: 0 auto 4em; }
     #reusable-components li strong {
       display: block;
-      margin: .6em 0;
-      font-size: 1.2em; }
+      margin: .4em 0;
+      font-size: 1.6em; }
     #reusable-components li p {
       font-size: 1em;
       color: #777; }
     #reusable-components li img {
-      width: 70px; }
+      width: 90px; }
 
 #proven-design img {
   width: 130px;
   margin: 0 auto; }
 #proven-design .main-text {
-  width: 64%;
+  width: 80%;
   margin: 1.5em auto 3em; }
 #proven-design #web {
-  width: 100%; }
+  width: 90%;
+  margin: 0 auto; }
 
 /*
                           .d8888b.   .d8888b.  
@@ -1210,31 +1185,31 @@ footer {
     z-index: 0; }
   #me #message {
     position: absolute;
-    top: 28%;
+    top: 32%;
     left: 50%;
     margin-left: -350px;
     width: 700px;
     text-align: center; }
     #me #message h2 {
       color: white;
-      font-size: 4em;
+      font-size: 2em;
       width: 100%;
       float: left;
-      margin-top: .2em;
+      margin-top: .4em;
       font-family: Kite One; }
     #me #message p {
       width: 100%;
-      margin-top: 3em;
+      margin-top: 2em;
       color: white;
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #a1a1a1;
       font-family: Trebuchet MS, Lucida Grande, sans-serif; }
 
 #bg-portrait {
   display: inline-block;
-  width: 160px;
-  height: 160px;
-  border: 8px solid #5b8aab;
+  width: 120px;
+  height: 120px;
+  border: 6px solid #5b8aab;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1242,20 +1217,22 @@ footer {
 
 #arrow {
   position: absolute;
-  top: 16%;
-  left: 55%;
-  width: 120px;
+  top: 12%;
+  left: 100%;
+  width: 60px;
   border: none; }
 
 #how-done {
   position: absolute;
-  top: 24%;
-  left: 65%;
-  width: 300px;
-  font-size: 1.7em;
+  top: 15%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  font-size: 1.2em;
   letter-spacing: 0.05em;
   line-height: 1.1;
   color: #777;
+  text-align: center;
   font-family: Waiting for the Sunrise; }
 
 #arc-logo {
@@ -1288,14 +1265,14 @@ footer {
     margin: 0 auto; }
   #people ul {
     text-align: center;
-    width: 1600px;
-    margin: 4em 0 4em -320px; }
+    width: 1000px;
+    margin: 3em 0 3em -320px; }
   #people li {
     margin: 0 5px;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
-    border: 4px solid #c2d8e7;
+    border: 2px solid #c2d8e7;
     border-radius: 50%;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -1303,7 +1280,7 @@ footer {
     display: inline-block; }
     #people li img {
       width: 100%;
-      border: 4px solid #fff;
+      border: 2px solid #fff;
       border-radius: 50%;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
@@ -1316,23 +1293,341 @@ footer {
 #narratives .main-text {
   margin: 2.2em auto 2em; }
 #narratives ul {
-  width: 95%;
-  margin: 8em auto 0em; }
+  width: 90%;
+  margin: 4em auto 0em; }
   #narratives ul:after {
     content: "";
     clear: both;
     display: block; }
   #narratives ul li {
     float: left;
-    width: 50%;
+    width: 100%;
+    margin-top: 1em;
     margin-bottom: 20px; }
     #narratives ul li img {
-      width: 110%;
-      margin-left: -5%; }
+      width: 100%; }
     #narratives ul li:first-child {
-      margin-top: -30px; }
+      margin-top: 0; }
 
 #homepage {
-  width: 100%;
+  width: 90%;
   margin: 4em auto 0;
   display: block; }
+
+@media screen and (min-width: 748px) {
+  .header.arc90 {
+    background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
+    background-size: 100%; }
+
+  .wrapper {
+    width: 748px;
+    margin: 0 auto; }
+
+  #michael-brandon h3 {
+    font-size: 2.2em;
+    margin-top: 5em; }
+    #michael-brandon h3:first-child {
+      margin-top: 4em; }
+  #michael-brandon .main-text {
+    font-size: 1.2em;
+    margin: 1.5em auto 3em;
+    width: 70%; }
+
+  #introduction {
+    padding-top: 3.5em; }
+    #introduction h1, #introduction h2 {
+      font-size: 5.1em; }
+    #introduction h2 {
+      font-size: 1.4em; }
+
+  #work a:link,
+  #work a:visited {
+    float: left;
+    width: 29%;
+    margin: 0 2%;
+    height: 200px; }
+
+  #hobbies li {
+    margin: 0 20px;
+    width: 70px;
+    height: 70px; }
+
+  #resume-pitch a:link,
+  #resume-pitch a:visited {
+    margin: 3em 0 0 0.3em;
+    width: auto;
+    display: inline; }
+
+  #finale {
+    font-size: 3em;
+    margin-top: 4em;
+    padding: 2em 0; }
+    #finale img {
+      width: 30px; }
+
+  /* Work */
+  .header {
+    height: 440px; }
+
+  #title-card {
+    top: 38%; }
+
+  section {
+    padding: 7em 0 6em; }
+    section h2 {
+      font-size: 5em; }
+    section .main-text {
+      width: 70%;
+      font-size: 1.2em; }
+
+  #reuters-intro ul li,
+  #arc90-background ul li,
+  #rdd-background ul li {
+    margin: -1em 0 4em;
+    padding-left: 50px;
+    width: 22%;
+    text-align: left; }
+  #reuters-intro ul img,
+  #arc90-background ul img,
+  #rdd-background ul img {
+    width: 40px;
+    position: absolute; }
+
+  #thoughtful-design {
+    padding-bottom: 3.5em; }
+
+  #rdd-feature-rundown {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    width: 90%;
+    margin: 0 auto; }
+
+  #iconography h2 {
+    font-size: 5em; }
+    #iconography h2 .icon {
+      display: inline;
+      margin-right: 0.2em; }
+  #iconography p {
+    width: 90%; }
+  #iconography li {
+    width: 14%;
+    padding: .6em 0 1.6em; }
+    #iconography li .icon {
+      font-size: 4em; }
+
+  #typography {
+    height: 1240px;
+    padding: 3.5em  0 2.5em; }
+    #typography h2 {
+      text-align: left;
+      margin: 0 30px; }
+    #typography .main-text {
+      text-align: left;
+      width: 90%;
+      margin: 1.8em 30px 3em; }
+
+  #landscape {
+    margin-left: -900px;
+    width: 800px;
+    top: 556px;
+    display: block; }
+
+  #portrait {
+    top: 460px;
+    margin-left: -80px;
+    height: 800px;
+    width: auto; }
+
+  #portrait-iphone {
+    width: 240px;
+    top: 720px;
+    display: block;
+    margin-left: 474px; }
+
+  #rdd-ux {
+    padding: 4em 0; }
+    #rdd-ux h2, #rdd-ux .main-text {
+      text-align: left; }
+    #rdd-ux h2 {
+      margin-top: 0; }
+    #rdd-ux .main-text {
+      width: 100%; }
+    #rdd-ux #ux-hero-video {
+      float: left;
+      width: 280px;
+      margin: 0 0 0 5%; }
+    #rdd-ux .right {
+      position: relative;
+      width: 45%;
+      float: left;
+      margin: 60px 0 0 5%; }
+
+  #rdd-love {
+    text-align: right;
+    padding: 5em 0 8em; }
+
+  #screen-holder {
+    height: 560px; }
+    #screen-holder h2 {
+      width: 55%;
+      margin: .8em 0 .7em; }
+    #screen-holder blockquote {
+      font-size: 1.6em;
+      width: 50%;
+      margin: 0 0 1.5em 5%; }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 60%;
+    z-index: 3;
+    margin-left: 0px; }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px; }
+
+  #featured-badge {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    margin-left: 40px; }
+
+  #dl-rdd {
+    float: left;
+    margin: 20px 20px 0 30px; }
+
+  #contact-me {
+    padding: 4em 0 5em; }
+    #contact-me li {
+      width: 45%;
+      display: inline-block;
+      padding-left: 5%;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      text-align: left;
+      margin: 0; }
+      #contact-me li:first-child {
+        padding: 0 5% 0 0;
+        text-align: right;
+        padding-top: none;
+        border-bottom: none;
+        border-right: 1px solid #d4d4d4; }
+
+  footer {
+    padding: 8em 0 0;
+    height: 200px; }
+    footer h3 {
+      font-size: 2.8em; }
+
+  #data-strategy {
+    padding-bottom: 9em; }
+    #data-strategy p {
+      width: 80%; }
+
+  #feature-rundown li {
+    padding: 1.5em 0 .5em 35%;
+    text-align: left;
+    margin-top: 5em; }
+    #feature-rundown li img {
+      width: 30%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #feature-rundown li h3 {
+      margin-top: 0;
+      font-size: 2.5em; }
+    #feature-rundown li p {
+      font-size: 1.1em;
+      text-align: left; }
+    #feature-rundown li.even {
+      text-align: right;
+      padding-left: 0;
+      padding-right: 35%; }
+      #feature-rundown li.even p {
+        text-align: right; }
+
+  #reusable-components {
+    padding-bottom: 4em; }
+    #reusable-components img {
+      width: 100%; }
+    #reusable-components li {
+      float: left;
+      width: 44%;
+      margin: 0 3% 4em 3%; }
+      #reusable-components li strong {
+        margin: .6em 0;
+        font-size: 1.2em; }
+      #reusable-components li img {
+        width: 70px; }
+
+  #proven-design .main-text {
+    width: 64%; }
+  #proven-design #web {
+    width: 100%; }
+
+  #people ul {
+    width: 1600px;
+    margin: 4em 0 4em -416px; }
+  #people li {
+    width: 120px;
+    height: 120px;
+    border-width: 4px; }
+    #people li img {
+      border-width: 4px; }
+
+  #me #message {
+    top: 28%; }
+    #me #message h2 {
+      font-size: 4em;
+      margin-top: .2em; }
+    #me #message p {
+      margin-top: 3em;
+      font-size: 1.4em; }
+
+  #bg-portrait {
+    width: 160px;
+    height: 160px;
+    border-width: 8px; }
+
+  #arrow {
+    top: 21%;
+    left: 52%;
+    width: 120px; }
+
+  #how-done {
+    top: 26%;
+    left: 65%;
+    margin-left: 0;
+    text-align: left;
+    width: 300px;
+    font-size: 1.7em; }
+
+  #narratives ul {
+    width: 95%;
+    margin: 8em auto 0em; }
+    #narratives ul li {
+      width: 50%;
+      margin-bottom: 20px;
+      margin-top: 0; }
+      #narratives ul li img {
+        width: 110%;
+        margin-left: -5%; }
+      #narratives ul li:first-child {
+        margin-top: -30px; }
+
+  #homepage {
+    width: 100%; } }
+@media screen and (min-width: 1002px) {
+  .wrapper {
+    width: 960px; } }

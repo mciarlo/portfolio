@@ -21,8 +21,7 @@ a:hover {
 }
 
 .wrapper {
-  width: 960px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -100,16 +99,16 @@ Y8b d88P
 
 section {
   @include overflowfix;
-  padding: 7em 0 6em;
+  padding: 4em 0 3.5em;
   text-align: center;
 
   h2 {
-    font-size: 5em;
+    font-size: 3em;
   }
 
   .main-text {
-    width: 70%;
-    font-size: 1.2em;
+    width: 90%;
+    font-size: 1em;
   }
 
   &.align-left {
@@ -143,13 +142,15 @@ footer {
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 8em 0 0;
-  height: 200px;
+  padding: 6em 0 0;
+  height: 210px;
   text-align: center;
 
   h3 {
     color: white;
-    font-size: 3em;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8em;
   }
 
   a:link,
@@ -252,10 +253,11 @@ footer {
     li {
       position: relative;
       display: inline-block;
-      margin: -1em 0 4em;
-      padding-left: 50px;
-      width: 17%;
-      text-align: left;
+
+      padding-left: 0px;
+      text-align: center;
+      margin: 1em auto 1em;
+      width: 80%;
     }
 
     span {
@@ -267,11 +269,12 @@ footer {
     }
 
     img {
-      display: inline-block;
-      width: 40px;
-      position: absolute;
       top: 0;
       left: 0;
+      display: inline-block;
+
+      width: 60px;
+      position: relative;
     }
   }
 }
@@ -310,7 +313,7 @@ footer {
 /* Header ---*/
 .header {
   padding: 0;
-  height: 440px;
+  height: 300px;
   position: relative;
   color: white;
   text-align: center;
@@ -342,7 +345,7 @@ footer {
 
   &.arc90 {
     background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
-    background-size: 100%;
+    background-size: 200%;
 
     #title-card {
       width: 140px;
@@ -353,7 +356,7 @@ footer {
 
 #title-card {
   position: absolute;
-  top: 38%;
+  top: 35%;
   left: 50%;
   width: 400px;
   margin-left: -200px;
@@ -365,15 +368,15 @@ footer {
 }
 
 #contact-me {
-  padding: 4em 0 5em;
+  padding: 3em 0 4em;
   font-size: 1.2em;
 
   li {
-    width: 45%;
-    display: inline-block;
-    padding-left: 5%;
+    width: 90%;
+    display: block;
+    margin: 5% auto 0;
     @include box-sizing;
-    text-align: left;
+    text-align: center;
 
     h4 {
       font-size: 1.8em;
@@ -381,10 +384,9 @@ footer {
     }
 
     &:first-child {
-      padding-left: 0%;
-      padding-right: 5%;
-      text-align: right;
-      border-right: 1px solid #d4d4d4;
+      margin-top: 0;
+      padding-bottom: 5%;
+      border-bottom: 1px solid #d4d4d4;
     }
   }
 
@@ -454,6 +456,7 @@ footer {
   width: 30px;
   padding: 10px;
   z-index: 9999;
+  display: none;
 
   &:hover {
     span {
@@ -475,7 +478,7 @@ footer {
   width: 100%;
   height: 110px;
   background: #DEE9D4;
-  padding: 3.5em 0 6em;
+  padding: 5em 0 6em;
   @include overflowfix;
   border-bottom: 10px solid #c0e0a3;
 
@@ -486,13 +489,13 @@ footer {
   }
 
   h1, h2 {
-    font-size: 5.1em;
+    font-size: 4em;
     text-align: center;
   }
 
   h2 {
     margin-top: .5em;
-    font-size: 1.4em;
+    font-size: 1em;
   }
 }
 
@@ -504,15 +507,11 @@ footer {
     font-family: Contrail One;
     letter-spacing: -0.05em;
     font-size: 2.2em;
-    margin: 5em 0 0;
-
-    &:first-child {
-      margin-top: 4em;
-    }  
+    margin: 2em 0 0; 
   }
 
   .main-text {
-    font-size: 1.2em;
+    font-size: 1em;
     text-align: center;
     margin: 1.5em auto 3em;
     width: 70%;
@@ -525,10 +524,8 @@ footer {
 
   a:link,
   a:visited {
-    float: left;
-    display: inline-block;
-    width: 29%;
-    margin: 0 2%;
+    display: block;
+    width: 100%;
     height: 200px;
     @include box-sizing;
     -webkit-transition: -webkit-transform 150ms; 
@@ -549,12 +546,12 @@ footer {
   text-align: center;
 
   li {
-    margin: 0 20px;
+    margin: 0 10px;
     padding: 1em;
-    width: 70px;
+    width: 30px;
+    height: 30px;
     display: inline-block;
     background: #f5f5f5;
-    height: 70px;
     @include border-radius(50%);
 
     img {
@@ -608,12 +605,14 @@ footer {
 
   a:link,
   a:visited {
+    display: block;
     color: #789c57;
     border: 1px solid #789c57;
     @include border-radius(.4em);
     padding: .6em .8em;
-    margin-left: .4em;
+    margin: .5em auto 0;
     font-size: .8em;
+    width: 60%;
   }
 
   a:hover {
@@ -624,9 +623,9 @@ footer {
 
 #finale {
   text-align: center;
-  font-size: 3em;
-  padding: 2em 0;
-  margin-top: 4em;
+  font-size: 2.4em;
+  padding: 1.4em 0;
+  margin-top: 2em;
   background: #dfdfdf;
   @include handwritten;
   
@@ -636,7 +635,7 @@ footer {
   
   img {
     display: block;
-    width: 30px;
+    width: 40px;
     margin: .2em auto 0;
   }
 }
@@ -785,6 +784,7 @@ footer {
 #thoughtful-design {
   background: #a6001b;
   color: white;
+  padding-bottom: 0;
 
   h2 {
     margin-top: .8em;
@@ -797,11 +797,9 @@ footer {
 }
 
 #rdd-feature-rundown {
-  @include border-radius(10px);
   background: #890016;
   padding: 2.6em 0 2.4em;
   text-align: center;
-  width: 90%;
   margin: 0 auto;
   font-size: .8em;
 
@@ -853,9 +851,11 @@ footer {
 #iconography {
   h2 {
     color: #a6001b;
+    font-size: 2.6em;
 
     .icon {
-      margin-right: 0.2em;
+      display: block;
+      margin: 0 auto .2em;
     }
   }
 
@@ -865,18 +865,17 @@ footer {
 
   li {
     text-align: center;
-    width: 14%;
-    float: left;
-    background: #f1f1f1;
+    width: 29%;
     margin-right: 2px;
     margin-bottom: 3px;
-    padding: .8em 0 2em;
+    padding: .4em 0 1em;
     @include box-sizing;
     color: #777;
     font-size: .8em;
+    display: inline-block;
 
     .icon {
-      font-size: 4em;
+      font-size: 3em;
       display: block;
     }
   }
@@ -886,8 +885,12 @@ footer {
   background: #a6001b;
   position: relative;
   color: white;
-  height: 1130px;
+  height: 880px;
   overflow: hidden;
+
+  h2 {
+    text-align: center;
+  }
 
   img {
     position: absolute;
@@ -895,31 +898,42 @@ footer {
   }
 
   .main-text {
-    margin: 1.8em 0 3em;
+    text-align: center;
+    width: 90%;
+    margin: 1.8em auto 3em;
   }
 }
 
 #landscape  {
-  margin-left: -900px;
-  width: 800px;
-  top: 526px;
+  margin-left: -450px;
+  width: 400px;
+  top: 263px;
+  display: none;
 }
 
 #portrait {
-  top: 430px;
-  margin-left: -80px;
-  height: 800px;
+  top: 525px;
+  margin-left: -140px;
+  width: 280px;
 }
 
 #portrait-iphone {
-  width: 240px;
-  top: 690px;
-  margin-left: 474px;
+  width: 120px;
+  top: 345px;
+  display: none;
+  margin-left: 237px;
 }
 
 #rdd-ux {
+  h2 {
+    margin-top:1em;
+    text-align: center;
+  }
+  
   .main-text {
-    margin: 2em 0 3em;
+    margin: 2em auto 3em;
+    width: 90%;
+    text-align: center;
   }
 
   .rdd-red {
@@ -927,75 +941,37 @@ footer {
   }
 
   #ux-hero-video {
-    float: left;
-    width: 340px;
-    margin-left: 10%;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
   }
 
   .right {
     position: relative;
-    width: 45%;
-    float: left;
-    margin-left: 9%;
-    margin-top: 115px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
 #rdd-love {
-  text-align: right;
-  padding: 5em 0 8em;
-
-  ul {
-    float: left; 
-    width: 80%;
-  }
-
-  li {
-    display: inline-block;
-    width: 114px;
-    position: relative;
-    padding-left: 50px;
-
-    &:first-child {
-      margin-right: 20px;
-    }
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 40px;
-    }
-
-    span {
-      display: block;
-      margin-top: .3em;
-      font-size: 1.2em;
-    }
-
-    &:first-child {
-      img {
-        width: 35px;
-        top: -5px;
-      }
-    }
-  }
+  text-align: center;
+  padding: 2em 0 0;
 }
 
 #screen-holder {
-  height: 560px;
+  height: 920px;
   position: relative;
   overflow: hidden;
 
   h2 {
-    width: 40%;
-    margin: .4em 0 .7em;
+    width: 80%;
+    margin: .4em auto .7em;
   }
 
   blockquote {
-    font-size: 1.8em;
-    width: 40%;
-    margin-bottom: 1.5em;
+    font-size: 1.4em;
+    width: 90%;
+    margin: 0 auto 1.5em;
     line-height: 1.2;
 
     span {
@@ -1019,12 +995,7 @@ footer {
 }
 
 #iphone {
-  position: absolute;
-  top: 70px;
-  width: 230px;
-  left: 50%;
-  z-index: 3;
-  margin-left: 0px;
+  width: 280px;
 }
 
 #ipad {
@@ -1033,19 +1004,19 @@ footer {
   left: 50%;
   width: 800px;
   z-index: 2;
+  display: none;
   margin-left: 110px;
 }
 
 #featured-badge {
-  float: left;
   display: inline-block;
   width: 200px;
-  margin-left: 20px;
+  margin: 0px auto;
 }
 
 #dl-rdd {
-  float: left;
-  margin:20px 20px 0 30px;
+  display: inline-block;
+  margin: 40px auto;
 }
 
 
@@ -1284,7 +1255,7 @@ footer {
 
 #data-strategy {
   background: #e8892d url(../images/reutersbg.png) top left repeat;
-  padding-bottom: 9em;
+  padding-bottom: 3em;
 
   h2, h3 {
     color: #5b3001;
@@ -1304,40 +1275,35 @@ footer {
 }
 
 #feature-rundown {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   li {
     position: relative;
-    padding-left: 35%;
-    padding: 2.5em 0 .5em 35%;
-    text-align: left;
-    margin-top: 5em;
+    padding: 2em 0;
+    text-align: center;
     @include box-sizing;
 
     img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 70%;
+      display: inline-block;
+      margin: 0 auto;
     }
 
     h3 {
-      margin-top: 0;
-      font-size: 2.5em;
+      margin-top: .5em;
+      font-size: 2em;
     }
 
     p {
       width: 100%;
-      font-size: 1.2em;
-      text-align: left;
+      font-size: 1em;
+      text-align: center;
       margin-top: 1em;
     }
 
     &.even {
-      text-align:right;
-      padding-left: 0;
-      padding-right: 35%;
+      text-align:center;
 
       img {
         left: auto;
@@ -1345,7 +1311,7 @@ footer {
       }
     
       p {
-        text-align:right;
+        text-align:center;
       }
     }
   }
@@ -1353,9 +1319,11 @@ footer {
 
 #reusable-components {
   border-bottom: 1px solid #dadada;
+  padding-bottom: 1em;
 
   img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   h3 {
@@ -1366,7 +1334,7 @@ footer {
   }
 
   .main-text {
-    margin: 1.5em auto 3em;
+    margin: 1.5em auto 2em;
   }
 
   ul {
@@ -1374,14 +1342,13 @@ footer {
   }
   
   li {
-    float: left;
-    width: 21%;
-    margin: 0 2%;
+    width: 90%;
+    margin: 0 auto 4em;
 
     strong {
       display: block;
-      margin: .6em 0;
-      font-size: 1.2em;
+      margin: .4em 0;
+      font-size: 1.6em;
     }
 
     p {
@@ -1390,7 +1357,7 @@ footer {
     }
 
     img {
-      width: 70px;
+      width: 90px;
     }
   }
 }
@@ -1402,12 +1369,13 @@ footer {
   }
 
   .main-text {
-    width: 64%;
+    width: 80%;
     margin: 1.5em auto 3em;
   }
 
   #web {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -1449,7 +1417,7 @@ footer {
 
   #message {
     position: absolute;
-    top: 28%;
+    top: 32%;
     left: 50%;
     margin-left: -350px;
     width: 700px;
@@ -1457,18 +1425,18 @@ footer {
 
     h2 {
       color: white;
-      font-size: 4em;
+      font-size: 2em;
       width: 100%;
       float: left;
-      margin-top: .2em;
+      margin-top: .4em;
       font-family: Kite One;
     }
 
     p {
       width: 100%;
-      margin-top: 3em;
+      margin-top: 2em;
       color: white;
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #a1a1a1;
       @include sans-serif;
     }
@@ -1477,29 +1445,31 @@ footer {
 
 #bg-portrait {
   display: inline-block;
-  width: 160px;
-  height: 160px;
-  border: 8px solid #5b8aab;
+  width: 120px;
+  height: 120px;
+  border: 6px solid #5b8aab;
   @include border-radius(50%);
 }
 
 #arrow {
   position: absolute;
-  top: 16%;
-  left: 55%;
-  width:120px;
+  top: 12%;
+  left: 100%;
+  width:60px;
   border: none;
 }
 
 #how-done {
   position: absolute;
-  top: 24%;
-  left: 65%;
-  width: 300px;
-  font-size: 1.7em;
+  top: 15%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  font-size: 1.2em;
   letter-spacing: 0.05em;
   line-height: 1.1;
   color: #777;
+  text-align: center;
   font-family: Waiting for the Sunrise;
 }
 
@@ -1548,22 +1518,22 @@ footer {
 
   ul {
     text-align: center;
-    width: 1600px;
-    margin: 4em 0 4em -320px;
+    width: 1000px;
+    margin: 3em 0 3em -320px;
   }
   
   li {
     margin: 0 5px;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
-    border: 4px solid #c2d8e7;
+    border: 2px solid #c2d8e7;
     @include border-radius(50%);
     display: inline-block;
     
     img {
       width: 100%;
-      border: 4px solid #fff;
+      border: 2px solid #fff;
       @include border-radius(50%);
       @include box-sizing;
     }
@@ -1576,29 +1546,29 @@ footer {
   }
 
   ul {
-    width: 95%;
-    margin: 8em auto 0em;
+    width: 90%;
+    margin: 4em auto 0em;
     @include overflowfix;
 
     li {
       float: left;
-      width: 50%;
+      width: 100%;
+      margin-top: 1em;
       margin-bottom: 20px;
 
       img {
-        width: 110%;
-        margin-left: -5%;
+        width: 100%;
       }
 
       &:first-child {
-        margin-top: -30px;
+        margin-top: 0;
       }
     }
   }
 }
 
 #homepage {
-  width: 100%;
+  width: 90%;
   margin: 4em auto 0;
   display: block;
 }
@@ -1609,11 +1579,467 @@ footer {
 }
 
 @media screen and (min-width: 748px) {
+  .header {
+    &.arc90 {
+      background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
+      background-size: 100%;
+    }
+  }
 
+  .wrapper {
+    width: 748px;
+    margin: 0 auto;
+  }
+
+  #michael-brandon {
+    h3 {
+      font-size: 2.2em;
+      margin-top: 5em;
+
+      &:first-child {
+        margin-top: 4em;
+      }  
+    }
+
+    .main-text {
+      font-size: 1.2em;
+      margin: 1.5em auto 3em;
+      width: 70%;
+    }
+  }
+
+  #introduction {
+    padding-top: 3.5em;
+
+    h1, h2 {
+      font-size: 5.1em;
+    }
+
+    h2 {
+      font-size: 1.4em;
+    }
+  }
+
+  #work {
+    a:link,
+    a:visited {
+      float: left;
+      width: 29%;
+      margin: 0 2%;
+      height: 200px; 
+    }
+  }
+
+  #hobbies {
+    li {
+      margin: 0 20px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  #resume-pitch {    
+    a:link,
+    a:visited {
+      margin: 3em 0 0 0.3em;
+      width: auto;
+      display: inline;
+    }
+  }
+
+  #finale {
+    font-size: 3em;
+    margin-top: 4em;
+    padding: 2em 0;
+
+    img {
+      width: 30px;
+    }
+  }
+
+
+  /* Work */
+  .header {
+    height: 440px;
+  }
+
+  #title-card {
+    top: 38%;
+  }
+
+  section {
+    padding: 7em 0 6em;
+
+    h2 {
+      font-size: 5em;
+    }
+
+    .main-text {
+      width: 70%;
+      font-size: 1.2em;
+    }
+  }
+
+  #reuters-intro,
+  #arc90-background,
+  #rdd-background {
+    ul {
+      li {
+        margin: -1em 0 4em;
+        padding-left: 50px;
+        width: 22%;
+        text-align: left;
+      }
+
+      img {
+        width: 40px;
+        position: absolute;
+      }
+    }
+  }
+
+  #thoughtful-design {
+    padding-bottom: 3.5em;
+  }
+
+  #rdd-feature-rundown {
+    @include border-radius(10px);
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #iconography {
+    h2 {
+      font-size: 5em;
+
+      .icon {
+        display: inline;
+        margin-right: 0.2em;
+      }
+    }
+
+    p {
+      width: 90%;
+    }
+
+    li {
+      width: 14%;
+      padding: .6em 0 1.6em;
+
+      .icon {
+        font-size: 4em;
+      }
+    }
+  }
+
+  #typography {
+    height: 1240px;
+    padding: 3.5em  0 2.5em;
+
+    h2 {
+      text-align: left;
+      margin: 0 30px;
+    }
+
+    .main-text {
+      text-align: left;
+      width: 90%;
+      margin: 1.8em 30px 3em;
+    }
+  }
+
+  #landscape  {
+    margin-left: -900px;
+    width: 800px;
+    top: 556px;
+    display: block;
+  }
+
+  #portrait {
+    top: 460px;
+    margin-left: -80px;
+    height: 800px;
+    width: auto;
+  }
+
+  #portrait-iphone {
+    width: 240px;
+    top: 720px;
+    display: block;
+    margin-left: 474px;
+  }
+
+  #rdd-ux {
+    padding:4em 0;
+
+    h2, .main-text {
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .main-text {
+      width: 100%;
+    }
+
+    #ux-hero-video {
+      float: left;
+      width: 280px;
+      margin: 0 0 0 5%;
+    }
+
+    .right {
+      position: relative;
+      width: 45%;
+      float: left;
+      margin: 60px 0 0 5%;
+    }
+  }
+
+  #rdd-love {
+    text-align: right;
+    padding: 5em 0 8em;
+  }
+
+  #screen-holder {
+    height: 560px;
+
+    h2 {
+      width: 55%;
+      margin: .8em 0 .7em;
+    }
+
+    blockquote {
+      font-size: 1.6em;
+      width: 50%;
+      margin: 0 0 1.5em 5%;
+    }
+  }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 60%;
+    z-index: 3;
+    margin-left: 0px;
+  }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 55%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px;
+  }
+
+  #featured-badge {
+    float: left;
+    display: inline-block;
+    width: 200px;
+    margin-left: 40px;
+  }
+
+  #dl-rdd {
+    float: left;
+    margin:20px 20px 0 30px;
+  }
+
+  #contact-me {
+    padding: 4em 0 5em;
+
+    li {
+      width: 45%;
+      display: inline-block;
+      padding-left: 5%;
+      @include box-sizing;
+      text-align: left;
+      margin: 0;
+
+      &:first-child {
+        padding: 0 5% 0 0;
+        text-align: right;
+        padding-top: none;
+        border-bottom: none;
+        border-right: 1px solid #d4d4d4;
+      }
+    }
+  }
+
+  footer {
+    padding: 8em 0 0;
+    height: 200px;
+
+    h3 {
+      font-size: 2.8em;
+    }
+  }
+
+  #data-strategy {
+    padding-bottom: 9em;
+
+    p {
+      width: 80%;
+    }
+  }
+
+  #feature-rundown {
+    li {
+      padding: 1.5em 0 .5em 35%;
+      text-align: left;
+      margin-top: 5em;
+
+      img {
+        width: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.1em;
+        text-align: left;
+      }
+
+      &.even {
+        text-align:right;
+        padding-left: 0;
+        padding-right: 35%;
+      
+        p {
+          text-align:right;
+        }
+      }
+    }
+  }
+
+  #reusable-components {  
+    padding-bottom: 4em;
+
+    img {
+      width: 100%;
+    }
+
+    li {
+      float: left;
+      width: 44%;
+      margin: 0 3% 4em 3%;
+
+      strong {
+        margin: .6em 0;
+        font-size: 1.2em;
+      }
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  #proven-design {
+    .main-text {
+      width: 64%;
+    }
+
+    #web {
+      width: 100%;
+    }
+  }
+
+  #people {
+    ul {
+      width: 1600px;
+      margin: 4em 0 4em -416px;
+    }
+    
+    li {
+      width: 120px;
+      height: 120px;
+      border-width: 4px;
+
+      img {
+        border-width: 4px;
+      }
+    }
+  }
+
+  #me {
+    #message {
+      top: 28%;
+
+      h2 {
+        font-size: 4em;
+        margin-top: .2em;
+      }
+
+      p {
+        margin-top: 3em;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  #bg-portrait {
+    width: 160px;
+    height: 160px;
+    border-width: 8px;
+  }
+
+  #arrow {
+    top: 21%;
+    left: 52%;
+    width:120px;
+  }
+
+  #how-done {
+    top: 26%;
+    left: 65%;
+    margin-left: 0;
+    text-align: left;
+    width: 300px;
+    font-size: 1.7em;
+  }
+
+  #narratives {
+    ul {
+      width: 95%;
+      margin: 8em auto 0em;
+
+      li {
+        width: 50%;
+        margin-bottom: 20px;
+        margin-top: 0;
+
+        img {
+          width: 110%;
+          margin-left: -5%;
+        }
+
+        &:first-child {
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+
+  #homepage {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1002px) {
-  
+  .wrapper {
+    width: 960px;
+  }
 }
 
 @media screen and (min-width: 1202px) {
