@@ -130,7 +130,9 @@ Y8b d88P
     #container.readability h1, #container.readability h2, #container.readability h3, #container.readability h4 {
       font-family: Arbutus Slab;
       letter-spacing: -0.04em;
-      line-height: 1.2; }
+      line-height: 1; }
+    #container.readability .letter-spacing-fix {
+      margin-right: -0.08em; }
   #container.reuters {
     background-color: #eaeaea; }
     #container.reuters h1, #container.reuters h2, #container.reuters h3, #container.reuters h4 {
@@ -588,18 +590,21 @@ footer {
 
 #rdd-ux .main-text {
   margin: 2em 0 3em; }
+#rdd-ux .rdd-red {
+  font-style: italic; }
 #rdd-ux #ux-hero-video {
   float: left;
-  width: 340px; }
+  width: 340px;
+  margin-left: 10%; }
 #rdd-ux .right {
   position: relative;
-  width: 50%;
+  width: 45%;
   float: left;
-  margin-left: 10%;
-  margin-top: 70px; }
+  margin-left: 9%;
+  margin-top: 115px; }
 
 #rdd-love {
-  border-top: 1px solid #dadada; }
+  text-align: right; }
   #rdd-love ul {
     float: left;
     width: 80%; }
@@ -624,19 +629,21 @@ footer {
       top: -5px; }
 
 #screen-holder {
-  height: 540px;
-  margin-top: 50px;
+  height: 560px;
   position: relative;
-  padding-top: 80px; }
+  overflow: hidden; }
+  #screen-holder h2 {
+    width: 40%;
+    margin: .4em 0 .7em; }
   #screen-holder blockquote {
-    font-size: 2em;
-    width: 30%;
-    margin-bottom: 2em;
+    font-size: 1.8em;
+    width: 40%;
+    margin-bottom: 1.5em;
     line-height: 1.2; }
     #screen-holder blockquote span {
       margin-top: .5em;
-      font-size: .5em;
-      color: #999;
+      font-size: .4em;
+      color: #777;
       display: block;
       text-align: right;
       text-transform: uppercase; }
@@ -652,7 +659,7 @@ footer {
   width: 230px;
   left: 50%;
   z-index: 3;
-  margin-left: -100px; }
+  margin-left: 0px; }
 
 #ipad {
   position: absolute;
@@ -660,21 +667,17 @@ footer {
   left: 50%;
   width: 800px;
   z-index: 2;
-  margin-left: 10px; }
-
-#featured-badge,
-#featured-news {
-  float: left;
-  display: inline-block;
-  width: 240px;
-  margin: 0 20px; }
+  margin-left: 110px; }
 
 #featured-badge {
-  margin-left: 130px; }
+  float: left;
+  display: inline-block;
+  width: 200px;
+  margin-left: 20px; }
 
 #dl-rdd {
   float: left;
-  margin: 30px 20px 0 20px; }
+  margin: 20px 20px 0 30px; }
 
 /* Videos ------- */
 #rdd-videos {
