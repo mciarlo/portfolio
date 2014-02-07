@@ -291,19 +291,19 @@ footer {
   }
 
   &.arc span {
-    border-color: #a9c1d1;
+    border-color: #3d80af;
     height: 0px;
     width: 2px;
     @include border-radius(0);
   }
 
   &.reuters span {
-    border-color: #d1baa9;
+    border-color: #de8024;
   }
 
   &.readability span {
-    border-color: #efacba;
-    background: #efacba;
+    border-color: #a6001b;
+    background: #a6001b;
   }
 }
 
@@ -377,6 +377,7 @@ footer {
 
     h4 {
       font-size: 1.8em;
+      margin-bottom: .3em;
     }
 
     &:first-child {
@@ -473,9 +474,10 @@ footer {
 #introduction {
   width: 100%;
   height: 110px;
-  background: #e4e4e4;
-  padding: 3em 0 6em;
+  background: #DEE9D4;
+  padding: 3.5em 0 6em;
   @include overflowfix;
+  border-bottom: 10px solid #c0e0a3;
 
   h1 {
     @include textmask;
@@ -606,17 +608,17 @@ footer {
 
   a:link,
   a:visited {
-    color: #a55656;
-    border: 1px solid #a55656;
-    @include border-radius(.2em);
+    color: #789c57;
+    border: 1px solid #789c57;
+    @include border-radius(.4em);
     padding: .6em .8em;
     margin-left: .4em;
     font-size: .8em;
   }
 
   a:hover {
-    color: #5b1d1d;
-    border-color: #5b1d1d;
+    color: #486b29;
+    border-color: #486b29;
   }
 }
 
@@ -625,7 +627,7 @@ footer {
   font-size: 3em;
   padding: 2em 0;
   margin-top: 4em;
-  background: #e4e4e4;
+  background: #dfdfdf;
   @include handwritten;
   
   p {
@@ -641,24 +643,24 @@ footer {
 
 #resume {
   @include overflowfix;
-  margin: 8em auto 0;
-  padding: 1em 0 4em;
+  margin: 0 auto;
+  padding: 5em 0;
+
+  h3, h4 {
+    font-family: Contrail One;
+  }
 
   h4 {
-    font-size: 2em;
+    font-size: 1.6em;
     padding-bottom: .4em;
     margin-bottom: .5em;
     line-height: .9;
     font-weight: normal;
-    font-family: Contrail One;
   }
 
   h3 {
-    margin-top: 0;
-  }
-
-  .main-text {
-    width: 40%;
+    margin: 0 0 .6em;
+    font-size: 2em;
   }
 
   li {
@@ -666,17 +668,12 @@ footer {
   }
 
   .date {
-    color: #888;
+    @include sans-serif;
+    color: #789c57;
     display: block;
     text-transform: uppercase;
-    left: 0;
     font-size: .7em;
-    margin-bottom: .4em;
-    position: absolute;
-    text-align: right;
-    width: 100px;
-    left: 0;
-    top: .55em;
+    margin-bottom: .2em;
   }
 }
 
@@ -688,7 +685,6 @@ footer {
 
   li {
     margin-bottom: 2em;
-    padding-left: 130px;
   }
 
   strong  {
@@ -696,34 +692,60 @@ footer {
     line-height: 1.3;
     margin-bottom: .15em;
     display: block;
-    font-weight: bold;
     font-size: 1.3em;
   }
 
   p {
+    margin-top: .7em;
     line-height: 1.4;
-    font-size: 1em;
+    font-size: .9em;
   }
 }
 
 #left-column,
+#center-column,
 #right-column {
   float: left;
 }
 
 #left-column {
-  width: 70%;
+  width: 20%;
+
+  p {
+    @include serif;
+  }
+}
+
+#center-column {
+  width: 50%;
+  margin: 0 5%;
 }
 
 #right-column {
-  width: 25%;
-  margin-left: 5%;
+  width: 20%;
   margin-top: 0;
 }
 
 #skillset {
+  font-size: .9em;
+
   li {
-    margin-bottom: .3em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+  }
+}
+
+#social {
+  margin-top: 2em;
+
+  li {
+    display: inline-block;
+    width: 30px;
+    margin-right: 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
   }
 }
 
@@ -1406,6 +1428,10 @@ footer {
 
 #arc90-background {
   border-top: 10px solid #3d80af;
+
+  .main-text {
+    margin-top: 2.2em;
+  }
 }
 
 #me {
@@ -1493,7 +1519,7 @@ footer {
   color: white;
 
   p {
-    margin: 1.5em auto 1em;
+    margin: 2.2em auto 1em;
   }
 
   #feature-rundown {
@@ -1546,7 +1572,7 @@ footer {
 
 #narratives {
   .main-text {
-    margin: 1.5em auto 2em;
+    margin: 2.2em auto 2em;
   }
 
   ul {
