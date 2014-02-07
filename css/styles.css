@@ -407,7 +407,8 @@ footer {
   top: 10px;
   left: 16px;
   width: 30px;
-  padding: 10px; }
+  padding: 10px;
+  z-index: 9999; }
   #nav-toggle:hover span {
     background: #444; }
   #nav-toggle span {
@@ -423,20 +424,25 @@ footer {
 
 #headshot {
   position: fixed;
-  top: 460px;
+  top: 490px;
   left: 50%;
-  width: 120px;
+  width: 160px;
   z-index: 2;
-  margin-left: -62px;
+  margin-left: -82px;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   -ms-border-radius: 50%;
   border: 4px solid #fff; }
+  #headshot.absolute {
+    position: absolute;
+    top: 3680px; }
 
 #home-container {
   position: relative;
-  padding: 9em 0 0 0;
+  padding: 8em 0 0 0;
+  height: 3900px;
+  overflow: hidden;
   font-family: Sue Ellen Francisco; }
   #home-container h1 {
     background-image: url(../images/mask.jpg);
@@ -448,11 +454,13 @@ footer {
     padding-top: .07em;
     margin-left: 0.1em; }
   #home-container h1, #home-container h2 {
-    font-size: 12em;
+    font-size: 16em;
     text-align: center; }
   #home-container h2 {
     margin-top: .5em;
     font-size: 2em; }
+  #home-container h3 {
+    font-size: 6em; }
   #home-container .detail {
     position: absolute;
     left: 50%;
@@ -460,17 +468,17 @@ footer {
     width: 300px; }
 
 #track {
-  height: 6000px;
+  height: 3200px;
   width: 2px;
-  background: #888;
+  background: #c1c1c1;
   position: absolute;
-  top: 500px;
+  top: 570px;
   left: 50%;
   margin-left: -1px;
   z-index: 1; }
 
 .dot {
-  background: #888;
+  background: #c1c1c1;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -515,6 +523,11 @@ footer {
 #dot01 {
   top: 0; }
 
+#dot02,
+#dot03,
+#dot04 {
+  margin-left: -500px; }
+
 #dot02 {
   padding-top: 110px;
   top: 600px;
@@ -542,6 +555,16 @@ footer {
     width: 160px;
     display: inline-block; }
 
+#dot05,
+#dot06,
+#dot07,
+#dot08 {
+  margin-left: 180px; }
+
+#dot06,
+#dot08 {
+  margin-left: 310px; }
+
 #dot05 {
   top: 2000px; }
 
@@ -555,15 +578,128 @@ footer {
   top: 2420px; }
 
 #dot09 {
-  top: 3420px; }
+  top: 3200px; }
 
 #tidbit-01 {
-  top: 1180px;
+  top: 1340px;
+  margin-left: 200px; }
+
+#tidbit-04 {
+  top: 1740px;
   margin-left: 200px; }
 
 #tidbit-02 {
-  top: 2580px;
-  margin-left: -550px; }
+  top: 2740px;
+  margin-left: -500px; }
+
+#tidbit-03 {
+  top: 2980px;
+  margin-left: -500px; }
+
+#heading-01,
+#heading-02,
+#heading-03 {
+  position: absolute;
+  left: 50%; }
+
+#heading-01 {
+  top: 1200px;
+  margin-left: 200px; }
+
+#heading-02 {
+  top: 2600px;
+  margin-left: -500px; }
+
+#heading-03 {
+  top: 3920px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 5; }
+
+#resume-holder {
+  position: relative;
+  z-index: 4;
+  background: #eaeaea;
+  margin-top: -10em;
+  padding: 14em 0 8em; }
+  #resume-holder .finale {
+    text-align: center;
+    font-size: 3em;
+    padding: 2em 0 1em;
+    font-family: Sue Ellen Francisco; }
+    #resume-holder .finale img {
+      display: block;
+      width: 30px;
+      margin: 0 auto; }
+
+#resume {
+  margin: 0 auto;
+  width: 70%;
+  padding-bottom: 4em;
+  border-bottom: 1px solid #dadada; }
+  #resume:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #resume h2 {
+    font-size: 3em;
+    padding-bottom: .4em;
+    margin-bottom: .5em;
+    line-height: .9;
+    font-weight: normal;
+    font-family: Sue Ellen Francisco; }
+  #resume li {
+    position: relative; }
+  #resume .date {
+    color: #888;
+    display: block;
+    text-transform: uppercase;
+    left: 0;
+    font-size: .7em;
+    margin-bottom: .4em;
+    position: absolute;
+    text-align: right;
+    width: 80px;
+    left: 0;
+    top: .55em; }
+
+#work-experience,
+#education {
+  float: left;
+  width: 100%;
+  margin-bottom: 1.5em; }
+  #work-experience li,
+  #education li {
+    margin-bottom: 2em;
+    padding-left: 110px; }
+  #work-experience strong,
+  #education strong {
+    font-weight: 200;
+    line-height: 1.3;
+    margin-bottom: .15em;
+    display: block;
+    font-weight: bold;
+    font-size: 1.3em; }
+  #work-experience p,
+  #education p {
+    line-height: 1.4;
+    font-size: 1em; }
+
+#left-column,
+#right-column {
+  float: left; }
+
+#left-column {
+  width: 65%; }
+
+#right-column {
+  width: 30%;
+  margin-left: 5%;
+  margin-top: 0; }
+
+#skillset li {
+  margin-bottom: .3em; }
 
 /*
                               888          888      d8b 888 d8b 888             
