@@ -4,8 +4,7 @@ $(function () {
 		windowHeight = $window.outerHeight(),
 		$overlay = $('#video-overlay'),
 		onScroll,
-		SCROLL_DELAY = 10,
-		RESUME_STOP = 3190;
+		SCROLL_DELAY = 10;
 
 	onScroll = function () {
 		var scrollTop = $window.scrollTop();
@@ -17,16 +16,6 @@ $(function () {
 				}
 			} else {
 				$('#me').removeClass('hidden');
-			}
-		}
-
-		if ($('#resume').length) {
-			if (scrollTop > RESUME_STOP) {
-				if (!$('#headshot').hasClass('absolute')) {
-					$('#headshot').addClass('absolute');
-				}
-			} else {
-				$('#headshot').removeClass('absolute');
 			}
 		}
 	};

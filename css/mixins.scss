@@ -18,6 +18,16 @@
   }
 }
 
+@mixin textmask {
+  background-image: url(../images/mask.jpg); 
+  -webkit-background-clip: text;  
+  background-clip: text;  
+  -webkit-background-size:100%;
+  color: rgba(0,0,0,0.0);
+  padding-top: .2em;
+  -webkit-mask-origin: padding;
+}
+
 @mixin readabilicons {
   font-family: 'readabiliconsregular';
 }
@@ -29,21 +39,18 @@
   -ms-border-radius: $radius;
 }
 
-@mixin sentinel-font {
-  font-family: 'Sentinel A', 'Sentinel B', 'Georgia', serif;
+@mixin serif {
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 }
 
-@mixin mercury-font {
-  font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', serif;
+@mixin handwritten {
+  font-family: Sue Ellen Francisco;
 }
 
-@mixin gotham-font {
-  font-family: 'Gotham Narrow A', 'Gotham Narrow B', Arial Narrow, sans-serif;
+@mixin sans-serif {
+  font-family: Trebuchet MS, Lucida Grande, sans-serif;
 }
 
-@mixin whitney-font {
-  font-family:'Whitney A', 'Whitney B', Arial Narrow, sans-serif;
-}
 
 @mixin opacity($float, $percent) {
   opacity: $float;

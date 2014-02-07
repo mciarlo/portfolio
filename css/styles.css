@@ -1,22 +1,26 @@
 @charset "UTF-8";
 /**
-                                     iL0G
-                                fGGGGGGGG
-                             :GGGGGGGGGGG
-       1GGGGGGGi           .GGGGGGf  LGGGGGGC.         fGGGGGGC:         1GGGGGGG;
-    GGGGGGGGGGGGGGG tGGGGGCGGGGG .GGGGGGGGGGGGGG1   GGGGGGGGGGGGGGL   G0GGGGGGGGGGGGG
-  GGGGGGGGi:iGGGGGGGG GGGGGGGGf 0GGGGGGL::tGGGGG  GGGGGGGC;:1GGGGGGGGGGGGGGG;:1GGGGGGGL
- GGGGGf         LGGGGG GGGGGGt.GGGGG.         G  GGGGG,         GGGGGGGG1         CGGGGG
-fGGGG.           .GGGGL.GGGGG GGGGG             GGGGG            tGGGGG            :GGGG1
-GGGGG             GGGGG GGGGC.GGGG,             GGGGt             GGGGG             GGGGG
-GGGGG             GGGGG GGGGC GGGGf             GGGGG             GGGGG             GGGGG
-:GGGGC           GGGGGG GGGGC GGGGG.            CGGGGi           GGGGGGL           GGGGG.
- iGGGGGf       fGGGGGGG GGGGC  GGGGG0.       GG. GGGGGG,       GGGGGGGGGGt       CGGGGG;
-   GGGGGGGGGGGGGGGGGGGG GGGGC   i0GGGGGGGGGGGGGGt .GGGGGGGGGGGGGGGGG GGGGGGGGGGGGGGGGG
-     LGGGGGGGGGGGL                 GGGGGGGGGGGG:     CGGGGGGGGGGGGG    CGGGGGGGGGGGf
-                                                            :GGGGG
-                                                           iGGGGG
-                                                          tGGGGG
+              d8b          888                        888    
+              Y8P          888                        888    
+                           888                        888    
+88888b.d88b.  888  .d8888b 88888b.   8888b.   .d88b.  888    
+888 "888 "88b 888 d88P"    888 "88b     "88b d8P  Y8b 888    
+888  888  888 888 888      888  888 .d888888 88888888 888    
+888  888  888 888 Y88b.    888  888 888  888 Y8b.     888    
+888  888  888 888  "Y8888P 888  888 "Y888888  "Y8888  888    
+                                                             
+                                                             
+                                                             
+888                                    888                   
+888                                    888                   
+888                                    888                   
+88888b.  888d888 8888b.  88888b.   .d88888  .d88b.  88888b.  
+888 "88b 888P"      "88b 888 "88b d88" 888 d88""88b 888 "88b 
+888  888 888    .d888888 888  888 888  888 888  888 888  888 
+888 d88P 888    888  888 888  888 Y88b 888 Y88..88P 888  888 
+88888P"  888    "Y888888 888  888  "Y88888  "Y88P"  888  888 
+                                                                                                                    
+                                                             
 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -422,233 +426,175 @@ footer {
     -moz-transition: background 150ms ease-in-out;
     -ms-transition: background 150ms ease-in-out; }
 
-#headshot {
-  position: fixed;
-  top: 490px;
-  left: 50%;
-  width: 160px;
-  z-index: 2;
-  margin-left: -82px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border: 4px solid #fff; }
-  #headshot.absolute {
-    position: absolute;
-    top: 3680px; }
-
-#home-container {
-  position: relative;
-  padding: 8em 0 0 0;
-  height: 3900px;
-  overflow: hidden;
-  font-family: Sue Ellen Francisco; }
-  #home-container h1 {
+#introduction {
+  width: 100%;
+  height: 110px;
+  background: #e4e4e4;
+  padding: 3em 0 6em; }
+  #introduction:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #introduction h1 {
     background-image: url(../images/mask.jpg);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-background-size: 100%;
     color: rgba(0, 0, 0, 0);
+    padding-top: .2em;
     -webkit-mask-origin: padding;
-    padding-top: .07em;
-    margin-left: 0.1em; }
-  #home-container h1, #home-container h2 {
-    font-size: 16em;
+    font-family: Sue Ellen Francisco;
+    letter-spacing: -0.03em; }
+  #introduction h1, #introduction h2 {
+    font-size: 5.1em;
     text-align: center; }
-  #home-container h2 {
+  #introduction h2 {
     margin-top: .5em;
-    font-size: 2em; }
-  #home-container h3 {
-    font-size: 6em; }
-  #home-container .detail {
-    position: absolute;
-    left: 50%;
-    font-size: 1.5em;
-    width: 300px; }
+    font-size: 1.4em; }
 
-#track {
-  height: 3200px;
-  width: 2px;
-  background: #c1c1c1;
-  position: absolute;
-  top: 570px;
-  left: 50%;
-  margin-left: -1px;
-  z-index: 1; }
+#michael-brandon {
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
+  #michael-brandon h3 {
+    text-align: center;
+    font-family: Contrail One;
+    letter-spacing: -0.05em;
+    font-size: 2.2em;
+    margin: 5em 0 0; }
+    #michael-brandon h3:first-child {
+      margin-top: 4em; }
+  #michael-brandon .main-text {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1.5em auto 3em;
+    width: 70%; }
 
-.dot {
-  background: #c1c1c1;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -ms-border-radius: 50%;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  left: 50%;
-  margin-left: -5px;
+#work {
   text-align: center; }
-  .dot.small {
-    width: 70px;
-    height: 70px;
-    margin-left: -35px; }
-  .dot.medium {
-    width: 120px;
-    height: 120px;
-    margin-left: -60px; }
-  .dot.large {
-    width: 300px;
-    height: 300px;
-    margin-left: -150px; }
-
-#map {
-  position: absolute;
-  top: 3600px;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-  border-bottom: 10px solid #e1e1e1;
-  border-top: 10px solid #e1e1e1; }
-  #map iframe {
+  #work:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #work a:link,
+  #work a:visited {
     float: left;
-    z-index: 0;
-    width: 100%;
-    height: 600px; }
+    display: inline-block;
+    width: 29%;
+    margin: 0 2%;
+    height: 200px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-transition: -webkit-transform 150ms;
+    -moz-transition: -moz-transform 150ms;
+    -ms-transition: -ms-transform 150ms;
+    transition: transform 150ms; }
+  #work a:hover {
+    transform: scale(1.05, 1.05);
+    -webkit-transform: scale(1.05, 1.05);
+    -moz-transform: scale(1.05, 1.05);
+    -ms-transform: scale(1.05, 1.05); }
 
-#dot01 {
-  top: 0; }
+#hobbies {
+  text-align: center; }
+  #hobbies li {
+    margin: 0 20px;
+    padding: 1em;
+    width: 70px;
+    display: inline-block;
+    background: #f5f5f5;
+    height: 70px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%; }
+    #hobbies li img {
+      width: 100%; }
 
-#dot02,
-#dot03,
-#dot04 {
-  margin-left: -500px; }
-
-#dot02 {
-  padding-top: 110px;
-  top: 600px;
+#readability-work {
   background: #820015;
-  color: white; }
-  #dot02 .icon {
-    font-size: 2em; }
-  #dot02 h2 {
-    margin-top: 0;
-    font-family: Arbutus Slab; }
+  color: white;
+  font-family: Arbutus Slab;
+  padding-top: 2.5em; }
+  #readability-work .icon {
+    font-size: 2em;
+    display: inline-block; }
+  #readability-work h2 {
+    margin: -.5em 0 0 0;
+    font-size: 2.3em; }
 
-#dot03 {
-  top: 920px;
-  padding-top: 120px;
+#arc-work {
+  padding-top: 4.5em;
   background: #34424c; }
-  #dot03 img {
+  #arc-work img {
     width: 120px;
     display: inline-block; }
 
-#dot04 {
-  top: 1240px;
-  background: #de8024;
-  padding-top: 115px; }
-  #dot04 img {
+#reuters-work {
+  padding-top: 4em;
+  background: #de8024; }
+  #reuters-work img {
     width: 160px;
     display: inline-block; }
 
-#dot05,
-#dot06,
-#dot07,
-#dot08 {
-  margin-left: 180px; }
-
-#dot06,
-#dot08 {
-  margin-left: 310px; }
-
-#dot05 {
-  top: 2000px; }
-
-#dot06 {
-  top: 2140px; }
-
-#dot07 {
-  top: 2280px; }
-
-#dot08 {
-  top: 2420px; }
-
-#dot09 {
-  top: 3200px; }
-
-#tidbit-01 {
-  top: 1340px;
-  margin-left: 200px; }
-
-#tidbit-04 {
-  top: 1740px;
-  margin-left: 200px; }
-
-#tidbit-02 {
-  top: 2740px;
-  margin-left: -500px; }
-
-#tidbit-03 {
-  top: 2980px;
-  margin-left: -500px; }
-
-#heading-01,
-#heading-02,
-#heading-03 {
-  position: absolute;
-  left: 50%; }
-
-#heading-01 {
-  top: 1200px;
-  margin-left: 200px; }
-
-#heading-02 {
-  top: 2600px;
-  margin-left: -500px; }
-
-#heading-03 {
-  top: 3920px;
-  left: 0;
+#resume-pitch {
   width: 100%;
+  margin-top: 3em;
   text-align: center;
-  z-index: 5; }
+  font-size: 1.3em; }
+  #resume-pitch a:link,
+  #resume-pitch a:visited {
+    color: #a55656;
+    border: 1px solid #a55656;
+    border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    -webkit-border-radius: 0.2em;
+    -ms-border-radius: 0.2em;
+    padding: .6em .8em;
+    margin-left: .4em;
+    font-size: .8em; }
+  #resume-pitch a:hover {
+    color: #5b1d1d;
+    border-color: #5b1d1d; }
 
-#resume-holder {
-  position: relative;
-  z-index: 4;
-  background: #eaeaea;
-  margin-top: -10em;
-  padding: 14em 0 8em; }
-  #resume-holder .finale {
-    text-align: center;
-    font-size: 3em;
-    padding: 2em 0 1em;
-    font-family: Sue Ellen Francisco; }
-    #resume-holder .finale img {
-      display: block;
-      width: 30px;
-      margin: 0 auto; }
+#finale {
+  text-align: center;
+  font-size: 3em;
+  padding: 2em 0;
+  margin-top: 4em;
+  background: #e4e4e4;
+  font-family: Sue Ellen Francisco; }
+  #finale p {
+    background-image: url(../images/mask.jpg);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-background-size: 100%;
+    color: rgba(0, 0, 0, 0);
+    padding-top: .2em;
+    -webkit-mask-origin: padding; }
+  #finale img {
+    display: block;
+    width: 30px;
+    margin: .2em auto 0; }
 
 #resume {
-  margin: 0 auto;
-  width: 70%;
-  padding-bottom: 4em;
-  border-bottom: 1px solid #dadada; }
+  margin: 8em auto 0;
+  padding: 1em 0 4em; }
   #resume:after {
     content: "";
     clear: both;
     display: block; }
-  #resume h2 {
-    font-size: 3em;
+  #resume h4 {
+    font-size: 2em;
     padding-bottom: .4em;
     margin-bottom: .5em;
     line-height: .9;
     font-weight: normal;
-    font-family: Sue Ellen Francisco; }
+    font-family: Contrail One; }
+  #resume h3 {
+    margin-top: 0; }
+  #resume .main-text {
+    width: 40%; }
   #resume li {
     position: relative; }
   #resume .date {
@@ -660,7 +606,7 @@ footer {
     margin-bottom: .4em;
     position: absolute;
     text-align: right;
-    width: 80px;
+    width: 100px;
     left: 0;
     top: .55em; }
 
@@ -672,7 +618,7 @@ footer {
   #work-experience li,
   #education li {
     margin-bottom: 2em;
-    padding-left: 110px; }
+    padding-left: 130px; }
   #work-experience strong,
   #education strong {
     font-weight: 200;
@@ -691,10 +637,10 @@ footer {
   float: left; }
 
 #left-column {
-  width: 65%; }
+  width: 70%; }
 
 #right-column {
-  width: 30%;
+  width: 25%;
   margin-left: 5%;
   margin-top: 0; }
 
