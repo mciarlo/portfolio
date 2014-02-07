@@ -303,8 +303,8 @@ footer {
   .divider.reuters span {
     border-color: #d1baa9; }
   .divider.readability span {
-    border-color: #d1a9af;
-    background: #d1a9af; }
+    border-color: #efacba;
+    background: #efacba; }
 
 /* Header ---*/
 .header {
@@ -501,7 +501,7 @@ footer {
   -webkit-border-radius: 10px;
   -ms-border-radius: 10px;
   background: #890016;
-  padding: 3em 0;
+  padding: 2.6em 0 2.4em;
   text-align: center;
   width: 90%;
   margin: 0 auto;
@@ -516,7 +516,7 @@ footer {
     color: #f8aeaf; }
   #rdd-feature-rundown p {
     width: 70%;
-    margin: 0 auto; }
+    margin: 1em auto 0; }
 
 .screens {
   margin-top: 1em; }
@@ -574,19 +574,19 @@ footer {
     margin: 1.8em 0 3em; }
 
 #landscape {
-  margin-left: -950px;
+  margin-left: -900px;
   width: 800px;
   top: 526px; }
 
 #portrait {
   top: 430px;
-  margin-left: -130px;
+  margin-left: -80px;
   height: 800px; }
 
 #portrait-iphone {
   width: 240px;
   top: 690px;
-  margin-left: 424px; }
+  margin-left: 474px; }
 
 #rdd-ux .main-text {
   margin: 2em 0 3em; }
@@ -604,7 +604,8 @@ footer {
   margin-top: 115px; }
 
 #rdd-love {
-  text-align: right; }
+  text-align: right;
+  padding: 5em 0 8em; }
   #rdd-love ul {
     float: left;
     width: 80%; }

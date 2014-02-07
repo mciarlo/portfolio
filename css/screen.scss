@@ -302,8 +302,8 @@ footer {
   }
 
   &.readability span {
-    border-color: #d1a9af;
-    background: #d1a9af;
+    border-color: #efacba;
+    background: #efacba;
   }
 }
 
@@ -587,7 +587,7 @@ footer {
 #rdd-feature-rundown {
   @include border-radius(10px);
   background: #890016;
-  padding: 3em 0;
+  padding: 2.6em 0 2.4em;
   text-align: center;
   width: 90%;
   margin: 0 auto;
@@ -607,7 +607,7 @@ footer {
 
   p {
     width: 70%;
-    margin: 0 auto;
+    margin: 1em auto 0;
   }
 }
 
@@ -688,21 +688,21 @@ footer {
 }
 
 #landscape  {
-  margin-left: -950px;
+  margin-left: -900px;
   width: 800px;
   top: 526px;
 }
 
 #portrait {
   top: 430px;
-  margin-left: -130px;
+  margin-left: -80px;
   height: 800px;
 }
 
 #portrait-iphone {
   width: 240px;
   top: 690px;
-  margin-left: 424px;
+  margin-left: 474px;
 }
 
 #rdd-ux {
@@ -731,6 +731,7 @@ footer {
 
 #rdd-love {
   text-align: right;
+  padding: 5em 0 8em;
 
   ul {
     float: left; 
