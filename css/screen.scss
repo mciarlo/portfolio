@@ -446,98 +446,207 @@ footer {
                                                                                           
 */
 
-#homepage-intro {
-  // background: #903d99;
+#nav-toggle {
+  position: fixed;
+  top: 10px;
+  left: 16px;
+  width: 30px;
+  padding: 10px;
+
+  &:hover {
+    span {
+      background: #444;
+    }
+  }
+
+  span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #999;
+    margin: 5px 0;
+    @include transition(background, 150ms, ease-in-out);
+  }
+}
+
+#headshot {
+  position: fixed;
+  top: 460px;
+  left: 50%;
+  width: 120px;
+  z-index: 2;
+  margin-left: -62px;
+  @include border-radius(50%);
+  border: 4px solid #fff;
+}
+
+#home-container {
   position: relative;
-  font-family: Trebuchet MS, Lucida Grande, sans-serif;
+  padding: 9em 0 0 0;
+  font-family: Sue Ellen Francisco;
+
+  h1 {
+    background-image: url(../images/mask.jpg); 
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    -webkit-background-size:100%;
+    color: rgba(0,0,0,0.0);
+    -webkit-mask-origin: padding;
+    padding-top: .07em;
+    margin-left: 0.1em;
+  }
+
+  h1, h2 {
+    font-size: 12em;
+    text-align: center;
+  }
+
+  h2 {
+    margin-top: .5em;
+    font-size: 2em;
+  }
+
+  .detail {
+    position: absolute;
+    left: 50%;
+    font-size: 1.5em;
+    width: 300px;
+  }
+}
+
+#track {
+  height: 6000px;
+  width: 2px;
+  background: #888;
+  position: absolute;
+  top: 500px;
+  left: 50%;
+  margin-left: -1px; 
+  z-index: 1;
+}
+
+.dot {
+  background: #888;
+  @include border-radius(50%);
+  @include box-sizing;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  text-align: center;
+
+  &.small {
+    width: 70px;
+    height: 70px;
+    margin-left: -35px;
+  }
+
+  &.medium {
+    width: 120px;
+    height: 120px;
+    margin-left: -60px;
+  }
+
+  &.large {
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+  }
+}
+
+#map {
+  position: absolute;
+  top: 3600px;
+  left: 0;
   width: 100%;
-  padding: 2em 0;
-}
+  z-index: 0;
+  border-bottom: 10px solid #e1e1e1;
+  border-top: 10px solid #e1e1e1;
 
-// #title-card {
-//   text-align: left;
-
-//   img {
-//     width: 50px;
-//     display: inline-block;
-//     display: none;
-//   }
-
-//   h1 {
-//     font-weight: normal;
-//     font-size: 2em;
-//     color: 903d99;
-//     border-bottom: 1px solid #dadada;
-//     padding: .2em 0 .3em;
-//     font-family: Sue Ellen Francisco;
-//   }
-
-//   h2 {
-//     font-size: .8em;
-//     color: #2f0635;
-//     display: none;
-//     text-transform: uppercase;
-//   }
-// }
-
-#selected-work {
-  padding: 4em 0 5em;
-  @include overflowfix;
-
-  h3 {
-    font-family: Sue Ellen Francisco;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
-  }
-
-  ul {
-    width: 76%;
-    margin: 0 auto;
-  }
-
-  a:link,
-  a:visited {
+  iframe {
     float: left;
-    width: 29%;
-    margin: 0 2%;
-    height: 50px;
-    padding: 3em 0;
-    text-align: center;
-    background: #f1f1f1;
-    border-right: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
-
-    .icon {
-      font-size: 2.4em;
-      line-height: 1.1;
-    }
-
-    img {
-      width: 120px;
-    }
+    z-index: 0;
+    width: 100%;
+    height: 600px;
   }
 }
 
-#about-me {
-  padding: 4em 0;
-  @include overflowfix;
+#dot01 {
+  top: 0;
+}
 
-  h3 {
-    font-family: Sue Ellen Francisco;
+#dot02 {
+  padding-top: 110px;
+  top: 600px;
+  background: #820015;
+  color: white;
+
+  .icon {
     font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
   }
 
-  p {
-    font-family: Trebuchet MS, Lucida Grande, sans-serif;
-    width: 76%;
-    margin: 0 auto;
-    font-size: 1.2em;
-    margin-bottom: 1em;
+  h2 {
+    margin-top: 0;
+    font-family: Arbutus Slab;
   }
 }
+
+#dot03 {
+  top: 920px;
+  padding-top: 120px;
+  background: #34424c;
+
+  img {
+    width: 120px;
+    display: inline-block;
+  }
+}
+
+#dot04 {
+  top: 1240px;
+  background: #de8024;
+  padding-top: 115px;
+
+  img {
+    width: 160px;
+    display: inline-block;
+  }
+}
+
+#dot05 {
+  top: 2000px;
+}
+
+#dot06 {
+  top: 2140px;
+}
+
+#dot07 {
+  top: 2280px;
+}
+
+#dot08 {
+  top: 2420px;
+}
+
+#dot09 {
+  top: 3420px;
+}
+
+#tidbit-01 {
+  top: 1180px;
+  margin-left: 200px;
+}
+
+#tidbit-02 {
+  top: 2580px;
+  margin-left: -550px;
+}
+
+
+
+
 
 /*
                               888          888      d8b 888 d8b 888             
