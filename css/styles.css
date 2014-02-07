@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
                                      iL0G
                                 fGGGGGGGG
@@ -96,7 +97,8 @@ h1, h2, h3, h4 {
     -webkit-font-smoothing: subpixel-antialiased; }
 
 p, li {
-  line-height: 1.6; }
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased; }
 
 li {
   list-style: none; }
@@ -123,13 +125,16 @@ Y8b d88P
   position: relative;
   z-index: 3; }
   #container.readability {
-    background: #fdfdfd; }
+    background: #fdfdfd;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
     #container.readability h1, #container.readability h2, #container.readability h3, #container.readability h4 {
       font-family: Arbutus Slab;
-      letter-spacing: -0.04em; }
+      letter-spacing: -0.04em;
+      line-height: 1.2; }
   #container.reuters {
     background-color: #eaeaea; }
     #container.reuters h1, #container.reuters h2, #container.reuters h3, #container.reuters h4 {
+      line-height: 1;
       font-family: Amaranth; }
   #container.arc90 h1, #container.arc90 h2, #container.arc90 h3, #container.arc90 h4 {
     font-family: Kite One; }
@@ -145,7 +150,7 @@ section {
     clear: both;
     display: block; }
   section h2 {
-    font-size: 4.4em; }
+    font-size: 5em; }
   section .main-text {
     width: 70%;
     font-size: 1.2em; }
@@ -164,33 +169,72 @@ section {
     background-color: transparent; }
 
 footer {
-  font-family: Duru Sans;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 8em 0 0; }
+  padding: 8em 0 0;
+  height: 200px;
+  text-align: center; }
+  footer h3 {
+    color: white;
+    font-size: 3em; }
+  footer a:link,
+  footer a:visited {
+    display: inline-block;
+    margin-top: 1em;
+    border-radius: 4em;
+    -moz-border-radius: 4em;
+    -webkit-border-radius: 4em;
+    -ms-border-radius: 4em;
+    padding: .4em 1.5em;
+    font-size: 1.2em;
+    border: 2px solid; }
   footer.arc90 {
-    height: 200px;
-    text-align: center;
     background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat; }
-    footer.arc90 h4 {
-      color: white;
-      font-family: Monda;
-      font-size: 3em; }
+    footer.arc90 h3 {
+      font-family: Kite One; }
     footer.arc90 a:link,
     footer.arc90 a:visited {
-      display: inline-block;
-      margin-top: 1em;
       color: #629fcb;
-      border-radius: 4em;
-      -moz-border-radius: 4em;
-      -webkit-border-radius: 4em;
-      -ms-border-radius: 4em;
-      padding: .4em 1.5em;
-      font-size: 1.2em;
-      border: 2px solid #629fcb; }
+      border-color: #629fcb; }
+    footer.arc90 a:hover {
+      color: #fff;
+      border-color: #fff; }
+  footer.readability {
+    background: #820015;
+    padding-top: 6em;
+    height: 230px; }
+    footer.readability h3 {
+      font-family: Arbutus Slab;
+      letter-spacing: -0.04em;
+      margin-top: .1em; }
+    footer.readability .icon {
+      color: white;
+      font-size: 2.4em; }
+    footer.readability a:link,
+    footer.readability a:visited {
+      color: #d46a6a;
+      border-color: #d46a6a; }
+    footer.readability a:hover {
+      color: #fff;
+      border-color: #fff; }
+  footer.reuters {
+    background: #37220b;
+    overflow: hidden; }
+    footer.reuters h3 {
+      font-family: Amaranth; }
+    footer.reuters h3, footer.reuters a {
+      z-index: 4;
+      position: relative; }
+    footer.reuters a:link,
+    footer.reuters a:visited {
+      color: #de8024;
+      border-color: #de8024; }
+    footer.reuters a:hover {
+      color: #fff;
+      border-color: #fff; }
 
 /* Intros --*/
 #reuters-intro,
@@ -200,7 +244,7 @@ footer {
   #reuters-intro .main-text,
   #arc90-background .main-text,
   #rdd-background .main-text {
-    margin: 1.5em auto 0; }
+    margin: 2em auto 0; }
   #reuters-intro ul,
   #arc90-background ul,
   #rdd-background ul {
@@ -214,7 +258,7 @@ footer {
       display: inline-block;
       margin: -1em 0 4em;
       padding-left: 50px;
-      width: 15%;
+      width: 17%;
       text-align: left; }
     #reuters-intro ul span,
     #arc90-background ul span,
@@ -401,9 +445,9 @@ footer {
   background: #a6001b;
   color: white; }
   #thoughtful-design h2 {
-    margin-bottom: 1em; }
+    margin-top: .8em; }
   #thoughtful-design .main-text {
-    margin: 3em auto 3em;
+    margin: 1.8em auto 3em;
     width: 85%; }
 
 #rdd-feature-rundown {
@@ -429,30 +473,32 @@ footer {
     width: 70%;
     margin: 0 auto; }
 
-.screens:after {
-  content: "";
-  clear: both;
-  display: block; }
-.screens li {
-  float: left;
-  list-style: none;
-  width: 20%;
-  text-align: center; }
-  .screens li.higher {
-    margin-top: -10px; }
-  .screens li.highest {
-    margin-top: -20px; }
-  .screens li.high {
-    margin-top: -5px; }
-  .screens li img {
-    width: 90%; }
+.screens {
+  margin-top: 1em; }
+  .screens:after {
+    content: "";
+    clear: both;
+    display: block; }
+  .screens li {
+    float: left;
+    list-style: none;
+    width: 20%;
+    text-align: center; }
+    .screens li.higher {
+      margin-top: -10px; }
+    .screens li.highest {
+      margin-top: -20px; }
+    .screens li.high {
+      margin-top: -5px; }
+    .screens li img {
+      width: 90%; }
 
 #iconography h2 {
   color: #a6001b; }
   #iconography h2 .icon {
     margin-right: 0.2em; }
 #iconography p {
-  margin: 2em auto 3em; }
+  margin: 1.8em auto 3em; }
 #iconography li {
   list-style: none;
   text-align: center;
@@ -482,7 +528,7 @@ footer {
     position: absolute;
     left: 50%; }
   #typography .main-text {
-    margin: 2em 0 3em; }
+    margin: 1.8em 0 3em; }
 
 #landscape {
   margin-left: -950px;
@@ -806,13 +852,16 @@ footer {
     margin-left: -6px; }
 
 #data-strategy {
-  background: #de8024 url(../images/reutersbg.png) top left repeat; }
+  background: #e8892d url(../images/reutersbg.png) top left repeat;
+  padding-bottom: 9em; }
+  #data-strategy p {
+    color: #4c2903; }
   #data-strategy img {
     width: 100%; }
   #data-strategy h2 {
     width: 100%; }
   #data-strategy .main-text {
-    margin: 1em auto 0em; }
+    margin: 1.5em auto 0em; }
 
 #feature-rundown {
   width: 80%;
@@ -835,12 +884,12 @@ footer {
       left: 0; }
     #feature-rundown li h3 {
       margin-top: 0;
-      color: #4c2903;
       font-size: 2.5em; }
     #feature-rundown li p {
       width: 100%;
       font-size: 1.2em;
-      text-align: left; }
+      text-align: left;
+      margin-top: 1em; }
     #feature-rundown li.even {
       text-align: right;
       padding-left: 0;
@@ -861,7 +910,7 @@ footer {
     margin: 3.2em 0 1.2em;
     text-transform: uppercase; }
   #reusable-components .main-text {
-    margin: 1em auto 2em; }
+    margin: 1.5em auto 3em; }
   #reusable-components ul {
     margin-top: 5em; }
   #reusable-components li {
@@ -884,7 +933,7 @@ footer {
   margin: 0 auto; }
 #proven-design .main-text {
   width: 64%;
-  margin: .5em auto 3em; }
+  margin: 1.5em auto 3em; }
 #proven-design #web {
   width: 100%; }
 
@@ -910,6 +959,8 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 1; }
+  #me.hidden {
+    z-index: 0; }
   #me #message {
     position: absolute;
     top: 28%;
@@ -1016,7 +1067,7 @@ footer {
       -ms-box-sizing: border-box; }
 
 #narratives .main-text {
-  margin: 1em auto 2em; }
+  margin: 1.5em auto 2em; }
 #narratives ul {
   width: 95%;
   margin: 8em auto 0em; }

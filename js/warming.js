@@ -2,7 +2,22 @@ $(function () {
 	var $window = $(window),
 		windowWidth = $window.outerWidth(),
 		windowHeight = $window.outerHeight(),
-		$overlay = $('#video-overlay');
+		$overlay = $('#video-overlay'),
+		onScroll;
+
+	onScroll = function () {
+		var scrollTop = $window.scrollTop();
+
+		if ($('#container').hasClass('arc90')) {
+			if (scrollTop > $('#narratives').offset().top) {
+				if (!$('#me').hasClass('hidden')) {
+					$('#me').addClass('hidden');
+				}
+			} else {
+				$('#me').removeClass('hidden');
+			}
+		}
+	};
 
 	$('.interaction-video .video-icon').click(function (ev) {
 	    var $this = $(this),
@@ -22,16 +37,5 @@ $(function () {
 	    }
 	  });
 
-	// $window.scroll(function () {
-	// 	var height = $('#reuters-parallax img:first').outerHeight(),
-	// 		offset = $('#reuters-parallax').offset().top,
-	// 		scrollTop = $window.scrollTop(),
-	// 		distance = scrollTop - offset;
-
-	// 	distance = distance > windowHeight ? windowHeight : distance;
-
-	// 	if (offset < scrollTop) {
-	// 		$('#reuters-parallax img:first').css('top', - (distance * (height / windowHeight)));
-	// 	}
-	// });
+	$window.scroll(_.throttle(onScroll, 50));
 });

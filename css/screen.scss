@@ -31,6 +31,7 @@ h1, h2, h3, h4 {
 
 p, li {
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 li {
@@ -63,10 +64,12 @@ Y8b d88P
 
   &.readability {
     background: #fdfdfd;
+    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 
     h1, h2, h3, h4 {
       font-family: Arbutus Slab;
       letter-spacing: -0.04em;
+      line-height: 1.2;
     }
   }
 
@@ -74,6 +77,7 @@ Y8b d88P
     background-color: #eaeaea;
 
     h1, h2, h3, h4 {
+      line-height: 1;
       font-family: Amaranth;
     }
   }
@@ -96,7 +100,7 @@ section {
   text-align: center;
 
   h2 {
-    font-size: 4.4em;
+    font-size: 5em;
   }
 
   .main-text {
@@ -130,36 +134,100 @@ section {
 }
 
 footer {
-  font-family: Duru Sans;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   z-index: 0;
   padding: 8em 0 0;
+  height: 200px;
+  text-align: center;
+
+  h3 {
+    color: white;
+    font-size: 3em;
+  }
+
+  a:link,
+  a:visited {
+    display: inline-block;
+    margin-top: 1em;
+    @include border-radius(4em);
+    padding: .4em 1.5em;
+    font-size: 1.2em;
+    border: 2px solid;
+  }
 
   &.arc90 {
-    height: 200px;
-    text-align: center;
+    background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat;
 
-    h4 {
-      color: white;
-    font-family: Monda;
-
-      font-size: 3em;
+    h3 {
+      font-family: Kite One;
     }
 
     a:link,
     a:visited {
-      display: inline-block;
-      margin-top: 1em;
       color: #629fcb;
-      @include border-radius(4em);
-      padding: .4em 1.5em;
-      font-size: 1.2em;
-      border: 2px solid #629fcb;
+      border-color: #629fcb;
     }
-    background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat;
+
+    a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
+  &.readability {
+    background: #820015;
+    padding-top: 6em;
+    height: 230px;
+
+    h3 {
+      font-family: Arbutus Slab;
+      letter-spacing: -0.04em;
+      margin-top: .1em;
+    }
+
+    .icon {
+      color: white;
+      font-size: 2.4em;
+    }
+
+    a:link,
+    a:visited {
+      color: #d46a6a;
+      border-color: #d46a6a;
+    }
+
+    a:hover {
+      color: #fff;
+      border-color: #fff;
+    } 
+  }
+
+  &.reuters {
+    background: #37220b;
+    overflow: hidden;
+
+    h3 {
+      font-family: Amaranth;
+    }
+
+    h3, a {
+      z-index: 4;
+      position: relative;
+    }
+
+    a:link,
+    a:visited {
+      color: #de8024;
+      border-color: #de8024;
+    }
+
+    a:hover {
+      color: #fff;
+      border-color: #fff;
+    } 
   }
 }
 
@@ -170,7 +238,7 @@ footer {
   border-top: 10px solid #de8024;
 
   .main-text {
-    margin: 1.5em auto 0;
+    margin: 2em auto 0;
   }
 
   ul {
@@ -183,7 +251,7 @@ footer {
       display: inline-block;
       margin: -1em 0 4em;
       padding-left: 50px;
-      width: 15%;
+      width: 17%;
       text-align: left;
     }
 
@@ -438,11 +506,11 @@ footer {
   color: white;
 
   h2 {
-    margin-bottom: 1em;
+    margin-top: .8em;
   }
 
   .main-text {
-    margin: 3em auto 3em;
+    margin: 1.8em auto 3em;
     width: 85%;
   }
 }
@@ -476,6 +544,7 @@ footer {
 
 .screens {
   @include overflowfix;
+  margin-top: 1em;
 
   li {
     float: left;
@@ -511,7 +580,7 @@ footer {
   }
 
   p {
-    margin: 2em auto 3em;
+    margin: 1.8em auto 3em;
   }
 
   li {
@@ -547,7 +616,7 @@ footer {
   }
 
   .main-text {
-    margin: 2em 0 3em;
+    margin: 1.8em 0 3em;
   }
 }
 
@@ -931,7 +1000,12 @@ footer {
 }
 
 #data-strategy {
-  background: #de8024 url(../images/reutersbg.png) top left repeat;
+  background: #e8892d url(../images/reutersbg.png) top left repeat;
+  padding-bottom: 9em;
+
+  p {
+    color: #4c2903;
+  }
 
   img {
     width: 100%;
@@ -942,7 +1016,7 @@ footer {
   }
 
   .main-text {
-    margin: 1em auto 0em;
+    margin: 1.5em auto 0em;
   }
 }
 
@@ -968,7 +1042,6 @@ footer {
 
     h3 {
       margin-top: 0;
-      color: #4c2903;
       font-size: 2.5em;
     }
 
@@ -976,6 +1049,7 @@ footer {
       width: 100%;
       font-size: 1.2em;
       text-align: left;
+      margin-top: 1em;
     }
 
     &.even {
@@ -1010,7 +1084,7 @@ footer {
   }
 
   .main-text {
-    margin: 1em auto 2em;
+    margin: 1.5em auto 3em;
   }
 
   ul {
@@ -1048,7 +1122,7 @@ footer {
 
   .main-text {
     width: 64%;
-    margin: .5em auto 3em;
+    margin: 1.5em auto 3em;
   }
 
   #web {
@@ -1083,6 +1157,10 @@ footer {
   width: 100%;
   height: 100%;
   z-index: 1;
+
+  &.hidden {
+    z-index: 0;
+  }
 
   #message {
     position: absolute;
@@ -1128,7 +1206,7 @@ footer {
   border: none;
 }
 
-#how-done{
+#how-done {
   position: absolute;
   top: 24%;
   left: 70%;
@@ -1209,7 +1287,7 @@ footer {
 
 #narratives {
   .main-text {
-    margin: 1em auto 2em;
+    margin: 1.5em auto 2em;
   }
 
   ul {
