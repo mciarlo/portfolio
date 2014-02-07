@@ -247,7 +247,6 @@ footer {
 
     li {
       position: relative;
-      list-style: none;
       display: inline-block;
       margin: -1em 0 4em;
       padding-left: 50px;
@@ -358,6 +357,72 @@ footer {
 
   img {
     display: inline-block;
+  }
+}
+
+#contact-me {
+  padding: 4em 0 5em;
+  font-size: 1.2em;
+
+  li {
+    width: 45%;
+    display: inline-block;
+    padding-left: 5%;
+    @include box-sizing;
+    text-align: left;
+
+    h4 {
+      font-size: 1.8em;
+    }
+
+    &:first-child {
+      padding-left: 0%;
+      padding-right: 5%;
+      text-align: right;
+      border-right: 1px solid #d4d4d4;
+    }
+  }
+
+  &.arc90 {
+    background: #dee6ec;
+    border-top: 1px solid #c5d7e3;
+    
+    a:link,
+    a:visited {
+      color: #3d80af;
+    }
+
+    a:hover {
+      color: #444;
+    }
+  }
+
+  &.reuters {
+    background: #efe5db;
+    border-top: 1px solid #e3d4c5;
+
+    a:link,
+    a:visited {
+      color: #de8024;
+    }
+
+    a:hover {
+      color: #444;
+    }
+  }
+
+  &.readability {
+    background: #efdbde;
+    border-top: 1px solid #e4c7cb;
+
+    a:link,
+    a:visited {
+      color: #a6001b;
+    }
+
+    a:hover {
+      color: #444;
+    }
   }
 }
 
@@ -548,7 +613,6 @@ footer {
 
   li {
     float: left;
-    list-style: none;
     width: 20%;
     text-align: center;
 
@@ -584,7 +648,6 @@ footer {
   }
 
   li {
-    list-style: none;
     text-align: center;
     width: 14%;
     float: left;
@@ -667,7 +730,6 @@ footer {
 
   li {
     display: inline-block;
-    list-style: none;
     width: 114px;
     position: relative;
     padding-left: 50px;
@@ -1003,8 +1065,8 @@ footer {
   background: #e8892d url(../images/reutersbg.png) top left repeat;
   padding-bottom: 9em;
 
-  p {
-    color: #4c2903;
+  h2, h3 {
+    color: #5b3001;
   }
 
   img {
@@ -1025,7 +1087,6 @@ footer {
   margin: 0 auto;
 
   li {
-    list-style: none;
     position: relative;
     padding-left: 35%;
     padding: 2.5em 0 .5em 35%;
@@ -1093,7 +1154,6 @@ footer {
   
   li {
     float: left;
-    list-style: none;
     width: 21%;
     margin: 0 2%;
 
@@ -1200,8 +1260,8 @@ footer {
 
 #arrow {
   position: absolute;
-  top: 10%;
-  left: 60%;
+  top: 16%;
+  left: 55%;
   width:120px;
   border: none;
 }
@@ -1209,11 +1269,11 @@ footer {
 #how-done {
   position: absolute;
   top: 24%;
-  left: 70%;
+  left: 65%;
   width: 300px;
   font-size: 1.7em;
   letter-spacing: 0.05em;
-  line-height: 1;
+  line-height: 1.1;
   color: #777;
   font-family: Waiting for the Sunrise;
 }
@@ -1296,7 +1356,6 @@ footer {
     @include overflowfix;
 
     li {
-      list-style: none;
       float: left;
       width: 50%;
       margin-bottom: 20px;

@@ -254,7 +254,6 @@ footer {
     #arc90-background ul li,
     #rdd-background ul li {
       position: relative;
-      list-style: none;
       display: inline-block;
       margin: -1em 0 4em;
       padding-left: 50px;
@@ -341,6 +340,50 @@ footer {
   text-align: center; }
   #title-card img {
     display: inline-block; }
+
+#contact-me {
+  padding: 4em 0 5em;
+  font-size: 1.2em; }
+  #contact-me li {
+    width: 45%;
+    display: inline-block;
+    padding-left: 5%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    text-align: left; }
+    #contact-me li h4 {
+      font-size: 1.8em; }
+    #contact-me li:first-child {
+      padding-left: 0%;
+      padding-right: 5%;
+      text-align: right;
+      border-right: 1px solid #d4d4d4; }
+  #contact-me.arc90 {
+    background: #dee6ec;
+    border-top: 1px solid #c5d7e3; }
+    #contact-me.arc90 a:link,
+    #contact-me.arc90 a:visited {
+      color: #3d80af; }
+    #contact-me.arc90 a:hover {
+      color: #444; }
+  #contact-me.reuters {
+    background: #efe5db;
+    border-top: 1px solid #e3d4c5; }
+    #contact-me.reuters a:link,
+    #contact-me.reuters a:visited {
+      color: #de8024; }
+    #contact-me.reuters a:hover {
+      color: #444; }
+  #contact-me.readability {
+    background: #efdbde;
+    border-top: 1px solid #e4c7cb; }
+    #contact-me.readability a:link,
+    #contact-me.readability a:visited {
+      color: #a6001b; }
+    #contact-me.readability a:hover {
+      color: #444; }
 
 /*
 
@@ -481,7 +524,6 @@ footer {
     display: block; }
   .screens li {
     float: left;
-    list-style: none;
     width: 20%;
     text-align: center; }
     .screens li.higher {
@@ -500,7 +542,6 @@ footer {
 #iconography p {
   margin: 1.8em auto 3em; }
 #iconography li {
-  list-style: none;
   text-align: center;
   width: 14%;
   float: left;
@@ -564,7 +605,6 @@ footer {
     width: 80%; }
   #rdd-love li {
     display: inline-block;
-    list-style: none;
     width: 114px;
     position: relative;
     padding-left: 50px; }
@@ -854,8 +894,8 @@ footer {
 #data-strategy {
   background: #e8892d url(../images/reutersbg.png) top left repeat;
   padding-bottom: 9em; }
-  #data-strategy p {
-    color: #4c2903; }
+  #data-strategy h2, #data-strategy h3 {
+    color: #5b3001; }
   #data-strategy img {
     width: 100%; }
   #data-strategy h2 {
@@ -867,7 +907,6 @@ footer {
   width: 80%;
   margin: 0 auto; }
   #feature-rundown li {
-    list-style: none;
     position: relative;
     padding-left: 35%;
     padding: 2.5em 0 .5em 35%;
@@ -915,7 +954,6 @@ footer {
     margin-top: 5em; }
   #reusable-components li {
     float: left;
-    list-style: none;
     width: 21%;
     margin: 0 2%; }
     #reusable-components li strong {
@@ -995,19 +1033,19 @@ footer {
 
 #arrow {
   position: absolute;
-  top: 10%;
-  left: 60%;
+  top: 16%;
+  left: 55%;
   width: 120px;
   border: none; }
 
 #how-done {
   position: absolute;
   top: 24%;
-  left: 70%;
+  left: 65%;
   width: 300px;
   font-size: 1.7em;
   letter-spacing: 0.05em;
-  line-height: 1;
+  line-height: 1.1;
   color: #777;
   font-family: Waiting for the Sunrise; }
 
@@ -1076,7 +1114,6 @@ footer {
     clear: both;
     display: block; }
   #narratives ul li {
-    list-style: none;
     float: left;
     width: 50%;
     margin-bottom: 20px; }
