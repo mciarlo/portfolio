@@ -1671,7 +1671,7 @@ footer {
     padding: 7em 0 6em;
 
     h2 {
-      font-size: 5em;
+      font-size: 4em;
     }
 
     .main-text {
@@ -1685,9 +1685,10 @@ footer {
   #rdd-background {
     ul {
       li {
-        margin: -1em 0 4em;
+        display: inline-block;
+        margin: -1em 0 2em;
         padding-left: 50px;
-        width: 22%;
+        width: 160px;
         text-align: left;
       }
 
@@ -1710,7 +1711,7 @@ footer {
 
   #iconography {
     h2 {
-      font-size: 5em;
+      font-size: 4em;
 
       .icon {
         display: inline;
@@ -1733,8 +1734,8 @@ footer {
   }
 
   #typography {
-    height: 1240px;
-    padding: 3.5em  0 2.5em;
+    height: 1200px;
+    padding: 6em 0 5em;
 
     h2 {
       text-align: left;
@@ -1770,7 +1771,7 @@ footer {
   }
 
   #rdd-ux {
-    padding:4em 0;
+    padding: 6em 0 4em;
 
     h2, .main-text {
       text-align: left;
@@ -1787,14 +1788,14 @@ footer {
     #ux-hero-video {
       float: left;
       width: 280px;
-      margin: 0 0 0 5%;
+      margin: 0 0 0 6%;
     }
 
     .right {
       position: relative;
-      width: 45%;
+      width: 42%;
       float: left;
-      margin: 60px 0 0 5%;
+      margin: 60px 0 0 8%;
     }
   }
 
@@ -1807,8 +1808,8 @@ footer {
     height: 560px;
 
     h2 {
-      width: 55%;
-      margin: .8em 0 .7em;
+      width: 50%;
+      margin: .8em 0 .7em 5%;
     }
 
     blockquote {
@@ -1841,7 +1842,7 @@ footer {
     float: left;
     display: inline-block;
     width: 200px;
-    margin-left: 40px;
+    margin-left: 50px;
   }
 
   #dl-rdd {
@@ -1888,6 +1889,9 @@ footer {
   }
 
   #feature-rundown {
+    width: 768px;
+    margin: 0 auto;
+
     li {
       padding: 1.5em 0 .5em 35%;
       text-align: left;
@@ -2039,6 +2043,105 @@ footer {
 @media screen and (min-width: 1002px) {
   .wrapper {
     width: 960px;
+  }
+
+  #typography {
+    height: 1200px;
+    padding: 7em 0 6em;
+  }
+
+  #rdd-ux {
+    padding: 8em 0 6em;
+
+    #ux-hero-video {
+      float: left;
+      width: 320px;
+      margin: 0 0 0 8%;
+    }
+
+    .right {
+      position: relative;
+      width: 45%;
+      float: left;
+      margin: 120px 0 0 6%;
+    }
+  }
+
+  section {
+    h2 {
+      font-size: 5em;
+    }
+  }
+
+  #iconography {
+    h2 {
+      font-size: 5em;
+    }
+  }
+
+  #screen-holder {
+    height: 560px;
+
+    h2 {
+      width: 45%;
+      margin: .8em 0 .7em;
+    }
+
+    blockquote {
+      font-size: 1.6em;
+      width: 40%;
+      margin: 0 0 1.5em 5%;
+    }
+  }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 50%;
+    z-index: 3;
+    margin-left: 0px;
+  }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px;
+  }
+
+  #featured-badge {
+    margin-left: 66px;
+  }
+
+  #feature-rundown {
+    width: 768px;
+
+    li {
+      padding: 2em 0 1em 35%;
+    }
+  }
+
+  #reusable-components {  
+    li {
+      width: 21%;
+      margin: 0 2% 4em 2%;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+  #arrow {
+    left: 55%;
+  }
+
+  #how-done {
+    top: 28%;
   }
 }
 

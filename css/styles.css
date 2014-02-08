@@ -1375,7 +1375,7 @@ footer {
   section {
     padding: 7em 0 6em; }
     section h2 {
-      font-size: 5em; }
+      font-size: 4em; }
     section .main-text {
       width: 70%;
       font-size: 1.2em; }
@@ -1383,9 +1383,10 @@ footer {
   #reuters-intro ul li,
   #arc90-background ul li,
   #rdd-background ul li {
-    margin: -1em 0 4em;
+    display: inline-block;
+    margin: -1em 0 2em;
     padding-left: 50px;
-    width: 22%;
+    width: 160px;
     text-align: left; }
   #reuters-intro ul img,
   #arc90-background ul img,
@@ -1405,7 +1406,7 @@ footer {
     margin: 0 auto; }
 
   #iconography h2 {
-    font-size: 5em; }
+    font-size: 4em; }
     #iconography h2 .icon {
       display: inline;
       margin-right: 0.2em; }
@@ -1418,8 +1419,8 @@ footer {
       font-size: 4em; }
 
   #typography {
-    height: 1240px;
-    padding: 3.5em  0 2.5em; }
+    height: 1200px;
+    padding: 6em 0 5em; }
     #typography h2 {
       text-align: left;
       margin: 0 30px; }
@@ -1447,7 +1448,7 @@ footer {
     margin-left: 474px; }
 
   #rdd-ux {
-    padding: 4em 0; }
+    padding: 6em 0 4em; }
     #rdd-ux h2, #rdd-ux .main-text {
       text-align: left; }
     #rdd-ux h2 {
@@ -1457,12 +1458,12 @@ footer {
     #rdd-ux #ux-hero-video {
       float: left;
       width: 280px;
-      margin: 0 0 0 5%; }
+      margin: 0 0 0 6%; }
     #rdd-ux .right {
       position: relative;
-      width: 45%;
+      width: 42%;
       float: left;
-      margin: 60px 0 0 5%; }
+      margin: 60px 0 0 8%; }
 
   #rdd-love {
     text-align: right;
@@ -1471,8 +1472,8 @@ footer {
   #screen-holder {
     height: 560px; }
     #screen-holder h2 {
-      width: 55%;
-      margin: .8em 0 .7em; }
+      width: 50%;
+      margin: .8em 0 .7em 5%; }
     #screen-holder blockquote {
       font-size: 1.6em;
       width: 50%;
@@ -1499,7 +1500,7 @@ footer {
     float: left;
     display: inline-block;
     width: 200px;
-    margin-left: 40px; }
+    margin-left: 50px; }
 
   #dl-rdd {
     float: left;
@@ -1535,27 +1536,30 @@ footer {
     #data-strategy p {
       width: 80%; }
 
-  #feature-rundown li {
-    padding: 1.5em 0 .5em 35%;
-    text-align: left;
-    margin-top: 5em; }
-    #feature-rundown li img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0; }
-    #feature-rundown li h3 {
-      margin-top: 0;
-      font-size: 2.5em; }
-    #feature-rundown li p {
-      font-size: 1.1em;
-      text-align: left; }
-    #feature-rundown li.even {
-      text-align: right;
-      padding-left: 0;
-      padding-right: 35%; }
-      #feature-rundown li.even p {
-        text-align: right; }
+  #feature-rundown {
+    width: 768px;
+    margin: 0 auto; }
+    #feature-rundown li {
+      padding: 1.5em 0 .5em 35%;
+      text-align: left;
+      margin-top: 5em; }
+      #feature-rundown li img {
+        width: 30%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+      #feature-rundown li h3 {
+        margin-top: 0;
+        font-size: 2.5em; }
+      #feature-rundown li p {
+        font-size: 1.1em;
+        text-align: left; }
+      #feature-rundown li.even {
+        text-align: right;
+        padding-left: 0;
+        padding-right: 35%; }
+        #feature-rundown li.even p {
+          text-align: right; }
 
   #reusable-components {
     padding-bottom: 4em; }
@@ -1630,4 +1634,73 @@ footer {
     width: 100%; } }
 @media screen and (min-width: 1002px) {
   .wrapper {
-    width: 960px; } }
+    width: 960px; }
+
+  #typography {
+    height: 1200px;
+    padding: 7em 0 6em; }
+
+  #rdd-ux {
+    padding: 8em 0 6em; }
+    #rdd-ux #ux-hero-video {
+      float: left;
+      width: 320px;
+      margin: 0 0 0 8%; }
+    #rdd-ux .right {
+      position: relative;
+      width: 45%;
+      float: left;
+      margin: 120px 0 0 6%; }
+
+  section h2 {
+    font-size: 5em; }
+
+  #iconography h2 {
+    font-size: 5em; }
+
+  #screen-holder {
+    height: 560px; }
+    #screen-holder h2 {
+      width: 45%;
+      margin: .8em 0 .7em; }
+    #screen-holder blockquote {
+      font-size: 1.6em;
+      width: 40%;
+      margin: 0 0 1.5em 5%; }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 50%;
+    z-index: 3;
+    margin-left: 0px; }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px; }
+
+  #featured-badge {
+    margin-left: 66px; }
+
+  #feature-rundown {
+    width: 768px; }
+    #feature-rundown li {
+      padding: 2em 0 1em 35%; }
+
+  #reusable-components li {
+    width: 21%;
+    margin: 0 2% 4em 2%; }
+    #reusable-components li img {
+      width: 50px; }
+
+  #arrow {
+    left: 55%; }
+
+  #how-done {
+    top: 28%; } }
