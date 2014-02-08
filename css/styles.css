@@ -139,8 +139,9 @@ Y8b d88P
   #container.reuters {
     background-color: #eaeaea; }
     #container.reuters h1, #container.reuters h2, #container.reuters h3, #container.reuters h4 {
-      line-height: 1;
-      font-family: Amaranth; }
+      line-height: 1.2;
+      font-family: Fjalla One;
+      letter-spacing: -0.05em; }
   #container.arc90 h1, #container.arc90 h2, #container.arc90 h3, #container.arc90 h4 {
     font-family: Kite One; }
   #container.arc90 .letter-spacing-fix {
@@ -231,7 +232,7 @@ footer {
     background: #37220b;
     overflow: hidden; }
     footer.reuters h3 {
-      font-family: Amaranth; }
+      font-family: Fjalla One; }
     footer.reuters h3, footer.reuters a {
       z-index: 4;
       position: relative; }
@@ -411,22 +412,16 @@ footer {
   position: fixed;
   top: 10px;
   left: 16px;
-  width: 30px;
+  width: 10px;
+  height: 10px;
+  background: transparent url(../images/home_icon.svg) center no-repeat;
+  background-size: 80%;
   padding: 10px;
   z-index: 9999;
+  opacity: 0.2;
   display: none; }
-  #nav-toggle:hover span {
-    background: #444; }
-  #nav-toggle span {
-    display: block;
-    height: 2px;
-    width: 100%;
-    background: #999;
-    margin: 5px 0;
-    transition: background 150ms ease-in-out;
-    -webkit-transition: background 150ms ease-in-out;
-    -moz-transition: background 150ms ease-in-out;
-    -ms-transition: background 150ms ease-in-out; }
+  #nav-toggle:hover {
+    opacity: 0.4; }
 
 #introduction {
   width: 100%;
@@ -756,16 +751,13 @@ footer {
     display: block; }
 
 #typography {
+  padding-bottom: 5em;
   background: #a6001b;
   position: relative;
   color: white;
-  height: 880px;
   overflow: hidden; }
   #typography h2 {
     text-align: center; }
-  #typography img {
-    position: absolute;
-    left: 50%; }
   #typography .main-text {
     text-align: center;
     width: 90%;
@@ -778,8 +770,8 @@ footer {
   display: none; }
 
 #portrait {
-  top: 525px;
-  margin-left: -140px;
+  display: block;
+  margin: 3em auto 0;
   width: 280px; }
 
 #portrait-iphone {
@@ -1115,7 +1107,7 @@ footer {
         text-align: center; }
 
 #reusable-components {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 2px dotted #dadada;
   padding-bottom: 1em; }
   #reusable-components img {
     width: 90%;
@@ -1135,7 +1127,8 @@ footer {
     #reusable-components li strong {
       display: block;
       margin: .4em 0;
-      font-size: 1.6em; }
+      font-size: 1.6em;
+      font-family: Fjalla One; }
     #reusable-components li p {
       font-size: 1em;
       color: #777; }
@@ -1310,6 +1303,9 @@ footer {
   display: block; }
 
 @media screen and (min-width: 748px) {
+  #nav-toggle {
+    display: block; }
+
   .header.arc90 {
     background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
     background-size: 100%; }
@@ -1397,7 +1393,7 @@ footer {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     -ms-border-radius: 10px;
-    width: 90%;
+    width: 87%;
     margin: 0 auto; }
 
   #iconography h2 {
@@ -1419,6 +1415,9 @@ footer {
     #typography h2 {
       text-align: left;
       margin: 0 30px; }
+    #typography img {
+      position: absolute;
+      left: 50%; }
     #typography .main-text {
       text-align: left;
       width: 90%;
@@ -1427,23 +1426,23 @@ footer {
   #landscape {
     margin-left: -900px;
     width: 800px;
-    top: 556px;
+    top: 536px;
     display: block; }
 
   #portrait {
-    top: 460px;
+    top: 440px;
     margin-left: -80px;
     height: 800px;
     width: auto; }
 
   #portrait-iphone {
     width: 240px;
-    top: 720px;
+    top: 700px;
     display: block;
     margin-left: 474px; }
 
   #rdd-ux {
-    padding: 6em 0 4em; }
+    padding: 6em 0; }
     #rdd-ux h2, #rdd-ux .main-text {
       text-align: left; }
     #rdd-ux h2 {
@@ -1461,8 +1460,9 @@ footer {
       margin: 60px 0 0 8%; }
 
   #rdd-love {
+    border-top: 2px dotted #dadada;
     text-align: right;
-    padding: 5em 0 8em; }
+    padding: 6em 0 8em; }
 
   #screen-holder {
     height: 560px; }
@@ -1532,7 +1532,7 @@ footer {
       width: 80%; }
 
   #feature-rundown {
-    width: 768px;
+    width: 688px;
     margin: 0 auto; }
     #feature-rundown li {
       padding: 1.5em 0 .5em 35%;
@@ -1657,7 +1657,7 @@ footer {
     padding: 7em 0 6em; }
 
   #rdd-ux {
-    padding: 8em 0 6em; }
+    padding: 8em 0; }
     #rdd-ux #ux-hero-video {
       float: left;
       width: 320px;
@@ -1673,6 +1673,11 @@ footer {
 
   #iconography h2 {
     font-size: 5em; }
+  #iconography li {
+    width: 12%; }
+
+  #rdd-love {
+    padding-top: 8em; }
 
   #screen-holder {
     height: 560px; }
