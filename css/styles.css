@@ -124,6 +124,54 @@ Y8b d88P
  "Y88P"                                     
                                                                
 */
+nav {
+  border-bottom: 1px solid #dadada;
+  background: #f1f1f1;
+  padding-top: 1em; }
+  nav:after {
+    content: "";
+    clear: both;
+    display: block; }
+  nav h1 {
+    float: left;
+    font-size: 1.6em;
+    padding: .5em 0; }
+    nav h1 a:link,
+    nav h1 a:visited {
+      background-image: url(../images/mask.jpg);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-background-size: 100%;
+      color: rgba(0, 0, 0, 0);
+      padding-top: .2em;
+      -webkit-mask-origin: padding;
+      font-family: Sue Ellen Francisco;
+      letter-spacing: -0.03em; }
+  nav h2 {
+    float: left;
+    margin-left: 1em;
+    padding: 1.4em 0 1.2em;
+    font-size: 1em;
+    font-family: Trebuchet MS, Lucida Grande, sans-serif;
+    display: none; }
+  nav ul {
+    width: 80%;
+    text-align: right;
+    float: right; }
+    nav ul li {
+      display: inline-block;
+      margin-left: 2em; }
+    nav ul a:link,
+    nav ul a:visited {
+      color: #999;
+      display: inline-block;
+      font-size: .8em;
+      text-transform: uppercase;
+      font-family: Trebuchet MS, Lucida Grande, sans-serif;
+      padding: 1.5em 0em; }
+    nav ul a:hover {
+      color: #444; }
+
 #container {
   position: relative;
   z-index: 3; }
@@ -408,86 +456,37 @@ footer {
                                          888                "Y88P"            
                                                                                           
 */
-#nav-toggle {
-  position: fixed;
-  top: 10px;
-  left: 16px;
-  width: 10px;
-  height: 10px;
-  background: transparent url(../images/home_icon.svg) center no-repeat;
-  background-size: 80%;
-  padding: 10px;
-  z-index: 9999;
-  opacity: 0.2;
-  display: none; }
-  #nav-toggle:hover {
-    opacity: 0.4; }
-
-#introduction {
-  width: 100%;
-  height: 110px;
-  background: #DEE9D4;
-  padding: 5em 0 6em;
-  border-bottom: 10px solid #c0e0a3; }
-  #introduction:after {
-    content: "";
-    clear: both;
-    display: block; }
-  #introduction h1 {
-    background-image: url(../images/mask.jpg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-background-size: 100%;
-    color: rgba(0, 0, 0, 0);
-    padding-top: .2em;
-    -webkit-mask-origin: padding;
-    font-family: Sue Ellen Francisco;
-    letter-spacing: -0.03em; }
-  #introduction h1, #introduction h2 {
-    font-size: 4em;
-    text-align: center; }
-  #introduction h2 {
-    margin-top: .5em;
-    font-size: 1em; }
-
-#michael-brandon {
-  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
-  #michael-brandon h3 {
-    text-align: center;
-    font-family: Contrail One;
-    letter-spacing: -0.05em;
-    font-size: 2.2em;
-    margin: 2em 0 0; }
-  #michael-brandon .main-text {
-    font-size: 1em;
-    text-align: center;
-    margin: 1.5em auto 3em;
-    width: 70%; }
-
-#work {
-  text-align: center; }
-  #work:after {
-    content: "";
-    clear: both;
-    display: block; }
-  #work a:link,
-  #work a:visited {
-    display: block;
-    width: 100%;
-    height: 200px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -webkit-transition: -webkit-transform 150ms;
-    -moz-transition: -moz-transform 150ms;
-    -ms-transition: -ms-transform 150ms;
-    transition: transform 150ms; }
-  #work a:hover {
-    transform: scale(1.05, 1.05);
-    -webkit-transform: scale(1.05, 1.05);
-    -moz-transform: scale(1.05, 1.05);
-    -ms-transform: scale(1.05, 1.05); }
+#work:after {
+  content: "";
+  clear: both;
+  display: block; }
+#work a:link,
+#work a:visited {
+  display: block;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box; }
+#work a:hover img, #work a:hover h2 {
+  transform: scale(1.05, 1.05);
+  -webkit-transform: scale(1.05, 1.05);
+  -moz-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05); }
+#work li {
+  width: 33%;
+  display: inline-block;
+  margin-bottom: 8em; }
+  #work li.middle {
+    width: 34%; }
+#work img, #work h2 {
+  position: absolute;
+  transition: transform 150ms ease-in-out;
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  -moz-transition: -moz-transform 150ms ease-in-out;
+  -ms-transition: -ms-transform 150ms ease-in-out; }
 
 #hobbies {
   text-align: center; }
@@ -506,30 +505,53 @@ footer {
       width: 100%; }
 
 #readability-work {
-  background: #820015;
+  border-bottom: 10px solid #a6001b;
+  background: #700012;
   color: white;
   font-family: Arbutus Slab;
   padding-top: 2.5em; }
   #readability-work .icon {
-    font-size: 2em;
-    display: inline-block; }
+    font-size: 1em;
+    display: inline-block;
+    margin-right: .2em; }
   #readability-work h2 {
-    margin: -.5em 0 0 0;
-    font-size: 2.3em; }
+    width: 100%;
+    top: 41%;
+    text-align: center;
+    font-size: 2.4em; }
 
 #arc-work {
+  border-bottom: 10px solid #3d80af;
   padding-top: 4.5em;
-  background: #34424c; }
-  #arc-work img {
-    width: 120px;
-    display: inline-block; }
+  background: #0f1d26;
+  background-size: auto 500px; }
+
+#arc-home {
+  position: absolute;
+  top: 38%;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px; }
+
+#arc-logo-homepage {
+  width: 120px;
+  display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-left: -60px; }
 
 #reuters-work {
+  border-bottom: 10px solid #de8024;
   padding-top: 4em;
-  background: #de8024; }
+  background: #37220b; }
   #reuters-work img {
     width: 160px;
-    display: inline-block; }
+    display: inline-block;
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    margin-left: -80px; }
 
 #resume-pitch {
   width: 100%;
@@ -850,65 +872,16 @@ footer {
 
 /* Videos ------- */
 #rdd-videos {
-  text-align: left;
-  position: relative;
-  z-index: 2; }
-  #rdd-videos .video-icon {
-    background: #78201f;
-    cursor: pointer;
-    background: rgba(120, 32, 31, 0.6); }
-    #rdd-videos .video-icon:hover {
-      background: #78201f;
-      background: rgba(120, 32, 31, 0.9); }
-  #rdd-videos li {
-    display: inline-block;
-    width: 30%;
-    overflow: hidden;
-    position: relative; }
-    #rdd-videos li .interaction-video {
-      display: block;
-      position: relative;
-      overflow: hidden; }
-    #rdd-videos li img, #rdd-videos li video {
-      width: 100%;
-      position: relative;
-      z-index: 0; }
-    #rdd-videos li .label {
-      font-size: .9em;
-      margin-top: .3em;
-      display: block;
-      text-align: center; }
-
-.video-icon {
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  margin: -16px 0 0 -16px;
-  border: 2px solid white;
-  border-radius: 50px;
-  -moz-border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -ms-border-radius: 50px;
-  transition: background 150ms ease-in-out;
-  -webkit-transition: background 150ms ease-in-out;
-  -moz-transition: background 150ms ease-in-out;
-  -ms-transition: background 150ms ease-in-out; }
-  .video-icon .arrow-icon {
-    border-top: 5px solid #fff;
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    transform: rotateZ(45deg);
-    -webkit-transform: rotateZ(45deg);
-    -moz-transform: rotateZ(45deg);
-    -ms-transform: rotateZ(45deg); }
+  padding: 5em 0 6em;
+  background: #a6001b; }
+  #rdd-videos:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #rdd-videos h3 {
+    color: white;
+    font-size: 1.8em;
+    margin-bottom: 1em; }
 
 /*
                          888                             
@@ -1331,13 +1304,6 @@ footer {
     #introduction h2 {
       font-size: 1.4em; }
 
-  #work a:link,
-  #work a:visited {
-    float: left;
-    width: 29%;
-    margin: 0 2%;
-    height: 200px; }
-
   #hobbies li {
     margin: 0 20px;
     width: 70px;
@@ -1459,8 +1425,54 @@ footer {
       float: left;
       margin: 60px 0 0 8%; }
 
+  #ux-videos {
+    text-align: center; }
+    #ux-videos li {
+      display: inline-block;
+      width: 33.3%; }
+      #ux-videos li a:link,
+      #ux-videos li a:visited {
+        position: relative;
+        display: block; }
+      #ux-videos li strong {
+        margin-top: .3em;
+        color: white;
+        transition: color 150ms ease-in-out;
+        -webkit-transition: color 150ms ease-in-out;
+        -moz-transition: color 150ms ease-in-out;
+        -ms-transition: color 150ms ease-in-out; }
+      #ux-videos li a:hover strong {
+        color: #fb96a6; }
+      #ux-videos li a:hover .play-btn {
+        background: #a6001b; }
+      #ux-videos li .play-btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 41%;
+        left: 50%;
+        margin: -20px 0 0 -20px;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border: 2px solid #fff; }
+      #ux-videos li .play-arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 6px solid #fff;
+        margin: -6px 0 0 -8px;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        transform: rotateZ(45deg);
+        -webkit-transform: rotateZ(45deg);
+        -moz-transform: rotateZ(45deg);
+        -ms-transform: rotateZ(45deg); }
+      #ux-videos li img {
+        width: 90%; }
+
   #rdd-love {
-    border-top: 2px dotted #dadada;
     text-align: right;
     padding: 6em 0 8em; }
 
@@ -1517,8 +1529,13 @@ footer {
         padding: 0 5% 0 0;
         text-align: right;
         padding-top: none;
-        border-bottom: none;
-        border-right: 1px solid #d4d4d4; }
+        border-bottom: none; }
+    #contact-me.arc90 li:first-child {
+      border-right: 1px solid #c5d7e3; }
+    #contact-me.reuters li:first-child {
+      border-right: 1px solid #e3d4c5; }
+    #contact-me.readability li:first-child {
+      border-right: 1px solid #e4c7cb; }
 
   footer {
     padding: 8em 0 0;
