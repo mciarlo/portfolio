@@ -704,25 +704,20 @@ footer {
 #left-column,
 #center-column,
 #right-column {
-  float: left;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#center-column,
+#right-column {
+  margin-top: 4em;
+
 }
 
 #left-column {
-  width: 20%;
-
   p {
     @include serif;
   }
-}
-
-#center-column {
-  width: 50%;
-  margin: 0 5%;
-}
-
-#right-column {
-  width: 20%;
-  margin-top: 0;
 }
 
 #skillset {
@@ -735,7 +730,7 @@ footer {
 }
 
 #social {
-  margin-top: 2em;
+  margin-top: 1em;
 
   li {
     display: inline-block;
@@ -2038,6 +2033,33 @@ footer {
   #homepage {
     width: 100%;
   }
+
+  #left-column,
+  #center-column,
+  #right-column {
+    float: left;
+    margin: 0;
+  }
+
+  #left-column {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 4em;
+
+    p {
+      @include serif;
+    }
+  }
+
+  #center-column {
+    width: 60%;
+    margin: 0 5%;
+  }
+
+  #right-column {
+    width: 25%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (min-width: 1002px) {
@@ -2142,6 +2164,33 @@ footer {
 
   #how-done {
     top: 28%;
+  }
+
+  #left-column,
+  #center-column,
+  #right-column {
+    float: left;
+    margin: 0;
+  }
+
+  #left-column {
+    width: 20%;
+    margin-left: 5%;
+    margin-bottom: 4em;
+
+    p {
+      @include serif;
+    }
+  }
+
+  #center-column {
+    width: 40%;
+    margin: 0 5%;
+  }
+
+  #right-column {
+    width: 20%;
+    margin-top: 0;
   }
 }
 
