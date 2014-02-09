@@ -13,7 +13,7 @@ a:link,
 a:visited {
   color: #a6001b;
   text-decoration: none;
-  @include transition(color, 150ms, ease-in-out);
+  @include transition(all, 150ms, ease-in-out);
 }
 
 a:hover {
@@ -515,12 +515,17 @@ footer {
     width: 254px;
     display: inline-block;
 
+    strong {
+      @include transition(color, 150ms, ease-in-out);
+    }
+
     &:first-child {
       margin-right: 18px;
 
       .image {
         background: #a60000;
       }
+
       .nubbin {
         border-bottom-color: #a60000;
         border-right-color: #a60000;
@@ -528,11 +533,17 @@ footer {
 
       a:link,
       a:visited {
-        color: #a60000;
+        color: #333;
+
+        strong {
+          color: #a60000;
+        }
       }
 
       a:hover {
-        color: #222;
+        strong {
+          color: #555;
+        }
       }
     }
 
@@ -560,11 +571,17 @@ footer {
 
       a:link,
       a:visited {
-        color: #3d80af;
+        color: #333;
+
+        strong {
+          color: #3d80af;
+        }
       }
 
       a:hover {
-        color: #222;
+        strong {
+          color: #555;
+        }
       }
     }
 
@@ -585,6 +602,10 @@ footer {
   .image {
     background: #222;
     @include border-radius(5px);
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    -moz-transition: -moz-transform 150ms ease-in-out;
+    -ms-transition: -ms-transform 150ms ease-in-out;
     text-align: center;
     height: 140px;
     position: relative;
@@ -620,13 +641,27 @@ footer {
     }
   }
 
+
   a:link,
   a:visited {
+    color: #333;
+
+    strong {
     color: #c4630c;
+    }
   }
 
   a:hover {
-    color: #222;
+    .image {
+      transform: translate3d(0px, -5px, 0px);
+      -webkit-transform: translate3d(0px, -5px, 0px);
+      -moz-transform: translate3d(0px, -5px, 0px);
+      -ms-transform: translate3d(0px, -5px, 0px);
+    }
+
+    strong {
+      color: #555;
+    }
   }
 
   h2 {
@@ -666,14 +701,15 @@ footer {
   width: 100%;
   margin-top: 2em;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  color: #656565;
 
   a:link,
   a:visited {
     display: block;
     border: 1px solid #a6001b;
-    @include border-radius(.4em);
-    padding: .6em .8em;
+    padding: .6em 1.4em .6em;
+    @include border-radius(4px);
     margin: .5em auto 0;
     font-size: .8em;
     width: 60%;
@@ -741,10 +777,10 @@ footer {
 #resume {
   @include overflowfix;
   margin: 0 auto;
-  padding: 5em 0;
+  padding: 5em 0 0 0;
 
   h3, h4 {
-    font-family: Contrail One;
+    font-family: Patua One;
   }
 
   h4 {
@@ -766,11 +802,25 @@ footer {
 
   .date {
     @include sans-serif;
-    color: #789c57;
+    color: #777;
     display: block;
     text-transform: uppercase;
     font-size: .7em;
     margin-bottom: .2em;
+  }
+}
+
+#back-to-home {
+  clear: left;
+  float: left;
+  color: #888;
+  border: 1px solid #999;
+  padding: .6em 1.4em .6em 1em;
+  @include border-radius(4px);
+
+  &:hover {
+    color: #555;
+    border-color: #555;
   }
 }
 
@@ -2111,25 +2161,14 @@ footer {
   }
 
   #left-column,
-  #center-column,
   #right-column {
     float: left;
     margin: 0;
   }
 
   #left-column {
-    width: 90%;
-    margin-left: 5%;
-    margin-bottom: 4em;
-
-    p {
-      @include serif;
-    }
-  }
-
-  #center-column {
-    width: 60%;
-    margin: 0 5%;
+    width: 70%;
+    margin-right: 5%;
   }
 
   #right-column {
@@ -2270,33 +2309,6 @@ footer {
 
   #how-done {
     top: 28%;
-  }
-
-  #left-column,
-  #center-column,
-  #right-column {
-    float: left;
-    margin: 0;
-  }
-
-  #left-column {
-    width: 20%;
-    margin-left: 5%;
-    margin-bottom: 4em;
-
-    p {
-      @include serif;
-    }
-  }
-
-  #center-column {
-    width: 40%;
-    margin: 0 5%;
-  }
-
-  #right-column {
-    width: 20%;
-    margin-top: 0;
   }
 }
 
