@@ -126,8 +126,7 @@ Y8b d88P
 */
 nav {
   border-bottom: 1px solid #dadada;
-  background: #f1f1f1;
-  padding-top: 1em; }
+  background: #eaeaea; }
   nav:after {
     content: "";
     clear: both;
@@ -135,25 +134,7 @@ nav {
   nav h1 {
     float: left;
     font-size: 1.6em;
-    padding: .5em 0; }
-    nav h1 a:link,
-    nav h1 a:visited {
-      background-image: url(../images/mask.jpg);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-background-size: 100%;
-      color: rgba(0, 0, 0, 0);
-      padding-top: .2em;
-      -webkit-mask-origin: padding;
-      font-family: Sue Ellen Francisco;
-      letter-spacing: -0.03em; }
-  nav h2 {
-    float: left;
-    margin-left: 1em;
-    padding: 1.4em 0 1.2em;
-    font-size: 1em;
-    font-family: Trebuchet MS, Lucida Grande, sans-serif;
-    display: none; }
+    padding: 1em 0 .95em; }
   nav ul {
     width: 80%;
     text-align: right;
@@ -168,7 +149,7 @@ nav {
       font-size: .8em;
       text-transform: uppercase;
       font-family: Trebuchet MS, Lucida Grande, sans-serif;
-      padding: 1.5em 0em; }
+      padding: 3.6em 0em; }
     nav ul a:hover {
       color: #444; }
 
@@ -456,113 +437,134 @@ footer {
                                          888                "Y88P"            
                                                                                           
 */
-#work:after {
+#michael-brandon {
+  background: transparent url(../images/home_bg.png) top left repeat; }
+
+#intro {
+  border-top: 10px solid #222; }
+  #intro img {
+    width: 300px;
+    display: block;
+    margin: 100px auto 40px; }
+  #intro .main-text {
+    font-size: 1.4em;
+    line-height: 1.5; }
+
+#jumps {
+  text-align: center;
+  width: 800px;
+  margin: 3em auto 8em; }
+  #jumps li {
+    width: 254px;
+    display: inline-block; }
+    #jumps li:first-child {
+      margin-right: 18px; }
+      #jumps li:first-child .image {
+        background: #a60000; }
+      #jumps li:first-child .nubbin {
+        border-bottom-color: #a60000;
+        border-right-color: #a60000; }
+      #jumps li:first-child a:link,
+      #jumps li:first-child a:visited {
+        color: #a60000; }
+      #jumps li:first-child a:hover {
+        color: #222; }
+    #jumps li:last-child {
+      margin-left: 19px; }
+      #jumps li:last-child .image {
+        background: #3d80af; }
+      #jumps li:last-child .nubbin {
+        border-bottom-color: #3d80af;
+        border-right-color: #3d80af; }
+      #jumps li:last-child .icon {
+        width: 90px;
+        height: 90px;
+        margin: -58px 0 0 -45px; }
+        #jumps li:last-child .icon img {
+          width: 100%; }
+      #jumps li:last-child a:link,
+      #jumps li:last-child a:visited {
+        color: #3d80af; }
+      #jumps li:last-child a:hover {
+        color: #222; }
+    #jumps li .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-size: 3.6em;
+      margin: -50px 0 0 -28px; }
+  #jumps p {
+    font-size: .9em; }
+  #jumps .image {
+    background: #222;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -ms-border-radius: 5px;
+    text-align: center;
+    height: 140px;
+    position: relative; }
+    #jumps .image.middle {
+      background: #c4630c; }
+      #jumps .image.middle .icon {
+        width: 60px;
+        height: 60px;
+        margin: -40px 0 0 -30px; }
+        #jumps .image.middle .icon img {
+          width: 100%; }
+      #jumps .image.middle .nubbin {
+        border-bottom-color: #c4630c;
+        border-right-color: #c4630c; }
+    #jumps .image .nubbin {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -10px;
+      border: 10px solid #222;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      transform: rotateZ(45deg);
+      -webkit-transform: rotateZ(45deg);
+      -moz-transform: rotateZ(45deg);
+      -ms-transform: rotateZ(45deg); }
+  #jumps a:link,
+  #jumps a:visited {
+    color: #c4630c; }
+  #jumps a:hover {
+    color: #222; }
+  #jumps h2 {
+    margin-top: .6em;
+    font-size: 2em;
+    font-family: Patua One; }
+
+#about-me:after {
   content: "";
   clear: both;
   display: block; }
-#work a:link,
-#work a:visited {
-  display: block;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box; }
-#work a:hover img, #work a:hover h2 {
-  transform: scale(1.05, 1.05);
-  -webkit-transform: scale(1.05, 1.05);
-  -moz-transform: scale(1.05, 1.05);
-  -ms-transform: scale(1.05, 1.05); }
-#work li {
-  width: 33%;
-  display: inline-block;
-  margin-bottom: 8em; }
-  #work li.middle {
-    width: 34%; }
-#work img, #work h2 {
-  position: absolute;
-  transition: transform 150ms ease-in-out;
-  -webkit-transition: -webkit-transform 150ms ease-in-out;
-  -moz-transition: -moz-transform 150ms ease-in-out;
-  -ms-transition: -ms-transform 150ms ease-in-out; }
-
-#hobbies {
-  text-align: center; }
-  #hobbies li {
-    margin: 0 10px;
-    padding: 1em;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background: #f5f5f5;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -ms-border-radius: 50%; }
-    #hobbies li img {
-      width: 100%; }
-
-#readability-work {
-  border-bottom: 10px solid #a6001b;
-  background: #700012;
-  color: white;
-  font-family: Arbutus Slab;
-  padding-top: 2.5em; }
-  #readability-work .icon {
-    font-size: 1em;
-    display: inline-block;
-    margin-right: .2em; }
-  #readability-work h2 {
-    width: 100%;
-    top: 41%;
-    text-align: center;
-    font-size: 2.4em; }
-
-#arc-work {
-  border-bottom: 10px solid #3d80af;
-  padding-top: 4.5em;
-  background: #0f1d26;
-  background-size: auto 500px; }
-
-#arc-home {
-  position: absolute;
-  top: 38%;
-  width: 100px;
-  left: 50%;
-  margin-left: -50px; }
-
-#arc-logo-homepage {
-  width: 120px;
-  display: inline-block;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  margin-left: -60px; }
-
-#reuters-work {
-  border-bottom: 10px solid #de8024;
-  padding-top: 4em;
-  background: #37220b; }
-  #reuters-work img {
-    width: 160px;
-    display: inline-block;
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    margin-left: -80px; }
+#about-me h2 {
+  margin-bottom: 1em;
+  font-size: 3em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Patua One; }
+#about-me .column {
+  float: left;
+  width: 48%; }
+  #about-me .column.left {
+    margin-right: 4%; }
+#about-me p {
+  margin-bottom: 1.4em; }
 
 #resume-pitch {
   width: 100%;
-  margin-top: 3em;
+  margin-top: 2em;
   text-align: center;
   font-size: 1.3em; }
   #resume-pitch a:link,
   #resume-pitch a:visited {
     display: block;
-    color: #789c57;
-    border: 1px solid #789c57;
+    border: 1px solid #a6001b;
     border-radius: 0.4em;
     -moz-border-radius: 0.4em;
     -webkit-border-radius: 0.4em;
@@ -572,29 +574,53 @@ footer {
     font-size: .8em;
     width: 60%; }
   #resume-pitch a:hover {
-    color: #486b29;
-    border-color: #486b29; }
+    border-color: #555; }
 
 #finale {
   text-align: center;
-  font-size: 2.4em;
-  padding: 1.4em 0;
-  margin-top: 2em;
+  margin-top: 8em;
+  padding: 2em 0 4em;
   background: #dfdfdf;
-  font-family: Sue Ellen Francisco; }
+  position: relative; }
+  #finale:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #finale ul {
+    float: right;
+    text-align: right; }
+    #finale ul li {
+      display: inline-block;
+      margin-left: 10px; }
+    #finale ul a {
+      display: block; }
+    #finale ul img {
+      width: 30px; }
   #finale p {
-    background-image: url(../images/mask.jpg);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-background-size: 100%;
-    color: rgba(0, 0, 0, 0);
-    padding-top: .2em;
-    -webkit-mask-origin: padding; }
-  #finale img {
-    display: block;
-    width: 40px;
-    margin: .2em auto 0; }
+    float: left;
+    font-size: .9em;
+    color: #888; }
 
+#footer-logo {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  margin-left: -30px;
+  display: block;
+  width: 60px; }
+
+/*
+                                                         
+                                                         
+                                                         
+888d888 .d88b.  .d8888b  888  888 88888b.d88b.   .d88b.  
+888P"  d8P  Y8b 88K      888  888 888 "888 "88b d8P  Y8b 
+888    88888888 "Y8888b. 888  888 888  888  888 88888888 
+888    Y8b.          X88 Y88b 888 888  888  888 Y8b.     
+888     "Y8888   88888P'  "Y88888 888  888  888  "Y8888  
+                                                         
+                                                         
+*/
 #resume {
   margin: 0 auto;
   padding: 5em 0; }
@@ -1276,9 +1302,6 @@ footer {
   display: block; }
 
 @media screen and (min-width: 748px) {
-  #nav-toggle {
-    display: block; }
-
   .header.arc90 {
     background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
     background-size: 100%; }
@@ -1286,23 +1309,6 @@ footer {
   .wrapper {
     width: 748px;
     margin: 0 auto; }
-
-  #michael-brandon h3 {
-    font-size: 2.2em;
-    margin-top: 5em; }
-    #michael-brandon h3:first-child {
-      margin-top: 4em; }
-  #michael-brandon .main-text {
-    font-size: 1.2em;
-    margin: 1.5em auto 3em;
-    width: 70%; }
-
-  #introduction {
-    padding-top: 3.5em; }
-    #introduction h1, #introduction h2 {
-      font-size: 5.1em; }
-    #introduction h2 {
-      font-size: 1.4em; }
 
   #hobbies li {
     margin: 0 20px;
@@ -1314,13 +1320,6 @@ footer {
     margin: 3em 0 0 0.3em;
     width: auto;
     display: inline; }
-
-  #finale {
-    font-size: 3em;
-    margin-top: 4em;
-    padding: 2em 0; }
-    #finale img {
-      width: 30px; }
 
   /* Work */
   .header {
@@ -1668,6 +1667,21 @@ footer {
 @media screen and (min-width: 1002px) {
   .wrapper {
     width: 960px; }
+
+  #michael-brandon h3 {
+    display: block;
+    font-weight: bold;
+    font-size: 3em;
+    margin: 1.4em 0 .6em;
+    text-align: center;
+    font-family: Patua One;
+    text-transform: uppercase; }
+  #michael-brandon .main-text {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center; }
+  #michael-brandon .wrapper {
+    width: 800px; }
 
   #typography {
     height: 1200px;

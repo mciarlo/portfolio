@@ -59,30 +59,13 @@ Y8b d88P
 
 nav {
   border-bottom: 1px solid #dadada;
-  background: #f1f1f1;
+  background: #eaeaea;
   @include overflowfix;
-  padding-top: 1em;
 
   h1 {
     float: left;
     font-size: 1.6em;
-    padding: .5em 0;
-
-    a:link,
-    a:visited {
-      @include textmask;
-      @include handwritten;
-      letter-spacing: -0.03em;
-    }
-  }
-
-  h2 {
-    float: left;
-    margin-left: 1em;
-    padding: 1.4em 0 1.2em;
-    font-size: 1em;
-    @include sans-serif;
-    display: none;
+    padding: 1em 0 .95em;
   }
 
   ul {
@@ -102,7 +85,7 @@ nav {
       font-size: .8em;
       text-transform: uppercase;
       @include sans-serif;
-      padding: 1.5em 0em;
+      padding: 3.6em 0em;
     }
 
     a:hover {
@@ -504,135 +487,191 @@ footer {
                                                                                           
 */
 
-#work {
-  @include overflowfix;
+#michael-brandon {
+  background: transparent url(../images/home_bg.png) top left repeat;
+}
+
+#intro {
+  border-top: 10px solid #222;
+
+  img {
+    width: 300px;
+    display: block;
+    margin: 100px auto 40px;
+  }
+
+  .main-text {
+    font-size: 1.4em;
+    line-height: 1.5;
+  }
+}
+
+#jumps {
+  text-align: center;
+  width: 800px;
+  margin: 3em auto 8em;
+
+  li {
+    width: 254px;
+    display: inline-block;
+
+    &:first-child {
+      margin-right: 18px;
+
+      .image {
+        background: #a60000;
+      }
+      .nubbin {
+        border-bottom-color: #a60000;
+        border-right-color: #a60000;
+      }
+
+      a:link,
+      a:visited {
+        color: #a60000;
+      }
+
+      a:hover {
+        color: #222;
+      }
+    }
+
+    &:last-child {
+      margin-left: 19px;
+
+      .image {
+        background: #3d80af;
+      }
+
+      .nubbin {
+        border-bottom-color: #3d80af;
+        border-right-color: #3d80af;
+      }
+
+      .icon {
+        width: 90px;
+        height: 90px;
+        margin: -58px 0 0 -45px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      a:link,
+      a:visited {
+        color: #3d80af;
+      }
+
+      a:hover {
+        color: #222;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-size: 3.6em;
+      margin: -50px 0 0 -28px;
+    }
+  }
+  
+  p {
+    font-size: .9em;
+  }
+
+  .image {
+    background: #222;
+    @include border-radius(5px);
+    text-align: center;
+    height: 140px;
+    position: relative;
+
+    &.middle {
+      background: #c4630c;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        margin: -40px 0 0 -30px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .nubbin {
+        border-bottom-color: #c4630c;
+        border-right-color: #c4630c;
+      }
+    }
+
+    .nubbin {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -10px;
+      border: 10px solid #222;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      @include rotate(45deg);
+    }
+  }
 
   a:link,
   a:visited {
-    display: block;
-    height: 500px;
-    position: relative;
-    overflow: hidden;
-    @include box-sizing;
+    color: #c4630c;
   }
 
   a:hover {
-    img, h2 {
-      transform: scale(1.05, 1.05);
-      -webkit-transform: scale(1.05, 1.05);
-      -moz-transform: scale(1.05, 1.05);
-      -ms-transform: scale(1.05, 1.05);
-    }
-  }
-
-  li {
-    width: 33%;
-    display: inline-block;
-    margin-bottom: 8em;
-
-    &.middle {
-      width: 34%;
-    }
-  }
-
-  img, h2 {
-    position: absolute;
-    transition: transform 150ms ease-in-out;
-    -webkit-transition: -webkit-transform 150ms ease-in-out;
-    -moz-transition: -moz-transform 150ms ease-in-out;
-    -ms-transition: -ms-transform 150ms ease-in-out;
-  }
-}
-
-#hobbies {
-  text-align: center;
-
-  li {
-    margin: 0 10px;
-    padding: 1em;
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    background: #f5f5f5;
-    @include border-radius(50%);
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-#readability-work {
-  border-bottom: 10px solid #a6001b;
-  background: #700012;
-  color: white;
-  font-family: Arbutus Slab;
-  padding-top: 2.5em;
-
-  .icon {
-    font-size:1em;
-    display: inline-block;
-    margin-right: .2em;
+    color: #222;
   }
 
   h2 {
-    width: 100%;
-    top: 41%;
+    margin-top: .6em;
+    font-size: 2em;
+    font-family: Patua One;
+  }
+}
+
+#about-me {
+  @include overflowfix;
+
+  h2 {
+    margin-bottom: 1em;
+    font-size: 3em;
     text-align: center;
-    font-size: 2.4em;
+    text-transform: uppercase;
+    font-family: Patua One;
   }
-}
 
-#arc-work {
-  border-bottom: 10px solid #3d80af;
-  padding-top: 4.5em;
-  background: #0f1d26;
-  background-size: auto 500px;
-}
+  .column {
+    float: left;
+    width: 48%;
 
-#arc-home {
-  position: absolute;
-  top: 38%;
-  width: 100px;
-  left: 50%;
-  margin-left: -50px;
-}
-
-#arc-logo-homepage {
-  width: 120px;
-  display: inline-block;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  margin-left: -60px;
-}
-
-#reuters-work {
-  border-bottom: 10px solid #de8024;
-  padding-top: 4em;
-  background: #37220b;
-
-  img {
-    width: 160px;
-    display: inline-block;
-    position: absolute;
-    top: 42%;
-    left: 50%;
-    margin-left: -80px;
+    &.left {
+      margin-right: 4%;
+    }
   }
+
+  p {
+    margin-bottom: 1.4em;
+  }
+
 }
 
 #resume-pitch {
   width: 100%;
-  margin-top: 3em;
+  margin-top: 2em;
   text-align: center;
   font-size: 1.3em;
 
   a:link,
   a:visited {
     display: block;
-    color: #789c57;
-    border: 1px solid #789c57;
+    border: 1px solid #a6001b;
     @include border-radius(.4em);
     padding: .6em .8em;
     margin: .5em auto 0;
@@ -641,29 +680,63 @@ footer {
   }
 
   a:hover {
-    color: #486b29;
-    border-color: #486b29;
+    border-color: #555;
   }
 }
 
 #finale {
+  @include overflowfix;
   text-align: center;
-  font-size: 2.4em;
-  padding: 1.4em 0;
-  margin-top: 2em;
+  margin-top: 8em;
+  padding: 2em 0 4em;
   background: #dfdfdf;
-  @include handwritten;
+  position: relative;
   
-  p {
-    @include textmask;
+  ul {
+    float: right;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    a {
+      display: block;
+    }
+    img {
+      width: 30px;
+    }
   }
-  
-  img {
-    display: block;
-    width: 40px;
-    margin: .2em auto 0;
+
+  p {
+    float: left;
+    font-size: .9em;
+    color: #888;
   }
 }
+
+#footer-logo {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  margin-left: -30px;
+  display: block;
+  width: 60px;
+}
+
+/*
+                                                         
+                                                         
+                                                         
+888d888 .d88b.  .d8888b  888  888 88888b.d88b.   .d88b.  
+888P"  d8P  Y8b 88K      888  888 888 "888 "88b d8P  Y8b 
+888    88888888 "Y8888b. 888  888 888  888  888 88888888 
+888    Y8b.          X88 Y88b 888 888  888  888 Y8b.     
+888     "Y8888   88888P'  "Y88888 888  888  888  "Y8888  
+                                                         
+                                                         
+*/
 
 #resume {
   @include overflowfix;
@@ -1539,10 +1612,6 @@ footer {
 }
 
 @media screen and (min-width: 748px) {
-  #nav-toggle {
-    display: block;
-  }
-
   .header {
     &.arc90 {
       background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
@@ -1553,35 +1622,6 @@ footer {
   .wrapper {
     width: 748px;
     margin: 0 auto;
-  }
-
-  #michael-brandon {
-    h3 {
-      font-size: 2.2em;
-      margin-top: 5em;
-
-      &:first-child {
-        margin-top: 4em;
-      }  
-    }
-
-    .main-text {
-      font-size: 1.2em;
-      margin: 1.5em auto 3em;
-      width: 70%;
-    }
-  }
-
-  #introduction {
-    padding-top: 3.5em;
-
-    h1, h2 {
-      font-size: 5.1em;
-    }
-
-    h2 {
-      font-size: 1.4em;
-    }
   }
 
   #hobbies {
@@ -1601,15 +1641,19 @@ footer {
     }
   }
 
-  #finale {
-    font-size: 3em;
-    margin-top: 4em;
-    padding: 2em 0;
+  // #finale {
+  //   margin-top: 7em;
+  //   padding: 2em 0;
 
-    img {
-      width: 30px;
-    }
-  }
+  //   p {
+  //     float: right;
+  //     text-align: right;
+  //   }
+
+  //   img {
+  //     width: 70px;
+  //   }
+  // }
 
 
   /* Work */
@@ -2097,6 +2141,28 @@ footer {
 @media screen and (min-width: 1002px) {
   .wrapper {
     width: 960px;
+  }
+
+  #michael-brandon {
+    h3 {
+      display: block;
+      font-weight: bold;
+      font-size: 3em;
+      margin: 1.4em 0 .6em;
+      text-align: center;
+      font-family: Patua One;
+      text-transform: uppercase;
+    }
+
+    .main-text {
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .wrapper {
+      width: 800px;
+    }
   }
 
   #typography {
