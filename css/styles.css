@@ -315,7 +315,11 @@ footer {
       margin-top: .5em;
       font-size: .9em;
       display: block;
-      font-weight: bold; }
+      font-weight: bold;
+      font-family: Anaheim;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      font-weight: normal; }
     #reuters-intro ul img,
     #arc90-background ul img,
     #rdd-background ul img {
@@ -758,6 +762,11 @@ footer {
   border-top: 10px solid #a6001b; }
   #rdd-background h2 {
     line-height: 1.2; }
+  #rdd-background ul span {
+    font-size: 1.2em;
+    font-family: Arbutus Slab;
+    letter-spacing: -0.04em;
+    line-height: 1; }
 
 #thoughtful-design {
   background: #a6001b;
@@ -888,6 +897,9 @@ footer {
     display: inline-block;
     width: 100%;
     margin-top: 4em; }
+    #ux-videos li video {
+      width: 90%;
+      display: none; }
     #ux-videos li:first-child {
       margin-top: 0; }
     #ux-videos li a:link,
@@ -911,9 +923,9 @@ footer {
       width: 40px;
       height: 40px;
       position: absolute;
-      top: 38%;
+      top: 45%;
       left: 50%;
-      margin: -20px 0 0 -20px;
+      margin: -20px 0 0 -22px;
       border-radius: 50%;
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
@@ -937,6 +949,50 @@ footer {
       -moz-border-radius: 8px;
       -webkit-border-radius: 8px;
       -ms-border-radius: 8px; }
+
+/* Videos ------- */
+#rdd-video-player {
+  margin: 0 auto 3em;
+  display: none;
+  position: relative; }
+  #rdd-video-player video {
+    width: 90%;
+    margin: 0 auto;
+    display: none; }
+
+#replay-video {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-left: -70px;
+  width: 100px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px 14px;
+  text-align: center;
+  border-radius: 2em;
+  -moz-border-radius: 2em;
+  -webkit-border-radius: 2em;
+  -ms-border-radius: 2em;
+  font-family: Arbutus Slab;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  display: none; }
+  #replay-video:hover {
+    background: rgba(0, 0, 0, 0.8); }
+
+#rdd-videos {
+  padding: 5em 0em 4em;
+  background: #a6001b; }
+  #rdd-videos:after {
+    content: "";
+    clear: both;
+    display: block; }
+  #rdd-videos h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 1em; }
 
 #rdd-love {
   text-align: center;
@@ -981,25 +1037,12 @@ footer {
 
 #featured-badge {
   display: inline-block;
-  width: 200px;
+  width: 70%;
   margin: 0px auto; }
 
 #dl-rdd {
   display: inline-block;
   margin: 40px auto; }
-
-/* Videos ------- */
-#rdd-videos {
-  padding: 5em 0em;
-  background: #a6001b; }
-  #rdd-videos:after {
-    content: "";
-    clear: both;
-    display: block; }
-  #rdd-videos h3 {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 1em; }
 
 /*
                          888                             
@@ -1012,6 +1055,9 @@ footer {
 888     "Y8888   "Y88888  "Y888 "Y8888  888      88888P' 
                                                          
 */
+#reuters-intro ul span {
+  font-size: 1.3em; }
+
 .data {
   position: absolute;
   border: 2px solid #5b3a0e;
@@ -1254,6 +1300,9 @@ footer {
   border-top: 10px solid #3d80af; }
   #arc90-background .main-text {
     margin-top: 2.2em; }
+  #arc90-background ul span {
+    font-size: 1.1em;
+    font-family: Kite One; }
 
 #me {
   background: #444;
@@ -1396,6 +1445,18 @@ footer {
   margin: 4em auto 0;
   display: block; }
 
+@media screen and (min-width: 460px) {
+  #love-badges {
+    width: 365px;
+    margin: 0 auto; }
+
+  #featured-badge {
+    float: left;
+    width: 200px; }
+
+  #dl-rdd {
+    float: left;
+    margin: 20px 0px 80px 30px; } }
 @media screen and (min-width: 748px) {
   .header {
     height: 340px; }
@@ -1501,7 +1562,7 @@ footer {
     display: inline-block;
     margin: -1em 0 2em;
     padding-left: 75px;
-    width: 120px;
+    width: 134px;
     text-align: left;
     font-size: 1.1em; }
     #reuters-intro ul li:first-child,
@@ -1511,13 +1572,16 @@ footer {
       #reuters-intro ul li:first-child img,
       #arc90-background ul li:first-child img,
       #rdd-background ul li:first-child img {
-        top: -8px;
+        top: -14px;
         width: 64px; }
   #reuters-intro ul img,
   #arc90-background ul img,
   #rdd-background ul img {
     width: 60px;
     position: absolute; }
+
+  #reuters-intro ul li:first-child img {
+    top: -8px; }
 
   #thoughtful-design {
     padding-bottom: 7em; }
@@ -1599,6 +1663,20 @@ footer {
   #ux-videos .play-btn {
     top: 36%; }
 
+  #rdd-video-player {
+    width: 90%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px; }
+    #rdd-video-player video {
+      border-radius: 3px;
+      -moz-border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -ms-border-radius: 3px;
+      width: 96%;
+      margin: 0 auto; }
+
   #rdd-love {
     text-align: right;
     padding: 6em 0 8em; }
@@ -1629,6 +1707,10 @@ footer {
     z-index: 2;
     display: block;
     margin-left: 110px; }
+
+  #love-badges {
+    width: auto;
+    margin: 0; }
 
   #featured-badge {
     float: left;

@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-<link href='http://fonts.googleapis.com/css?family=Nixie+One|Abel|Mako|BenchNine:400,700|Anaheim|Chau+Philomene+One|Magra:400,700|Exo:400,700|Days+One|Oswald:300,700|Rosario:400,400italic,700|Roboto+Condensed:700|Gafata|Strait|Advent+Pro:400,700|Cuprum:400,700|Play:400,700|Homenaje|Titillium+Web:400,700|Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Anaheim|Arbutus+Slab' rel='stylesheet' type='text/css'>
 
 
     <link href='../css/styles.css' rel='stylesheet' type='text/css'>
@@ -130,32 +130,81 @@
 
       <section id="rdd-videos">
         <div class="wrapper">
-          <h3>A taste of the fun.</h3>
+          <div id="rdd-video-player">
+            <a href="#" id="replay-video">Replay</a>
+
+            <video id="readability-tour-video">
+              <source src="/video/readability_tour_ipad.mp4" type="video/mp4">
+              <source src="/video/readability_tour_ipad.ogv" type="video/ogv">
+              <source src="/video/readability_tour_ipad.webm" type="video/webm">
+
+              <img src="/images//ux_tour.jpg" alt="Delete" />
+            </video>
+
+            <video id="readability-options-video">
+              <source src="/video/readability_options_ipad.mp4" type="video/mp4">
+              <source src="/video/readability_options_ipad.ogv" type="video/ogv">
+              <source src="/video/readability_options_ipad.webm" type="video/webm">
+
+              <img src="/images//ux_options.jpg" alt="Delete" />
+            </video>
+
+            <video id="readability-styling-video">
+              <source src="/video/readability_styles_ipad.mp4" type="video/mp4">
+              <source src="/video/readability_styles_ipad.ogv" type="video/ogv">
+              <source src="/video/readability_styles_ipad.webm" type="video/webm">
+
+              <img src="/images//ux_styling.jpg" alt="Delete" />
+            </video>
+          </div>
+
           <ul id="ux-videos">
             <li>
-              <a href="#" id="ux-tour-video">
+              <video id="readability-tour-video-inline">
+                <source src="/video/readability_tour_ipad.mp4" type="video/mp4">
+                <source src="/video/readability_tour_ipad.ogv" type="video/ogv">
+                <source src="/video/readability_tour_ipad.webm" type="video/webm">
+
+                <img src="/images//ux_tour.jpg" alt="Delete" />
+              </video>
+
+              <a class="play-video-btn" data-video-element="readability-tour-video" href="#" id="ux-tour-video">
                 <span class="play-btn">
                   <span class="play-arrow"></span>
                 </span>
                 <img src="/images/ux_tour.jpg"/>
-                <strong>Tour</strong>
               </a>
+              <strong>Tour</strong>
             </li><li>
-              <a href="#" id="ux-options-video">
+              <video id="readability-options-video-inline">
+                <source src="/video/readability_options_ipad.mp4" type="video/mp4">
+                <source src="/video/readability_options_ipad.ogv" type="video/ogv">
+                <source src="/video/readability_options_ipad.webm" type="video/webm">
+
+                <img src="/images//ux_options.jpg" alt="Delete" />
+              </video>
+              <a class="play-video-btn" data-video-element="readability-options-video" href="#" id="ux-options-video">
                 <span class="play-btn">
                   <span class="play-arrow"></span>
                 </span>
                 <img src="/images/ux_options.jpg"/>
-                <strong>Options</strong>
               </a>
+              <strong>Options</strong>
             </li><li>
-              <a href="#" id="ux-styling-video">
+               <video id="readability-styling-video-inline">
+                <source src="/video/readability_styles_ipad.mp4" type="video/mp4">
+                <source src="/video/readability_styles_ipad.ogv" type="video/ogv">
+                <source src="/video/readability_styles_ipad.webm" type="video/webm">
+
+                <img src="/images//ux_styling.jpg" alt="Delete" />
+              </video>
+              <a class="play-video-btn" data-video-element="readability-styling-video" href="#" id="ux-styling-video">
                 <span class="play-btn">
                   <span class="play-arrow"></span>
                 </span>
                 <img src="/images/ux_styling.jpg"/>
-                <strong>Styles</strong>
-              </a>
+              </a> 
+              <strong>Styles</strong>
             </li>
           </ul>
           </ul>
@@ -172,8 +221,11 @@
               <span>&ndash; Apple App Store</a></span>
             </blockquote>
 
-            <img id="featured-badge" src="../images/featured.svg"/>
-             <a id="dl-rdd" href="#"><img src="../images/appstore.svg"/></a>
+            <ul id="love-badges">
+              <li><img id="featured-badge" src="../images/featured.svg"/></li><li>
+                <a id="dl-rdd" href="#"><img src="../images/appstore.svg"/></a>
+              </li>
+            </ul>
           </div>
 
           <img id="iphone" src="../images/ios-reading-list.png"/>
@@ -254,11 +306,8 @@
     </footer>
 
 
-    <script src="../js/respond.js"></script>
+    <script src="/js/respond.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="../js/underscore.min.js"></script>
-    <script src="../js/backbone.js"></script>
-    <script src="../js/warming.js"></script>
-
+    <script src="/js/mciarlo.js"></script>
   </body>
 </html>

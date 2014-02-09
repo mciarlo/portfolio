@@ -304,6 +304,7 @@ footer {
       font-size: .9em;
       display: block;
       font-weight: bold;
+      @include reutersfont;
     }
 
     img {
@@ -901,6 +902,13 @@ footer {
   h2 {
     line-height: 1.2;
   }
+
+  ul {
+    span {
+      font-size: 1.2em;
+      @include readabilityfont;
+    }
+  }
 }
 
 #thoughtful-design {
@@ -1081,6 +1089,11 @@ footer {
     width: 100%;
     margin-top: 4em;
 
+    video {
+      width: 90%;
+      display: none;
+    }
+
     &:first-child {
       margin-top: 0;
     }
@@ -1113,9 +1126,9 @@ footer {
       width: 40px;
       height: 40px;
       position: absolute;
-      top: 38%;
+      top: 45%;
       left: 50%;
-      margin: -20px 0 0 -20px;
+      margin: -20px 0 0 -22px;
       @include border-radius(50%);
       border: 2px solid #fff;
     }
@@ -1136,7 +1149,53 @@ footer {
       @include border-radius(8px);
     }
   }
+}
+
+/* Videos ------- */
+
+#rdd-video-player {
+  margin: 0 auto 3em;
+  display: none;
+  position: relative;
+
+  video {
+    width: 90%;
+    margin: 0 auto;
+    display: none;
   }
+}
+
+#replay-video {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-left: -70px;
+  width: 100px;
+  background: #333;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px 14px;
+  text-align: center;
+  @include border-radius(2em);
+  @include readabilityfont;
+  display: none;
+
+  &:hover {
+    background: rgba(0,0,0,0.8);
+  }
+}
+
+#rdd-videos {
+  padding: 5em 0em 4em;
+  background: #a6001b;
+  @include overflowfix;
+
+  h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+}
 
 #rdd-love {
   text-align: center;
@@ -1195,7 +1254,7 @@ footer {
 
 #featured-badge {
   display: inline-block;
-  width: 200px;
+  width: 70%;
   margin: 0px auto;
 }
 
@@ -1204,20 +1263,6 @@ footer {
   margin: 40px auto;
 }
 
-
-/* Videos ------- */
-
-#rdd-videos {
-  padding: 5em 0em;
-  background: #a6001b;
-  @include overflowfix;
-
-  h3 {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 1em;
-  }
-}
 
 /*
                          888                             
@@ -1230,6 +1275,14 @@ footer {
 888     "Y8888   "Y88888  "Y888 "Y8888  888      88888P' 
                                                          
 */
+
+#reuters-intro {
+  ul {
+    span {
+      font-size: 1.3em;
+    }
+  }
+}
 
 .data {
   position: absolute;
@@ -1530,6 +1583,13 @@ footer {
   .main-text {
     margin-top: 2.2em;
   }
+
+  ul {
+    span {
+      font-size: 1.1em;
+      @include arc90font;
+    }
+  }
 }
 
 #me {
@@ -1704,8 +1764,21 @@ footer {
 }
 
 
-@media screen and (min-width: 520px) {
-  
+@media screen and (min-width: 460px) {
+  #love-badges {
+    width: 365px;
+    margin: 0 auto;
+  }
+
+  #featured-badge {
+    float: left;
+    width: 200px;
+  }
+
+  #dl-rdd {
+    float: left;
+    margin:20px 0px 80px 30px;
+  }
 }
 
 @media screen and (min-width: 748px) {
@@ -1858,7 +1931,7 @@ footer {
         display: inline-block;
         margin: -1em 0 2em;
         padding-left:75px;
-        width: 120px;
+        width: 134px;
         text-align: left;
         font-size: 1.1em;
 
@@ -1866,7 +1939,7 @@ footer {
           margin-right: 20px;
 
           img {
-            top: -8px;
+            top: -14px;
             width: 64px;
           }
         }
@@ -1876,6 +1949,12 @@ footer {
         width: 60px;
         position: absolute;
       }
+    }
+  }
+
+  #reuters-intro {
+    ul li:first-child img {
+      top: -8px;
     }
   }
 
@@ -1995,6 +2074,17 @@ footer {
     }
   }
 
+  #rdd-video-player {
+    width: 90%;
+    @include border-radius(10px);
+    
+    video {
+      @include border-radius(3px);
+      width: 96%;
+      margin: 0 auto;
+    }
+  }
+
   #rdd-love {
     text-align: right;
     padding: 6em 0 8em;
@@ -2032,6 +2122,11 @@ footer {
     z-index: 2;
     display: block;
     margin-left: 110px;
+  }
+
+  #love-badges {
+    width: auto;
+    margin: 0;
   }
 
   #featured-badge {
