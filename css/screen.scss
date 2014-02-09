@@ -2503,6 +2503,12 @@ footer {
       margin-left: -279px;
     }
   }
+
+  #rdd-video-player {    
+    video {
+      height: 620px; // iPad
+    }
+  }
 }
 
 @media screen and (min-width: 1202px) {

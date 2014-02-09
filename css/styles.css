@@ -1962,7 +1962,10 @@ footer {
     top: 28%; }
 
   #people ul {
-    margin-left: -279px; } }
+    margin-left: -279px; }
+
+  #rdd-video-player video {
+    height: 620px; } }
 @media screen and (min-width: 1202px) {
   #reusable-components li {
     width: 21%;
