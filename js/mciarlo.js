@@ -10,6 +10,10 @@ $(function () {
 		prepareVideo,
 		onVideoEnd,
 		DELAY = 10,
+		SLIDE_DURATION = 300,
+		SCROLL_DURATION = 250,
+		FADE_SPEED = 150,
+		MIN_INLINE_WIDTH = 748,
 		$rddPlayer = $("#rdd-video-player"),
 		$replayBtn = $('#replay-video'),
 		activeVideo,
@@ -31,20 +35,23 @@ $(function () {
 
 	onResize = function () {
 		windowWidth = $window.outerWidth();
-		shouldPlayInline = windowWidth < 768;
+		shouldPlayInline = windowWidth < MIN_INLINE_WIDTH;
 	};
 
 	// Show the video player is necessary and scroll into view
 
 	showVideoPlayer = function () {
 		if ($rddPlayer.is(":visible") || shouldPlayInline) {
+			activeVideo.play();
 			return;
 		}
 
 		$body.animate({
-			scrollTop: $rddPlayer.offset().top
-		}, 200, function () {
-			$rddPlayer.slideDown();
+			scrollTop: $('#rdd-videos').offset().top
+		}, SCROLL_DURATION, function () {
+			$rddPlayer.slideDown(SLIDE_DURATION, function () {
+			    activeVideo.play();
+			});
 		})
 	};
 
@@ -56,7 +63,7 @@ $(function () {
 		if (!shouldPlayInline) {
 			showReplayButton();
 		} else {
-			$(activeVideo).next('a:first').fadeIn();
+			$(activeVideo).next('a:first').fadeIn(FADE_SPEED);
 			$(activeVideo).hide();
 		}
 	};
@@ -66,7 +73,10 @@ $(function () {
 		$rddPlayer.find('video').hide();
 
 		// Show our active video
-	    $(activeVideo).fadeIn();
+	    $(activeVideo).fadeIn(FADE_SPEED, function () {
+	    	// Show the player if necessary
+	    	showVideoPlayer();
+	    });
 
 	    if (shouldPlayInline) {
 	    	$(activeVideo).next('a:first').hide();
@@ -93,15 +103,6 @@ $(function () {
 
 	    // Prepare our video
 	    prepareVideo();
-
-	    // Show the player if necessary
-	    showVideoPlayer();
-
-	    if (activeVideo.paused) {
-	      activeVideo.play();
-	    } else {
-	      activeVideo.pause();
-	    }
 	  });
 
 	$replayBtn.click(function (ev) {
