@@ -103,9 +103,7 @@ nav {
     @include serif;
 
     h1, h2, h3, h4 {
-      font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
-      line-height: 1;
+      @include readabilityfont;
     }
 
     .letter-spacing-fix {
@@ -115,17 +113,16 @@ nav {
 
   &.reuters {
     background-color: #eaeaea;
+    @include serif;
 
     h1, h2, h3, h4 {
-      line-height: 1.2;
-      font-family: Fjalla One;
-      letter-spacing: -0.05em;
+      @include reutersfont;
     }
   }
 
   &.arc90 {
     h1, h2, h3, h4 {
-      font-family: Kite One;
+      @include arc90font;
     }
 
     .letter-spacing-fix {
@@ -180,7 +177,7 @@ footer {
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 6em 0 0;
+  padding: 5em 0 0;
   height: 210px;
   text-align: center;
 
@@ -194,7 +191,7 @@ footer {
   a:link,
   a:visited {
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 1.4em;
     @include border-radius(4em);
     padding: .4em 1.5em;
     font-size: 1.2em;
@@ -205,7 +202,7 @@ footer {
     background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat;
 
     h3 {
-      font-family: Kite One;
+      @include arc90font;
     }
 
     a:link,
@@ -226,8 +223,7 @@ footer {
     height: 230px;
 
     h3 {
-      font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
+      @include readabilityfont;
       margin-top: .1em;
     }
 
@@ -253,7 +249,7 @@ footer {
     overflow: hidden;
 
     h3 {
-      font-family: Fjalla One;
+      @include reutersfont;
     }
 
     h3, a {
@@ -280,6 +276,11 @@ footer {
 #rdd-background {
   border-top: 10px solid #de8024;
 
+  h2, h3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .main-text {
     margin: 2em auto 0;
   }
@@ -291,18 +292,17 @@ footer {
     li {
       position: relative;
       display: inline-block;
+      width: 40%;
 
       padding-left: 0px;
       text-align: center;
-      margin: 1em auto 1em;
-      width: 80%;
+      margin: 0em;
     }
 
     span {
       margin-top: .5em;
       font-size: .9em;
       display: block;
-      text-transform: uppercase;
       font-weight: bold;
     }
 
@@ -311,7 +311,7 @@ footer {
       left: 0;
       display: inline-block;
 
-      width: 60px;
+      width: 70px;
       position: relative;
     }
   }
@@ -320,7 +320,7 @@ footer {
 .divider {
   text-align: center;
   display: block;
-  margin: 3em 0 4em;
+  margin: 3em 0;
 
   span {
     @include border-radius(50%);
@@ -351,7 +351,7 @@ footer {
 /* Header ---*/
 .header {
   padding: 0;
-  height: 300px;
+  height: 260px;
   position: relative;
   color: white;
   text-align: center;
@@ -374,8 +374,9 @@ footer {
   }
 
   &.reuters {
-    h1 {
-      margin-top: .2em;
+    img {
+      margin-top: .8em;
+      width: 170px;
     }
 
     background: #37220b url(../images/reuters_bg.png) top left repeat;
@@ -753,7 +754,7 @@ footer {
 #resume {
   @include overflowfix;
   margin: 0 auto;
-  padding: 5em 0 0 0;
+  padding: 2em 0 0 0;
 
   h3, h4 {
     font-family: Patua One;
@@ -792,6 +793,7 @@ footer {
   color: #888;
   border: 1px solid #999;
   padding: .6em 1.4em .6em 1em;
+  margin: 2em 0 0 5%;
   @include border-radius(4px);
 
   &:hover {
@@ -846,7 +848,7 @@ footer {
 }
 
 #skillset {
-  font-size: .9em;
+  font-size: 1.1em;
 
   li {
     line-height: 1.4;
@@ -942,8 +944,9 @@ footer {
 }
 
 .screens {
+  width: 90%;
+  margin: 1em auto 0;
   @include overflowfix;
-  margin-top: 1em;
 
   li {
     float: left;
@@ -1137,7 +1140,7 @@ footer {
 
 #rdd-love {
   text-align: center;
-  padding: 2em 0 0;
+  padding: 3em 0 0;
 }
 
 #screen-holder {
@@ -1205,7 +1208,7 @@ footer {
 /* Videos ------- */
 
 #rdd-videos {
-  padding: 5em 0 6em;
+  padding: 5em 0em;
   background: #a6001b;
   @include overflowfix;
 
@@ -1230,7 +1233,7 @@ footer {
 
 .data {
   position: absolute;
-  border: 2px solid #8c5825;
+  border: 2px solid #5b3a0e;
   width: 30px;
   height: 30px;
   margin-left: -15px;
@@ -1475,7 +1478,7 @@ footer {
       display: block;
       margin: .4em 0;
       font-size: 1.6em;
-      font-family: Fjalla One;
+      @include reutersfont;
     }
 
     p {
@@ -1556,7 +1559,7 @@ footer {
       width: 100%;
       float: left;
       margin-top: .4em;
-      font-family: Kite One;
+      @include arc90font;
     }
 
     p {
@@ -1707,6 +1710,8 @@ footer {
 
 @media screen and (min-width: 748px) {
   .header {
+    height: 340px;
+
     &.arc90 {
       background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
       background-size: 100%;
@@ -1714,7 +1719,7 @@ footer {
   }
 
   .wrapper {
-    width: 748px;
+    width: 728px;
     margin: 0 auto;
   }
 
@@ -1731,17 +1736,17 @@ footer {
 
   #jumps {
     margin: 3em auto 3em;
-    width: 800px;
+    width: 100%;
 
     li {
-      width: 254px;
+      width: 228px;
 
       &:first-child {
-        margin-right: 18px;
+        margin-right: 22px;
       }
 
       &:last-child {
-        margin-left: 19px;
+        margin-left: 22px;
       }
     }
   
@@ -1820,9 +1825,12 @@ footer {
     }
   }
 
-  /* Work */
-  .header {
-    height: 440px;
+  #back-to-home {
+    margin: 2em 0 0 0;
+  }
+
+  #skillset {
+    font-size: .9em;
   }
 
   #title-card {
@@ -1849,13 +1857,23 @@ footer {
       li {
         display: inline-block;
         margin: -1em 0 2em;
-        padding-left: 50px;
-        width: 160px;
+        padding-left:75px;
+        width: 120px;
         text-align: left;
+        font-size: 1.1em;
+
+        &:first-child {
+          margin-right: 20px;
+
+          img {
+            top: -8px;
+            width: 64px;
+          }
+        }
       }
 
       img {
-        width: 40px;
+        width: 60px;
         position: absolute;
       }
     }
