@@ -178,7 +178,7 @@ nav {
       font-weight: normal; }
   #container.arc90 h1, #container.arc90 h2, #container.arc90 h3, #container.arc90 h4 {
     font-family: Kite One;
-    line-height: 1.3; }
+    line-height: 1.1; }
   #container.arc90 .letter-spacing-fix {
     display: inline-block;
     margin-right: -0.1em; }
@@ -238,6 +238,7 @@ footer {
     background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat; }
     footer.arc90 h3 {
       font-family: Kite One;
+      line-height: 1.1;
       line-height: 1.3; }
     footer.arc90 a:link,
     footer.arc90 a:visited {
@@ -1327,7 +1328,7 @@ footer {
   #arc90-background ul span {
     font-size: 1.1em;
     font-family: Kite One;
-    line-height: 1.3; }
+    line-height: 1.1; }
 
 #me {
   background: #444;
@@ -1353,7 +1354,7 @@ footer {
       float: left;
       margin-top: .4em;
       font-family: Kite One;
-      line-height: 1.3; }
+      line-height: 1.1; }
     #me #message p {
       width: 100%;
       margin-top: 2em;
