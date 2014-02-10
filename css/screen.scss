@@ -6,14 +6,14 @@ body {
   color: #333;
   font-size: 1em;
   background-color: #eaeaea;
-  font-family: Trebuchet MS, Lucida Grande, sans-serif;
+  @include sans-serif;
 }
 
 a:link,
 a:visited {
   color: #a6001b;
   text-decoration: none;
-  @include transition(color, 150ms, ease-in-out);
+  @include transition(all, 150ms, ease-in-out);
 }
 
 a:hover {
@@ -21,8 +21,7 @@ a:hover {
 }
 
 .wrapper {
-  width: 960px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -42,6 +41,10 @@ em {
   font-style: italic;
 }
 
+.prevent-wrap {
+  display: block;
+}
+
 /*
 
          888          888               888 
@@ -58,18 +61,53 @@ Y8b d88P
                                                                
 */
 
+nav {
+  border-bottom: 1px solid #dadada;
+  background: #eaeaea;
+  @include overflowfix;
+
+  h1 {
+    float: left;
+    font-size: 1.6em;
+    padding: 1em 0 .95em;
+  }
+
+  ul {
+    width: 80%;
+    text-align: right;
+    float: right;
+
+    li {
+      display: inline-block;
+      margin-left: 2em;
+    }
+
+    a:link,
+    a:visited {
+      color: #999;
+      display: inline-block;
+      font-size: .8em;
+      text-transform: uppercase;
+      @include sans-serif;
+      padding: 3.6em 0em;
+    }
+
+    a:hover {
+      color: #444;
+    }
+  }
+}
+
 #container {
   position: relative;
   z-index: 3;
 
   &.readability {
     background: #fdfdfd;
-    font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+    @include serif;
 
     h1, h2, h3, h4 {
-      font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
-      line-height: 1;
+      @include readabilityfont;
     }
 
     .letter-spacing-fix {
@@ -79,16 +117,16 @@ Y8b d88P
 
   &.reuters {
     background-color: #eaeaea;
+    @include serif;
 
     h1, h2, h3, h4 {
-      line-height: 1;
-      font-family: Amaranth;
+      @include reutersfont;
     }
   }
 
   &.arc90 {
     h1, h2, h3, h4 {
-      font-family: Kite One;
+      @include arc90font;
     }
 
     .letter-spacing-fix {
@@ -100,16 +138,16 @@ Y8b d88P
 
 section {
   @include overflowfix;
-  padding: 7em 0 6em;
+  padding: 4em 0 3.5em;
   text-align: center;
 
   h2 {
-    font-size: 5em;
+    font-size: 3em;
   }
 
   .main-text {
-    width: 70%;
-    font-size: 1.2em;
+    width: 90%;
+    font-size: 1em;
   }
 
   &.align-left {
@@ -143,19 +181,21 @@ footer {
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 8em 0 0;
-  height: 200px;
+  padding: 5em 0 0;
+  height: 220px;
   text-align: center;
 
   h3 {
     color: white;
-    font-size: 3em;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 1.8em;
   }
 
   a:link,
   a:visited {
     display: inline-block;
-    margin-top: 1em;
+    margin-top: 1.4em;
     @include border-radius(4em);
     padding: .4em 1.5em;
     font-size: 1.2em;
@@ -166,7 +206,7 @@ footer {
     background: #34424c url(../images/arc90_preview.jpg) bottom center no-repeat;
 
     h3 {
-      font-family: Kite One;
+      @include arc90font;
     }
 
     a:link,
@@ -187,8 +227,7 @@ footer {
     height: 230px;
 
     h3 {
-      font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
+      @include readabilityfont;
       margin-top: .1em;
     }
 
@@ -214,7 +253,7 @@ footer {
     overflow: hidden;
 
     h3 {
-      font-family: Amaranth;
+      @include reutersfont;
     }
 
     h3, a {
@@ -241,6 +280,11 @@ footer {
 #rdd-background {
   border-top: 10px solid #de8024;
 
+  h2, h3 {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .main-text {
     margin: 2em auto 0;
   }
@@ -252,26 +296,28 @@ footer {
     li {
       position: relative;
       display: inline-block;
-      margin: -1em 0 4em;
-      padding-left: 50px;
-      width: 17%;
-      text-align: left;
+      width: 45%;
+
+      padding-left: 0px;
+      text-align: center;
+      margin: 0em;
     }
 
     span {
       margin-top: .5em;
       font-size: .9em;
       display: block;
-      text-transform: uppercase;
       font-weight: bold;
+      @include reutersfont;
     }
 
     img {
-      display: inline-block;
-      width: 40px;
-      position: absolute;
       top: 0;
       left: 0;
+      display: inline-block;
+
+      width: 70px;
+      position: relative;
     }
   }
 }
@@ -279,7 +325,7 @@ footer {
 .divider {
   text-align: center;
   display: block;
-  margin: 3em 0 4em;
+  margin: 3em 0;
 
   span {
     @include border-radius(50%);
@@ -291,26 +337,26 @@ footer {
   }
 
   &.arc span {
-    border-color: #a9c1d1;
+    border-color: #3d80af;
     height: 0px;
     width: 2px;
     @include border-radius(0);
   }
 
   &.reuters span {
-    border-color: #d1baa9;
+    border-color: #de8024;
   }
 
   &.readability span {
-    border-color: #efacba;
-    background: #efacba;
+    border-color: #a6001b;
+    background: #a6001b;
   }
 }
 
 /* Header ---*/
 .header {
   padding: 0;
-  height: 440px;
+  height: 260px;
   position: relative;
   color: white;
   text-align: center;
@@ -333,8 +379,9 @@ footer {
   }
 
   &.reuters {
-    h1 {
-      margin-top: .2em;
+    img {
+      margin-top: .8em;
+      width: 170px;
     }
 
     background: #37220b url(../images/reuters_bg.png) top left repeat;
@@ -342,7 +389,7 @@ footer {
 
   &.arc90 {
     background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
-    background-size: 100%;
+    background-size: 200%;
 
     #title-card {
       width: 140px;
@@ -353,7 +400,7 @@ footer {
 
 #title-card {
   position: absolute;
-  top: 38%;
+  top: 35%;
   left: 50%;
   width: 400px;
   margin-left: -200px;
@@ -365,25 +412,24 @@ footer {
 }
 
 #contact-me {
-  padding: 4em 0 5em;
+  padding: 3em 0 4em;
   font-size: 1.2em;
 
   li {
-    width: 45%;
-    display: inline-block;
-    padding-left: 5%;
+    width: 90%;
+    display: block;
+    margin: 5% auto 0;
     @include box-sizing;
-    text-align: left;
+    text-align: center;
 
     h4 {
       font-size: 1.8em;
+      margin-bottom: .3em;
     }
 
     &:first-child {
-      padding-left: 0%;
-      padding-right: 5%;
-      text-align: right;
-      border-right: 1px solid #d4d4d4;
+      margin-top: 0;
+      padding-bottom: 5%;
     }
   }
 
@@ -446,98 +492,392 @@ footer {
                                                                                           
 */
 
-#homepage-intro {
-  // background: #903d99;
-  position: relative;
-  font-family: Trebuchet MS, Lucida Grande, sans-serif;
-  width: 100%;
-  padding: 2em 0;
+#michael-brandon {
+  background: transparent url(../images/home_bg.png) top left repeat;
 }
 
-// #title-card {
-//   text-align: left;
+#intro {
+  border-top: 10px solid #222;
 
-//   img {
-//     width: 50px;
-//     display: inline-block;
-//     display: none;
-//   }
-
-//   h1 {
-//     font-weight: normal;
-//     font-size: 2em;
-//     color: 903d99;
-//     border-bottom: 1px solid #dadada;
-//     padding: .2em 0 .3em;
-//     font-family: Sue Ellen Francisco;
-//   }
-
-//   h2 {
-//     font-size: .8em;
-//     color: #2f0635;
-//     display: none;
-//     text-transform: uppercase;
-//   }
-// }
-
-#selected-work {
-  padding: 4em 0 5em;
-  @include overflowfix;
-
-  h3 {
-    font-family: Sue Ellen Francisco;
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
+  img {
+    width: 140px;
+    display: block;
+    margin: 60px auto 40px;
   }
 
-  ul {
-    width: 76%;
+  .main-text {
+    width: 80%;
     margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
   }
+}
+
+#jumps {
+  text-align: center;
+  width: 90%;
+  margin: 3em auto 1em;
+
+  li {
+    width: 100%;
+    margin-bottom: 3em;
+    display: inline-block;
+
+    strong {
+      @include transition(color, 150ms, ease-in-out);
+    }
+
+    &:first-child {
+      .image {
+        background: #a60000;
+      }
+
+      .nubbin {
+        border-bottom-color: #a60000;
+        border-right-color: #a60000;
+      }
+
+      a:link,
+      a:visited {
+        color: #333;
+
+        strong {
+          color: #a60000;
+        }
+      }
+
+      a:hover {
+        strong {
+          color: #555;
+        }
+      }
+    }
+
+    &:last-child {
+      .image {
+        background: #3d80af;
+      }
+
+      .nubbin {
+        border-bottom-color: #3d80af;
+        border-right-color: #3d80af;
+      }
+
+      .icon {
+        width: 90px;
+        height: 90px;
+        margin: -58px 0 0 -45px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      a:link,
+      a:visited {
+        color: #333;
+
+        strong {
+          color: #3d80af;
+        }
+      }
+
+      a:hover {
+        strong {
+          color: #555;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      font-size: 3.6em;
+      margin: -50px 0 0 -28px;
+    }
+  }
+  
+  p {
+    font-size: .9em;
+  }
+
+  .image {
+    background: #222;
+    @include border-radius(5px);
+    transition: transform 150ms ease-in-out;
+    -webkit-transition: -webkit-transform 150ms ease-in-out;
+    -moz-transition: -moz-transform 150ms ease-in-out;
+    -ms-transition: -ms-transform 150ms ease-in-out;
+    text-align: center;
+    height: 140px;
+    position: relative;
+
+    &.middle {
+      background: #c4630c;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        margin: -40px 0 0 -30px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .nubbin {
+        border-bottom-color: #c4630c;
+        border-right-color: #c4630c;
+      }
+    }
+
+    .nubbin {
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      margin-left: -10px;
+      border: 10px solid #222;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      @include rotate(45deg);
+    }
+  }
+
 
   a:link,
   a:visited {
-    float: left;
-    width: 29%;
-    margin: 0 2%;
-    height: 50px;
-    padding: 3em 0;
-    text-align: center;
-    background: #f1f1f1;
-    border-right: 1px solid #dadada;
-    border-bottom: 1px solid #dadada;
+    color: #333;
 
-    .icon {
-      font-size: 2.4em;
-      line-height: 1.1;
+    strong {
+    color: #c4630c;
+    }
+  }
+
+  a:hover {
+    .image {
+      transform: translate3d(0px, -5px, 0px);
+      -webkit-transform: translate3d(0px, -5px, 0px);
+      -moz-transform: translate3d(0px, -5px, 0px);
+      -ms-transform: translate3d(0px, -5px, 0px);
     }
 
-    img {
-      width: 120px;
+    strong {
+      color: #555;
     }
+  }
+
+  h2 {
+    margin-top: .3em;
+    font-size: 2em;
+    font-family: Patua One;
   }
 }
 
 #about-me {
-  padding: 4em 0;
+  border-top: 2px dotted #dadada;
+  padding-top: 4em;
+
   @include overflowfix;
 
-  h3 {
-    font-family: Sue Ellen Francisco;
+  h2 {
+    width: 86%;
+    margin: 0 auto 1em auto;
     font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: Patua One;
+  }
+
+  .column {
+    width: 86%;
+    margin: 0 auto;
   }
 
   p {
-    font-family: Trebuchet MS, Lucida Grande, sans-serif;
-    width: 76%;
-    margin: 0 auto;
-    font-size: 1.2em;
+    margin-bottom: 1.4em;
+  }
+}
+
+#finale {
+  @include overflowfix;
+  text-align: left;
+  margin-top: 4em;
+  padding: 3em 0 2em;
+  background: #222;
+  position: relative;
+  
+  ul {
+    margin-top: 1em;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 40px;
+    }
+  }
+
+  p {
+    font-size: 1.1em;
+    margin: 3.5em 0 0;
+    color: #d1d1d1;
+    font-family: Patua One;
+    text-align: center;
+  }
+}
+
+#social {
+  margin: 2em 0 0 0;
+  text-align: center;
+
+  li {
+    display: inline-block;
+    width: 50px;
+    margin: 0 10px;
+  }
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+#footer-logo {
+  position: absolute;
+  top: 2.5em;
+  left: 50%;
+  margin-left: -30px;
+  width: 60px;
+}
+
+/*
+                                                         
+                                                         
+                                                         
+888d888 .d88b.  .d8888b  888  888 88888b.d88b.   .d88b.  
+888P"  d8P  Y8b 88K      888  888 888 "888 "88b d8P  Y8b 
+888    88888888 "Y8888b. 888  888 888  888  888 88888888 
+888    Y8b.          X88 Y88b 888 888  888  888 Y8b.     
+888     "Y8888   88888P'  "Y88888 888  888  888  "Y8888  
+                                                         
+                                                         
+*/
+
+#resume {
+  @include overflowfix;
+  margin: 0 auto;
+  padding: 2em 0 0 0;
+
+  h3, h4 {
+    font-family: Patua One;
+  }
+
+  h4 {
+    font-size: 1.6em;
+    padding-bottom: .4em;
+    margin-bottom: .5em;
+    line-height: .9;
+    font-weight: normal;
+  }
+
+  h3 {
+    margin: 0 0 .6em;
+    font-size: 2.3em;
+  }
+
+  li {
+    position: relative;
+  }
+
+  .date {
+    @include sans-serif;
+    color: #777;
+    display: block;
+    text-transform: uppercase;
+    font-size: .7em;
+    margin-bottom: .2em;
+  }
+}
+
+#back-to-home {
+  clear: left;
+  float: left;
+  color: #888;
+  border: 1px solid #999;
+  padding: .6em 1.4em .6em 1em;
+  margin: 2em 0 0 7%;
+  @include border-radius(4px);
+
+  &:hover {
+    background: #555;
+    color: #fff;
+    border-color: #555;
+  }
+}
+
+#work-experience,
+#education {
+  float: left;
+  width: 100%;
+  margin-bottom: 1.5em;
+
+  li {
+    margin-bottom: 2em;
+  }
+
+  strong  {
+    font-weight: 200;
+    line-height: 1.3;
+    margin-bottom: .15em;
+    display: block;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-top: .7em;
+    line-height: 1.4;
+    font-size: .9em;
+  }
+}
+
+#left-column,
+#center-column,
+#right-column {
+  width: 86%;
+  margin: 0 auto;
+}
+
+#center-column,
+#right-column {
+  margin-top: 4em;
+
+}
+
+#left-column {
+  p {
+    @include serif;
+  }
+}
+
+#skillset {
+  font-size: 1.1em;
+
+  li {
+    line-height: 1.4;
     margin-bottom: 1em;
   }
 }
+
+
 
 /*
                               888          888      d8b 888 d8b 888             
@@ -568,28 +908,34 @@ footer {
   h2 {
     line-height: 1.2;
   }
+
+  ul {
+    span {
+      font-size: 1em;
+      @include readabilityfont;
+    }
+  }
 }
 
 #thoughtful-design {
   background: #a6001b;
   color: white;
+  padding-bottom: 0;
 
   h2 {
-    margin-top: .8em;
+    margin-top: .5em;
   }
 
   .main-text {
-    margin: 1.8em auto 3em;
+    margin: 1.8em auto 4em;
     width: 85%;
   }
 }
 
 #rdd-feature-rundown {
-  @include border-radius(10px);
   background: #890016;
   padding: 2.6em 0 2.4em;
   text-align: center;
-  width: 90%;
   margin: 0 auto;
   font-size: .8em;
 
@@ -612,8 +958,9 @@ footer {
 }
 
 .screens {
+  width: 90%;
+  margin: 1em auto 0;
   @include overflowfix;
-  margin-top: 1em;
 
   li {
     float: left;
@@ -641,9 +988,11 @@ footer {
 #iconography {
   h2 {
     color: #a6001b;
+    font-size: 2.6em;
 
     .icon {
-      margin-right: 0.2em;
+      display: block;
+      margin: 0 auto .2em;
     }
   }
 
@@ -653,61 +1002,70 @@ footer {
 
   li {
     text-align: center;
-    width: 14%;
-    float: left;
-    background: #f1f1f1;
+    width: 29%;
     margin-right: 2px;
     margin-bottom: 3px;
-    padding: .8em 0 2em;
+    padding: .4em 0 1em;
     @include box-sizing;
     color: #777;
     font-size: .8em;
+    display: inline-block;
 
     .icon {
-      font-size: 4em;
+      font-size: 3em;
       display: block;
     }
   }
 }
 
 #typography {
+  padding-bottom: 5em;
   background: #a6001b;
   position: relative;
   color: white;
-  height: 1130px;
   overflow: hidden;
 
-  img {
-    position: absolute;
-    left: 50%;
+  h2 {
+    text-align: center;
   }
 
   .main-text {
-    margin: 1.8em 0 3em;
+    text-align: center;
+    width: 90%;
+    margin: 1.8em auto 3em;
   }
 }
 
 #landscape  {
-  margin-left: -900px;
-  width: 800px;
-  top: 526px;
+  margin-left: -450px;
+  width: 400px;
+  top: 263px;
+  display: none;
 }
 
 #portrait {
-  top: 430px;
-  margin-left: -80px;
-  height: 800px;
+  display: block;
+  margin: 3em auto 0;
+  width: 280px;
 }
 
 #portrait-iphone {
-  width: 240px;
-  top: 690px;
-  margin-left: 474px;
+  width: 120px;
+  top: 345px;
+  display: none;
+  margin-left: 237px;
 }
 
 #rdd-ux {
+  h2 {
+    margin-top:1em;
+    text-align: center;
+  }
+  
   .main-text {
-    margin: 2em 0 3em;
+    margin: 2em auto 1em;
+    width: 90%;
+    text-align: center;
   }
 
   .rdd-red {
@@ -715,75 +1073,174 @@ footer {
   }
 
   #ux-hero-video {
-    float: left;
-    width: 340px;
-    margin-left: 10%;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
   }
 
   .right {
     position: relative;
-    width: 45%;
-    float: left;
-    margin-left: 9%;
-    margin-top: 115px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+#ux-videos {
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+
+  li {
+    display: inline-block;
+    width: 100%;
+    margin-top: 2em;
+
+    video {
+      width: 90%;
+      min-height: 195px;
+      display: none;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    a:link,
+    a:visited {
+      position: relative;
+      display: block;
+    }
+
+    strong {
+      margin-top: .3em;
+      color: white;
+      display: block;
+      font-size: 1.2em;
+      @include transition(color, 150ms, ease-in-out);
+    }
+
+    a:hover {
+      strong {
+        color: #fb96a6;
+      }
+
+      .play-btn {
+        background: #a6001b;
+      }
+    }
+
+    .play-btn {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      margin: -20px 0 0 -22px;
+      @include border-radius(50%);
+      border: 2px solid #fff;
+    }
+
+    .play-arrow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 6px solid #fff;
+      margin: -6px 0 0 -8px;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      @include rotate(45deg);
+    }
+
+    img {
+      width: 90%;
+      @include border-radius(8px);
+    }
+  }
+}
+
+/* Videos ------- */
+
+#rdd-video-player {
+  margin: 0 auto;
+  height: 0px;
+  overflow: hidden;
+  position: relative;
+  @include transition(height, 200ms, ease-in-out);
+
+  /* This should never get used because we replace inline for mobile */
+  &.active {
+    margin-bottom: 3em;
+    height: 445px;
+  }
+
+  video {
+    width: 90%;
+    margin: 0 auto;
+    display: none;
+  }
+}
+
+#replay-video {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-left: -70px;
+  width: 100px;
+  background: #333;
+  background: rgba(0,0,0,0.8);
+  border: 2px solid #000;
+  padding: 10px 20px 14px 42px;
+  text-align: center;
+  @include border-radius(2em);
+  @include readabilityfont;
+  display: none;
+  z-index: 9999;
+
+  &:hover {
+    border-color: #fff;
+  }
+
+  img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -42px;
+    width: 18px;
+  }
+}
+
+#rdd-videos {
+  padding: 5em 0em 4em;
+  background: #a6001b;
+  @include overflowfix;
+
+  h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 1em;
   }
 }
 
 #rdd-love {
-  text-align: right;
-  padding: 5em 0 8em;
-
-  ul {
-    float: left; 
-    width: 80%;
-  }
-
-  li {
-    display: inline-block;
-    width: 114px;
-    position: relative;
-    padding-left: 50px;
-
-    &:first-child {
-      margin-right: 20px;
-    }
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 40px;
-    }
-
-    span {
-      display: block;
-      margin-top: .3em;
-      font-size: 1.2em;
-    }
-
-    &:first-child {
-      img {
-        width: 35px;
-        top: -5px;
-      }
-    }
-  }
+  text-align: center;
+  padding: 3em 0 0;
 }
 
 #screen-holder {
-  height: 560px;
+  height: 920px;
   position: relative;
   overflow: hidden;
 
   h2 {
-    width: 40%;
-    margin: .4em 0 .7em;
+    width: 80%;
+    margin: .4em auto .7em;
   }
 
   blockquote {
-    font-size: 1.8em;
-    width: 40%;
-    margin-bottom: 1.5em;
+    font-size: 1.4em;
+    width: 85%;
+    margin: 0 auto 1.5em;
     line-height: 1.2;
 
     span {
@@ -807,12 +1264,7 @@ footer {
 }
 
 #iphone {
-  position: absolute;
-  top: 70px;
-  width: 230px;
-  left: 50%;
-  z-index: 3;
-  margin-left: 0px;
+  width: 280px;
 }
 
 #ipad {
@@ -821,91 +1273,21 @@ footer {
   left: 50%;
   width: 800px;
   z-index: 2;
+  display: none;
   margin-left: 110px;
 }
 
 #featured-badge {
-  float: left;
   display: inline-block;
-  width: 200px;
-  margin-left: 20px;
+  width: 70%;
+  margin: 20px auto 0;
 }
 
 #dl-rdd {
-  float: left;
-  margin:20px 20px 0 30px;
+  display: inline-block;
+  margin: 40px auto;
 }
 
-
-/* Videos ------- */
-
-#rdd-videos {
-  text-align: left;
-  position: relative;
-  z-index: 2;
-
-  .video-icon {
-    background: #78201f;
-    cursor: pointer;
-    background: rgba(120,32,31,0.6);
-
-    &:hover {
-      background: #78201f;
-      background: rgba(120,32,31,0.9);
-    }
-  }
-
-  li {
-    display: inline-block;
-    width: 30%;
-    overflow: hidden;
-    position: relative;
-
-    .interaction-video {
-      display: block;
-      position: relative;
-      overflow: hidden;
-    }
-
-    img, video {
-      width: 100%;
-      position: relative;
-      z-index: 0;
-    }
-
-    .label {
-      font-size: .9em;
-      margin-top: .3em;
-      display: block;
-      text-align: center;
-    }
-  }
-}
-
-.video-icon {
-  position: absolute;
-  top: 37%;
-  left: 50%;
-  z-index: 1;
-  width: 30px;
-  height: 30px;
-  margin: -16px 0 0 -16px;
-  border: 2px solid white;
-  @include border-radius(50px);
-  @include transition(background, 150ms, ease-in-out);
-
-  .arrow-icon {
-    border-top: 5px solid #fff;
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid transparent;
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    @include rotate(45deg);
-  }
-}
 
 /*
                          888                             
@@ -919,9 +1301,17 @@ footer {
                                                          
 */
 
+#reuters-intro {
+  ul {
+    span {
+      font-size: 1.3em;
+    }
+  }
+}
+
 .data {
   position: absolute;
-  border: 2px solid #8c5825;
+  border: 2px solid #5b3a0e;
   width: 30px;
   height: 30px;
   margin-left: -15px;
@@ -1072,7 +1462,7 @@ footer {
 
 #data-strategy {
   background: #e8892d url(../images/reutersbg.png) top left repeat;
-  padding-bottom: 9em;
+  padding-bottom: 3em;
 
   h2, h3 {
     color: #5b3001;
@@ -1092,40 +1482,35 @@ footer {
 }
 
 #feature-rundown {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
   li {
     position: relative;
-    padding-left: 35%;
-    padding: 2.5em 0 .5em 35%;
-    text-align: left;
-    margin-top: 5em;
+    padding: 2em 0;
+    text-align: center;
     @include box-sizing;
 
     img {
-      width: 30%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 70%;
+      display: inline-block;
+      margin: 0 auto;
     }
 
     h3 {
-      margin-top: 0;
-      font-size: 2.5em;
+      margin-top: .5em;
+      font-size: 2em;
     }
 
     p {
       width: 100%;
-      font-size: 1.2em;
-      text-align: left;
+      font-size: 1em;
+      text-align: center;
       margin-top: 1em;
     }
 
     &.even {
-      text-align:right;
-      padding-left: 0;
-      padding-right: 35%;
+      text-align:center;
 
       img {
         left: auto;
@@ -1133,17 +1518,19 @@ footer {
       }
     
       p {
-        text-align:right;
+        text-align:center;
       }
     }
   }
 }
 
 #reusable-components {
-  border-bottom: 1px solid #dadada;
+  border-bottom: 2px dotted #dadada;
+  padding-bottom: 1em;
 
   img {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 
   h3 {
@@ -1154,7 +1541,7 @@ footer {
   }
 
   .main-text {
-    margin: 1.5em auto 3em;
+    margin: 1.5em auto 2em;
   }
 
   ul {
@@ -1162,23 +1549,22 @@ footer {
   }
   
   li {
-    float: left;
-    width: 21%;
-    margin: 0 2%;
+    width: 90%;
+    margin: 0 auto 4em;
 
     strong {
       display: block;
-      margin: .6em 0;
-      font-size: 1.2em;
+      margin: .4em 0;
+      font-size: 1.8em;
+      @include reutersfont;
     }
 
     p {
       font-size: 1em;
-      color: #777;
     }
 
     img {
-      width: 70px;
+      width: 90px;
     }
   }
 }
@@ -1186,16 +1572,17 @@ footer {
 #proven-design {
   img {
     width: 130px;
-    margin: 0 auto;
+    margin: 0 auto 1.5em;
   }
 
   .main-text {
-    width: 64%;
+    width: 80%;
     margin: 1.5em auto 3em;
   }
 
   #web {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -1216,6 +1603,17 @@ footer {
 
 #arc90-background {
   border-top: 10px solid #3d80af;
+
+  .main-text {
+    margin-top: 2.2em;
+  }
+
+  ul {
+    span {
+      font-size: 1.1em;
+      @include arc90font;
+    }
+  }
 }
 
 #me {
@@ -1233,7 +1631,7 @@ footer {
 
   #message {
     position: absolute;
-    top: 28%;
+    top: 32%;
     left: 50%;
     margin-left: -350px;
     width: 700px;
@@ -1241,49 +1639,51 @@ footer {
 
     h2 {
       color: white;
-      font-size: 4em;
+      font-size: 2em;
       width: 100%;
       float: left;
-      margin-top: .2em;
-      font-family: Kite One;
+      margin-top: .4em;
+      @include arc90font;
     }
 
     p {
       width: 100%;
-      margin-top: 3em;
+      margin-top: 2em;
       color: white;
-      font-size: 1.4em;
+      font-size: 1.2em;
       color: #a1a1a1;
-      font-family: Trebuchet MS, Lucida Grande, sans-serif;
+      @include sans-serif;
     }
   }
 }
 
 #bg-portrait {
   display: inline-block;
-  width: 160px;
-  height: 160px;
-  border: 8px solid #5b8aab;
+  width: 120px;
+  height: 120px;
+  border: 6px solid #5b8aab;
   @include border-radius(50%);
 }
 
 #arrow {
   position: absolute;
-  top: 16%;
-  left: 55%;
-  width:120px;
+  top: 12%;
+  left: 100%;
+  width:60px;
   border: none;
 }
 
 #how-done {
   position: absolute;
-  top: 24%;
-  left: 65%;
-  width: 300px;
-  font-size: 1.7em;
+  top: 15%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  font-size: 1.2em;
   letter-spacing: 0.05em;
   line-height: 1.1;
   color: #777;
+  text-align: center;
   font-family: Waiting for the Sunrise;
 }
 
@@ -1303,7 +1703,7 @@ footer {
   color: white;
 
   p {
-    margin: 1.5em auto 1em;
+    margin: 2.2em auto 1em;
   }
 
   #feature-rundown {
@@ -1312,7 +1712,7 @@ footer {
     }
 
     li {
-      padding-top: 2em;
+      padding-top: 1em;
     }
   }
 }
@@ -1332,22 +1732,22 @@ footer {
 
   ul {
     text-align: center;
-    width: 1600px;
-    margin: 4em 0 4em -320px;
+    width: 814px;
+    margin: 3em 0 3em -247px;
   }
   
   li {
     margin: 0 5px;
-    width: 120px;
-    height: 120px;
+    width: 60px;
+    height: 60px;
     overflow: hidden;
-    border: 4px solid #c2d8e7;
+    border: 2px solid #c2d8e7;
     @include border-radius(50%);
     display: inline-block;
     
     img {
       width: 100%;
-      border: 4px solid #fff;
+      border: 2px solid #fff;
       @include border-radius(50%);
       @include box-sizing;
     }
@@ -1356,50 +1756,867 @@ footer {
 
 #narratives {
   .main-text {
-    margin: 1.5em auto 2em;
+    margin: 2.2em auto 2em;
   }
 
   ul {
-    width: 95%;
-    margin: 8em auto 0em;
+    width: 90%;
+    margin: 4em auto 0em;
     @include overflowfix;
 
     li {
       float: left;
-      width: 50%;
+      width: 100%;
+      margin-top: 1em;
       margin-bottom: 20px;
 
       img {
-        width: 110%;
-        margin-left: -5%;
+        width: 100%;
       }
 
       &:first-child {
-        margin-top: -30px;
+        margin-top: 0;
       }
     }
   }
 }
 
 #homepage {
-  width: 100%;
+  width: 90%;
   margin: 4em auto 0;
   display: block;
 }
 
 
-@media screen and (min-width: 520px) {
-  
+@media screen and (min-width: 460px) {
+  #love-badges {
+    width: 365px;
+    margin: 0 auto;
+  }
+
+  #featured-badge {
+    float: left;
+    width: 200px;
+  }
+
+  #dl-rdd {
+    float: left;
+    margin:20px 0px 80px 30px;
+  }
 }
 
 @media screen and (min-width: 748px) {
+  .prevent-wrap {
+    display: inline;
+  }
 
+  .header {
+    height: 340px;
+
+    &.arc90 {
+      background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  .wrapper {
+    width: 688px;
+    margin: 0 auto;
+  }
+
+  #intro {
+    img {
+      width: 300px;
+      margin: 100px auto 40px;
+    }
+
+    .main-text {
+      font-size: 1.4em;
+    }
+  }
+
+  #jumps {
+    margin: 3em auto 3em;
+    width: 100%;
+
+    li {
+      width: 216px;
+
+      &:first-child {
+        margin-right: 20px;
+      }
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  
+    h2 {
+      margin-top: .6em;
+    }
+  }
+
+  #about-me {
+    padding: 6em 0 1em;
+    @include overflowfix;
+
+    h2 {
+      margin-bottom: 1em;
+      font-size: 3em;
+      text-align: center;
+      font-family: Patua One;
+    }
+
+    .column {
+      float: left;
+      width: 48%;
+
+      &.left {
+        margin-right: 4%;
+      }
+    }
+
+    p {
+      margin-bottom: 1.4em;
+    }
+  }
+
+  #footer-logo {
+    position: absolute;
+    left: 50%;
+    float: none;
+    top: 2em;
+    margin-left: -30px;
+    width: 60px;
+  }
+
+  #back-to-home {
+    margin: 2em 0 0 0;
+  }
+
+  #skillset {
+    font-size: .9em;
+  }
+
+  #title-card {
+    top: 38%;
+  }
+
+  section {
+    padding: 7em 0 6em;
+
+    h2 {
+      font-size: 4em;
+    }
+
+    .main-text {
+      width: 80%;
+      font-size: 1.2em;
+    }
+  }
+
+  #reuters-intro,
+  #arc90-background,
+  #rdd-background {
+    ul {
+      li {
+        display: inline-block;
+        margin: -1em 0 2em;
+        padding-left:75px;
+        width: auto;
+        text-align: left;
+        font-size: 1.1em;
+
+        &:first-child {
+          margin-right: 2em;
+
+          img {
+            top: -14px;
+            width: 64px;
+          }
+        }
+      }
+
+      img {
+        width: 60px;
+        position: absolute;
+      }
+    }
+  }
+
+  #reuters-intro {
+    ul li:first-child img {
+      top: -8px;
+    }
+  }
+
+  #arc90-background {
+    h2, h3 {
+      width: 70%;
+    }
+  }
+
+  #thoughtful-design {
+    padding-bottom: 7em;
+  }
+
+  #rdd-feature-rundown {
+    @include border-radius(10px);
+    width: 87%;
+    margin: 0 auto;
+  }
+
+  #iconography {
+    h2 {
+      font-size: 4em;
+
+      .icon {
+        display: inline;
+        margin-right: 0.2em;
+      }
+    }
+
+    p {
+      width: 80%;
+    }
+
+    li {
+      width: 14%;
+      padding: .6em 0 1.6em;
+
+      .icon {
+        font-size: 4em;
+      }
+    }
+  }
+
+  #arc-details,
+  #data-strategy {
+    p {
+      width: 82%;
+    }
+  }
+
+  #typography {
+    height: 1200px;
+    padding: 6em 0 5em;
+
+    h2 {
+      text-align: left;
+      margin: 0 30px;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+    }
+
+    .main-text {
+      text-align: left;
+      width: 80%;
+      margin: 1.8em 30px 3em;
+    }
+  }
+
+  #landscape  {
+    margin-left: -900px;
+    width: 800px;
+    top: 536px;
+    display: block;
+  }
+
+  #portrait {
+    top: 440px;
+    margin-left: -80px;
+    height: 800px;
+    width: auto;
+  }
+
+  #portrait-iphone {
+    width: 240px;
+    top: 700px;
+    display: block;
+    margin-left: 474px;
+  }
+
+  #rdd-ux {
+    padding: 6em 0;
+
+    h2, .main-text {
+      text-align: left;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .main-text {
+      width: 100%;
+    }
+
+    #ux-hero-video {
+      float: left;
+      width: 280px;
+      margin: 0 0 0 6%;
+    }
+
+    .right {
+      position: relative;
+      width: 42%;
+      float: left;
+      margin: 60px 0 0 8%;
+    }
+  }
+
+  #ux-videos {
+    li {
+      width: 33.3%;
+      margin-top: 0;
+    }
+
+    .play-btn {
+      top: 36%;
+    }
+  }
+
+  #rdd-video-player {
+    width: 90%;
+    @include border-radius(10px);
+      
+    &.active {
+      height: 445px; // iPad
+    }
+    
+    video {
+      @include border-radius(3px);
+      width: 96%;
+      height: 445px; // iPad
+      margin: 0 auto;
+    }
+  }
+
+  #rdd-love {
+    text-align: right;
+    padding: 6em 0;
+  }
+
+  #screen-holder {
+    height: 560px;
+
+    h2 {
+      width: 44%;
+      margin: 1.3em 0 .7em 0%;
+    }
+
+    blockquote {
+      font-size: 1.6em;
+      width: 40%;
+      margin: 0 0 1.5em 4%;
+    }
+  }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 50%;
+    z-index: 3;
+    margin-left: 0px;
+  }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px;
+  }
+
+  #love-badges {
+    width: auto;
+    margin: 0;
+  }
+
+  #featured-badge {
+    float: left;
+    display: inline-block;
+    width: 120px;
+    margin-top: .5em;
+    margin-left: 20px;
+  }
+
+  #dl-rdd {
+    float: left;
+    margin: .8em 20px 0 30px;
+  }
+
+  #contact-me {
+    padding: 4em 0 5em;
+
+    li {
+      width: 45%;
+      display: inline-block;
+      padding-left: 5%;
+      @include box-sizing;
+      text-align: left;
+      margin: 0;
+
+      &:first-child {
+        padding: 0 5% 0 0;
+        text-align: right;
+        padding-top: none;
+        border-bottom: none;
+      }
+    }
+
+    &.arc90 li:first-child {
+      border-right: 1px solid #c5d7e3;
+    }
+
+    &.reuters li:first-child {
+      border-right: 1px solid #e3d4c5;
+    }
+
+    &.readability li:first-child {
+      border-right: 1px solid #e4c7cb;
+    }
+  }
+
+  footer {
+    padding: 8em 0 0;
+    height: 200px;
+
+    h3 {
+      font-size: 2.8em;
+    }
+  }
+
+  #reuters-intro {
+    h2 {
+      width: 90%;
+    }
+  }
+
+  #data-strategy {
+    padding-bottom: 9em;
+  }
+
+  #feature-rundown {
+    width: 688px;
+    margin: 0 auto;
+
+    li {
+      padding: 1.5em 0 .5em 35%;
+      text-align: left;
+      margin-top: 5em;
+
+      img {
+        width: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      h3 {
+        margin-top: 0;
+        font-size: 2.5em;
+      }
+
+      p {
+        font-size: 1.1em;
+        text-align: left;
+      }
+
+      &.even {
+        text-align:right;
+        padding-left: 0;
+        padding-right: 35%;
+      
+        p {
+          text-align:right;
+        }
+      }
+    }
+  }
+
+  #reusable-components {  
+    padding-bottom: 4em;
+
+    img {
+      width: 100%;
+    }
+
+    li {
+      float: left;
+      width: 44%;
+      margin: 0 3% 4em 3%;
+
+      strong {
+        margin: .6em 0;
+        font-size: 1.8em;
+      }
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  #proven-design {
+    .main-text {
+      width: 64%;
+    }
+
+    #web {
+      width: 100%;
+    }
+  }
+
+  #people {
+    ul {
+      width: 1518px;
+      margin: 4em 0 4em -415px;
+    }
+    
+    li {
+      width: 120px;
+      height: 120px;
+      border-width: 4px;
+
+      img {
+        border-width: 4px;
+      }
+    }
+  }
+
+  #me {
+    #message {
+      top: 28%;
+
+      h2 {
+        font-size: 4em;
+        margin-top: .2em;
+      }
+
+      p {
+        margin-top: 3em;
+        font-size: 1.4em;
+      }
+    }
+  }
+
+  #bg-portrait {
+    width: 160px;
+    height: 160px;
+    border-width: 8px;
+  }
+
+  #arrow {
+    top: 21%;
+    left: 52%;
+    width:120px;
+  }
+
+  #how-done {
+    top: 26%;
+    left: 65%;
+    margin-left: 0;
+    text-align: left;
+    width: 300px;
+    font-size: 1.7em;
+  }
+
+  #narratives {
+    ul {
+      width: 95%;
+      margin: 8em auto 0em;
+
+      li {
+        width: 50%;
+        margin-bottom: 20px;
+        margin-top: 0;
+
+        img {
+          width: 110%;
+          margin-left: -5%;
+        }
+
+        &:first-child {
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+
+  #homepage {
+    width: 100%;
+  }
+
+  #left-column,
+  #right-column {
+    float: left;
+    margin: 0;
+  }
+
+  #left-column {
+    width: 70%;
+    margin-right: 5%;
+  }
+
+  #right-column {
+    width: 25%;
+    margin-top: 0;
+  }
+
+  #back-to-home {
+    margin: 0 0 2em 0;
+  }
+
+  #finale {
+    p {
+      margin-top: 3em;
+    }
+  }
 }
 
 @media screen and (min-width: 1002px) {
-  
+  .wrapper {
+    width: 960px;
+  }
+
+  section {
+    .main-text {
+      width: 60%;
+    }
+  }
+
+  #michael-brandon {
+    h3 {
+      display: block;
+      font-weight: bold;
+      font-size: 3em;
+      margin: 1.4em 0 .6em;
+      text-align: center;
+      font-family: Patua One;
+      text-transform: uppercase;
+    }
+
+    .main-text {
+      width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .wrapper {
+      width: 800px;
+    }
+  }
+
+  #typography {
+    height: 1200px;
+    padding: 7em 0 6em;
+  }
+
+  #rdd-ux {
+    padding: 7em 0;
+
+    #ux-hero-video {
+      float: left;
+      width: 320px;
+      margin: 0 0 0 8%;
+    }
+
+    .right {
+      position: relative;
+      width: 45%;
+      float: left;
+      margin: 120px 0 0 6%;
+    }
+  }
+
+  section {
+    h2 {
+      font-size: 5em;
+    }
+  }
+
+  #iconography {
+    h2 {
+      font-size: 5em;
+    }
+
+    li {
+      width: 12%;
+    }
+  }
+
+  #rdd-love {
+    padding: 7em 0;
+  }
+
+  #arc90-background {
+    h2, h3 {
+      width: 60%;
+    }
+  }
+
+  #screen-holder {
+    height: 560px;
+
+    h2 {
+      width: 45%;
+      margin: .8em 0 .7em;
+    }
+
+    blockquote {
+      font-size: 1.6em;
+      width: 40%;
+      margin: 0 0 1.5em 5%;
+    }
+  }
+
+  #iphone {
+    position: absolute;
+    top: 70px;
+    width: 230px;
+    left: 50%;
+    z-index: 3;
+    margin-left: 0px;
+  }
+
+  #ipad {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    width: 800px;
+    z-index: 2;
+    display: block;
+    margin-left: 110px;
+  }
+
+  #featured-badge {
+    margin-left: 66px;
+    width: 200px;
+  }
+
+  #feature-rundown {
+    width: 768px;
+
+    li {
+      padding: 2em 0 1em 35%;
+    }
+  }
+
+  #dl-rdd {
+    margin-top: 1.6em;
+  }
+
+  #reusable-components {
+    li {
+      float: none;
+      display: inline-block;
+      width: 40%;
+    }
+  }
+
+  #arrow {
+    left: 55%;
+  }
+
+  #how-done {
+    top: 28%;
+  }
+
+  #people {
+    ul {
+      margin-left: -279px;
+    }
+  }
+
+  #rdd-video-player { 
+    &.active {
+      height: 620px;
+    }
+ 
+    video {
+      height: 620px; // iPad
+    }
+  }
+
+  #arc90-background {
+    .main-text {
+      width: 70%;
+    }
+  }
+
+  #arc-details,
+  #data-strategy {
+    p {
+      width: 76%;
+    }
+  }
 }
 
 @media screen and (min-width: 1202px) {
+  #reusable-components {  
+    li {
+      font-size: 1.2em;
+    }
+  }
   
+  section {
+    padding: 9em 0 8em;
+
+    h2 {
+      font-size: 5.4em;
+    }
+
+    .main-text {
+      width: 90%;
+      font-size: 1.4em;
+    }
+  }
+
+  #rdd-background,
+  #reuters-intro {
+    .main-text {
+      width: 82%;
+    }
+  }
+
+  #arc90-background,
+  #people,
+  #narratives {
+    .main-text {
+      width: 76%;
+    }
+  }
+
+  #reuters-intro,
+  #arc90-background,
+  #rdd-background {
+    ul {
+      li {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  #rdd-feature-rundown {
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  #rdd-ux {
+    .right {
+      margin-top: 88px;
+    }
+  }
+
+  .divider {
+    margin: 3em 0 4.2em;
+  }
 }
