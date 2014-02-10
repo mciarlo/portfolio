@@ -1161,9 +1161,17 @@ footer {
 /* Videos ------- */
 
 #rdd-video-player {
-  margin: 0 auto 3em;
-  display: none;
+  margin: 0 auto;
+  height: 0px;
+  overflow: hidden;
   position: relative;
+  @include transition(height, 200ms, ease-in-out);
+
+  /* This should never get used because we replace inline for mobile */
+  &.active {
+    margin-bottom: 3em;
+    height: 445px;
+  }
 
   video {
     width: 90%;
@@ -2065,6 +2073,10 @@ footer {
   #rdd-video-player {
     width: 90%;
     @include border-radius(10px);
+      
+    &.active {
+      height: 445px; // iPad
+    }
     
     video {
       @include border-radius(3px);
@@ -2514,7 +2526,11 @@ footer {
     }
   }
 
-  #rdd-video-player {    
+  #rdd-video-player { 
+    &.active {
+      height: 620px;
+    }
+ 
     video {
       height: 620px; // iPad
     }

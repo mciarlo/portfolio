@@ -3,7 +3,6 @@ $(function () {
 		$body = $('body'),
 		windowWidth = $window.outerWidth(),
 		windowHeight = $window.outerHeight(),
-		$overlay = $('#video-overlay'),
 		onScroll,
 		showVideoPlayer,
 		showReplayButton,
@@ -42,17 +41,20 @@ $(function () {
 	// Show the video player is necessary and scroll into view
 
 	showVideoPlayer = function () {
-		if ($rddPlayer.is(":visible") || shouldPlayInline) {
+		if (shouldPlayInline) {
 			playVideo();
 			return;
 		}
 
+		// Tricks the iPad into playing on first load
+		playVideo();
+		activeVideo.pause();
+
 		$body.animate({
 			scrollTop: $('#rdd-videos').offset().top
 		}, SCROLL_DURATION, function () {
-			$rddPlayer.slideDown(SLIDE_DURATION, function () {
-			    playVideo();
-			});
+			$rddPlayer.addClass('active');
+			playVideo();
 		})
 	};
 
