@@ -182,7 +182,7 @@ footer {
   width: 100%;
   z-index: 0;
   padding: 5em 0 0;
-  height: 210px;
+  height: 220px;
   text-align: center;
 
   h3 {
@@ -911,7 +911,7 @@ footer {
 
   ul {
     span {
-      font-size: 1.2em;
+      font-size: 1em;
       @include readabilityfont;
     }
   }
