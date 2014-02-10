@@ -1545,13 +1545,13 @@ footer {
     display: inline-block;
     margin: -1em 0 2em;
     padding-left: 75px;
-    width: 136px;
+    width: auto;
     text-align: left;
     font-size: 1.1em; }
     #reuters-intro ul li:first-child,
     #arc90-background ul li:first-child,
     #rdd-background ul li:first-child {
-      margin-right: 20px; }
+      margin-right: 2em; }
       #reuters-intro ul li:first-child img,
       #arc90-background ul li:first-child img,
       #rdd-background ul li:first-child img {
@@ -2003,7 +2003,6 @@ footer {
   #reuters-intro ul li,
   #arc90-background ul li,
   #rdd-background ul li {
-    width: 162px;
     font-size: 1.3em; }
 
   #rdd-feature-rundown p {

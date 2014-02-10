@@ -1906,12 +1906,12 @@ footer {
         display: inline-block;
         margin: -1em 0 2em;
         padding-left:75px;
-        width: 136px;
+        width: auto;
         text-align: left;
         font-size: 1.1em;
 
         &:first-child {
-          margin-right: 20px;
+          margin-right: 2em;
 
           img {
             top: -14px;
@@ -2574,7 +2574,6 @@ footer {
   #rdd-background {
     ul {
       li {
-        width: 162px;
         font-size: 1.3em;
       }
     }
