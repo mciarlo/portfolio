@@ -20,14 +20,14 @@
 
 @mixin reutersfont {
   font-family: Anaheim;
-  line-height: 1.1;
+  line-height: 1;
   letter-spacing: -0.04em;
   font-weight: normal;
 }
 
 @mixin readabilityfont {
   font-family: Arbutus Slab;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
 }
 

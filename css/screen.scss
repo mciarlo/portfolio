@@ -1097,6 +1097,7 @@ footer {
 
     video {
       width: 90%;
+      min-height: 195px;
       display: none;
     }
 
@@ -1554,7 +1555,7 @@ footer {
 #proven-design {
   img {
     width: 130px;
-    margin: 0 auto;
+    margin: 0 auto 1.5em;
   }
 
   .main-text {
@@ -1694,7 +1695,7 @@ footer {
     }
 
     li {
-      padding-top: 2em;
+      padding-top: 1em;
     }
   }
 }
@@ -1892,7 +1893,7 @@ footer {
     }
 
     .main-text {
-      width: 70%;
+      width: 80%;
       font-size: 1.2em;
     }
   }
@@ -1905,7 +1906,7 @@ footer {
         display: inline-block;
         margin: -1em 0 2em;
         padding-left:75px;
-        width: 134px;
+        width: 136px;
         text-align: left;
         font-size: 1.1em;
 
@@ -1959,7 +1960,7 @@ footer {
     }
 
     p {
-      width: 90%;
+      width: 80%;
     }
 
     li {
@@ -1969,6 +1970,13 @@ footer {
       .icon {
         font-size: 4em;
       }
+    }
+  }
+
+  #arc-details,
+  #data-strategy {
+    p {
+      width: 82%;
     }
   }
 
@@ -1988,7 +1996,7 @@ footer {
 
     .main-text {
       text-align: left;
-      width: 90%;
+      width: 80%;
       margin: 1.8em 30px 3em;
     }
   }
@@ -2172,10 +2180,6 @@ footer {
 
   #data-strategy {
     padding-bottom: 9em;
-
-    p {
-      width: 90%;
-    }
   }
 
   #feature-rundown {
@@ -2361,6 +2365,12 @@ footer {
     width: 960px;
   }
 
+  section {
+    .main-text {
+      width: 60%;
+    }
+  }
+
   #michael-brandon {
     h3 {
       display: block;
@@ -2509,17 +2519,80 @@ footer {
       height: 620px; // iPad
     }
   }
+
+  #arc90-background {
+    .main-text {
+      width: 70%;
+    }
+  }
+
+  #arc-details,
+  #data-strategy {
+    p {
+      width: 76%;
+    }
+  }
 }
 
 @media screen and (min-width: 1202px) {
   #reusable-components {  
     li {
-      width: 21%;
-      margin: 0 2% 4em 2%;
+      font-size: 1.2em;
+    }
+  }
+  
+  section {
+    padding: 9em 0 8em;
 
-      img {
-        width: 50px;
+    h2 {
+      font-size: 5.4em;
+    }
+
+    .main-text {
+      width: 90%;
+      font-size: 1.4em;
+    }
+  }
+
+  #rdd-background,
+  #reuters-intro {
+    .main-text {
+      width: 82%;
+    }
+  }
+
+  #arc90-background,
+  #people,
+  #narratives {
+    .main-text {
+      width: 76%;
+    }
+  }
+
+  #reuters-intro,
+  #arc90-background,
+  #rdd-background {
+    ul {
+      li {
+        width: 162px;
+        font-size: 1.3em;
       }
     }
+  }
+
+  #rdd-feature-rundown {
+    p {
+      font-size: 1.3em;
+    }
+  }
+
+  #rdd-ux {
+    .right {
+      margin-top: 88px;
+    }
+  }
+
+  .divider {
+    margin: 3em 0 4.2em;
   }
 }

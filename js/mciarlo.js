@@ -9,6 +9,7 @@ $(function () {
 		showReplayButton,
 		prepareVideo,
 		onVideoEnd,
+		playVideo,
 		DELAY = 10,
 		SLIDE_DURATION = 300,
 		SCROLL_DURATION = 250,
@@ -42,7 +43,7 @@ $(function () {
 
 	showVideoPlayer = function () {
 		if ($rddPlayer.is(":visible") || shouldPlayInline) {
-			activeVideo.play();
+			playVideo();
 			return;
 		}
 
@@ -50,10 +51,17 @@ $(function () {
 			scrollTop: $('#rdd-videos').offset().top
 		}, SCROLL_DURATION, function () {
 			$rddPlayer.slideDown(SLIDE_DURATION, function () {
-			    activeVideo.play();
+			    playVideo();
 			});
 		})
 	};
+
+	playVideo = function () {
+		activeVideo.play();
+
+		// Show the replay button on end
+	    activeVideo.addEventListener('ended', onVideoEnd);
+	}
 
 	showReplayButton = function () {
 		$replayBtn.show();
@@ -72,18 +80,17 @@ $(function () {
 		// Reset all videos to hidden
 		$rddPlayer.find('video').hide();
 
+		$(activeVideo).show();
+
 		// Show our active video
-	    $(activeVideo).fadeIn(FADE_SPEED, function () {
-	    	// Show the player if necessary
-	    	showVideoPlayer();
-	    });
+		$(activeVideo).fadeIn(FADE_SPEED, function () {
+			// Show the player if necessary
+			showVideoPlayer();
+		});
 
 	    if (shouldPlayInline) {
 	    	$(activeVideo).next('a:first').hide();
 	    }
-
-	    // Show the replay button on end
-	    activeVideo.addEventListener('ended', onVideoEnd);
 	};
 
 	$('.play-video-btn').click(function (ev) {

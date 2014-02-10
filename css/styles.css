@@ -164,7 +164,7 @@ nav {
     font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
     #container.readability h1, #container.readability h2, #container.readability h3, #container.readability h4 {
       font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.03em;
       line-height: 1; }
     #container.readability .letter-spacing-fix {
       margin-right: -0.08em; }
@@ -173,7 +173,7 @@ nav {
     font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif; }
     #container.reuters h1, #container.reuters h2, #container.reuters h3, #container.reuters h4 {
       font-family: Anaheim;
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.04em;
       font-weight: normal; }
   #container.arc90 h1, #container.arc90 h2, #container.arc90 h3, #container.arc90 h4 {
@@ -250,7 +250,7 @@ footer {
     height: 230px; }
     footer.readability h3 {
       font-family: Arbutus Slab;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.03em;
       line-height: 1;
       margin-top: .1em; }
     footer.readability .icon {
@@ -268,7 +268,7 @@ footer {
     overflow: hidden; }
     footer.reuters h3 {
       font-family: Anaheim;
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.04em;
       font-weight: normal; }
     footer.reuters h3, footer.reuters a {
@@ -320,7 +320,7 @@ footer {
       display: block;
       font-weight: bold;
       font-family: Anaheim;
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.04em;
       font-weight: normal; }
     #reuters-intro ul img,
@@ -770,7 +770,7 @@ footer {
   #rdd-background ul span {
     font-size: 1.2em;
     font-family: Arbutus Slab;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
     line-height: 1; }
 
 #thoughtful-design {
@@ -904,6 +904,7 @@ footer {
     margin-top: 2em; }
     #ux-videos li video {
       width: 90%;
+      min-height: 195px;
       display: none; }
     #ux-videos li:first-child {
       margin-top: 0; }
@@ -981,7 +982,7 @@ footer {
   -webkit-border-radius: 2em;
   -ms-border-radius: 2em;
   font-family: Arbutus Slab;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1;
   display: none;
   z-index: 9999; }
@@ -1272,7 +1273,7 @@ footer {
       margin: .4em 0;
       font-size: 1.8em;
       font-family: Anaheim;
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.04em;
       font-weight: normal; }
     #reusable-components li p {
@@ -1282,7 +1283,7 @@ footer {
 
 #proven-design img {
   width: 130px;
-  margin: 0 auto; }
+  margin: 0 auto 1.5em; }
 #proven-design .main-text {
   width: 80%;
   margin: 1.5em auto 3em; }
@@ -1388,7 +1389,7 @@ footer {
   #arc-details #feature-rundown h3 {
     color: #91cef1; }
   #arc-details #feature-rundown li {
-    padding-top: 2em; }
+    padding-top: 1em; }
 
 #peek-through {
   width: 100%;
@@ -1535,7 +1536,7 @@ footer {
     section h2 {
       font-size: 4em; }
     section .main-text {
-      width: 70%;
+      width: 80%;
       font-size: 1.2em; }
 
   #reuters-intro ul li,
@@ -1544,7 +1545,7 @@ footer {
     display: inline-block;
     margin: -1em 0 2em;
     padding-left: 75px;
-    width: 134px;
+    width: 136px;
     text-align: left;
     font-size: 1.1em; }
     #reuters-intro ul li:first-child,
@@ -1585,12 +1586,16 @@ footer {
       display: inline;
       margin-right: 0.2em; }
   #iconography p {
-    width: 90%; }
+    width: 80%; }
   #iconography li {
     width: 14%;
     padding: .6em 0 1.6em; }
     #iconography li .icon {
       font-size: 4em; }
+
+  #arc-details p,
+  #data-strategy p {
+    width: 82%; }
 
   #typography {
     height: 1200px;
@@ -1603,7 +1608,7 @@ footer {
       left: 50%; }
     #typography .main-text {
       text-align: left;
-      width: 90%;
+      width: 80%;
       margin: 1.8em 30px 3em; }
 
   #landscape {
@@ -1744,8 +1749,6 @@ footer {
 
   #data-strategy {
     padding-bottom: 9em; }
-    #data-strategy p {
-      width: 90%; }
 
   #feature-rundown {
     width: 688px;
@@ -1866,6 +1869,9 @@ footer {
   .wrapper {
     width: 960px; }
 
+  section .main-text {
+    width: 60%; }
+
   #michael-brandon h3 {
     display: block;
     font-weight: bold;
@@ -1965,10 +1971,46 @@ footer {
     margin-left: -279px; }
 
   #rdd-video-player video {
-    height: 620px; } }
+    height: 620px; }
+
+  #arc90-background .main-text {
+    width: 70%; }
+
+  #arc-details p,
+  #data-strategy p {
+    width: 76%; } }
 @media screen and (min-width: 1202px) {
   #reusable-components li {
-    width: 21%;
-    margin: 0 2% 4em 2%; }
-    #reusable-components li img {
-      width: 50px; } }
+    font-size: 1.2em; }
+
+  section {
+    padding: 9em 0 8em; }
+    section h2 {
+      font-size: 5.4em; }
+    section .main-text {
+      width: 90%;
+      font-size: 1.4em; }
+
+  #rdd-background .main-text,
+  #reuters-intro .main-text {
+    width: 82%; }
+
+  #arc90-background .main-text,
+  #people .main-text,
+  #narratives .main-text {
+    width: 76%; }
+
+  #reuters-intro ul li,
+  #arc90-background ul li,
+  #rdd-background ul li {
+    width: 162px;
+    font-size: 1.3em; }
+
+  #rdd-feature-rundown p {
+    font-size: 1.3em; }
+
+  #rdd-ux .right {
+    margin-top: 88px; }
+
+  .divider {
+    margin: 3em 0 4.2em; } }
