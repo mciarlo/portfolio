@@ -986,7 +986,7 @@ footer {
   width: 100px;
   background: #333;
   background: rgba(0, 0, 0, 0.6);
-  padding: 10px 20px 14px;
+  padding: 10px 20px 14px 42px;
   text-align: center;
   border-radius: 2em;
   -moz-border-radius: 2em;
@@ -999,6 +999,12 @@ footer {
   z-index: 9999; }
   #replay-video:hover {
     background: rgba(0, 0, 0, 0.8); }
+  #replay-video img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -42px;
+    width: 18px; }
 
 #rdd-videos {
   padding: 5em 0em 4em;
