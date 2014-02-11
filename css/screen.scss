@@ -1804,6 +1804,37 @@ footer {
     float: left;
     margin:20px 0px 80px 30px;
   }
+
+  #people {
+    ul {
+      width: 814px;
+      margin-left: -177px
+    }
+  }
+}
+
+@media screen and (min-width: 560px) {
+  #people {
+    ul {
+      margin-left: -127px;
+    }
+  }
+}
+
+@media screen and (min-width: 660px) {
+  #people {
+    ul {
+      margin-left: -77px;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #people {
+    ul {
+      margin-left: -47px;
+    }
+  }
 }
 
 @media screen and (min-width: 748px) {
