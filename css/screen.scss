@@ -1752,6 +1752,7 @@ footer {
     display: inline-block;
     
     img {
+      float:left;
       width: 100%;
       border: 2px solid #fff;
       @include border-radius(50%);

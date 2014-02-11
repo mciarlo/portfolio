@@ -1441,6 +1441,7 @@ footer {
     -ms-border-radius: 50%;
     display: inline-block; }
     #people li img {
+      float: left;
       width: 100%;
       border: 2px solid #fff;
       border-radius: 50%;
