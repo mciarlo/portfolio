@@ -1417,6 +1417,10 @@ footer {
   height: 500px;
   padding: 0; }
 
+#faces-wrapper {
+  width: 320px;
+  margin: 0 auto; }
+
 #people {
   overflow: hidden; }
   #people p {
@@ -1483,20 +1487,7 @@ footer {
 
   #dl-rdd {
     float: left;
-    margin: 20px 0px 80px 30px; }
-
-  #people ul {
-    width: 814px;
-    margin-left: -177px; } }
-@media screen and (min-width: 560px) {
-  #people ul {
-    margin-left: -127px; } }
-@media screen and (min-width: 660px) {
-  #people ul {
-    margin-left: -77px; } }
-@media screen and (min-width: 720px) {
-  #people ul {
-    margin-left: -47px; } }
+    margin: 20px 0px 80px 30px; } }
 @media screen and (min-width: 748px) {
   .prevent-wrap {
     display: inline; }
@@ -1507,7 +1498,8 @@ footer {
       background: #0f1d26 url(../images/arc90_header_image.jpg) top center no-repeat;
       background-size: 100%; }
 
-  .wrapper {
+  .wrapper,
+  #faces-wrapper {
     width: 688px;
     margin: 0 auto; }
 
@@ -2002,9 +1994,6 @@ footer {
 
   #how-done {
     top: 28%; }
-
-  #people ul {
-    margin-left: -279px; }
 
   #rdd-video-player.active {
     height: 620px; }
