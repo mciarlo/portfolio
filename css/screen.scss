@@ -954,7 +954,7 @@ footer {
 
   p {
     width: 70%;
-    margin: 1em auto 0;
+    margin: .2em auto 0;
   }
 }
 
@@ -1971,6 +1971,7 @@ footer {
   #rdd-feature-rundown {
     @include border-radius(10px);
     width: 87%;
+    padding: 2em 0;
     margin: 0 auto;
   }
 
