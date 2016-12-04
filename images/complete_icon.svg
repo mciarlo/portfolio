@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="57px" viewBox="0 0 50 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>complete_icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,2.80580783 C0,1.7022791 0.898241717,0.807692308 2.0061411,0.807692308 L43.9938589,0.807692308 C45.10182,0.807692308 46,1.70260645 46,2.80580783 L46,51.0018845 C46,52.1054132 45.0952834,53 44.0083436,53 L12.8217346,53 C11.7217731,53 9.94380738,53 8.83105379,53 L1.99902433,53 C0.89499368,53 0,52.1050859 0,51.0018845 L0,2.80580783 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="-2" y="-2" width="50" height="56.1923077">
+            <rect x="-2" y="-1.19230769" width="50" height="56.1923077" fill="white"></rect>
+            <use xlink:href="#path-1" fill="black"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-180.000000, -173.000000)">
+            <g id="complete_icon" transform="translate(205.000000, 201.500000) rotate(-180.000000) translate(-205.000000, -201.500000) translate(182.000000, 175.000000)">
+                <use id="Rectangle" stroke="#8D63AB" mask="url(#mask-2)" stroke-width="4" transform="translate(23.000000, 26.903846) rotate(-180.000000) translate(-23.000000, -26.903846) " xlink:href="#path-1"></use>
+                <path d="M22.0753788,14.6035928 L22.0753788,41.8656099 C22.0753788,42.2420658 22.523094,42.5472437 23.0753788,42.5472437 C23.6276635,42.5472437 24.0753788,42.2420658 24.0753788,41.8656099 L24.0753788,14.4614572 L36.5104076,26.8964861 C36.9009319,27.2870103 37.5340969,27.2870103 37.9246212,26.8964861 L37.9246212,25.4822725 L24.1628777,11.720529 C24.1149676,11.581569 24.0355488,11.4510644 23.9246212,11.3401369 C23.7112725,11.1267882 23.4255056,11.0299947 23.1464466,11.0497566 C22.8673876,11.0299947 22.5816207,11.1267882 22.368272,11.3401369 C22.2573445,11.4510644 22.1779256,11.581569 22.1300155,11.720529 L8.36827202,25.4822725 C7.97774772,25.8727968 7.97774772,26.5059618 8.36827202,26.8964861 L9.78248558,26.8964861 L22.0753788,14.6035928 Z" id="Combined-Shape" fill="#8D63AB" transform="translate(23.000000, 26.797244) rotate(-180.000000) translate(-23.000000, -26.797244) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
