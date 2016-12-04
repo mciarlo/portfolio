@@ -1,17 +1,21 @@
 $mainBackground : #f1f1f1;
 $purpleBackground: #9b9abc;
-$purple: #8d63ab;
+$purple: #9273a8;
 
 @mixin quicksand {
   font-family: "Quicksand", sans-serif;
 }
 
 @mixin serif {
-  font-family: "Playfair Display", "Palatino", "Georgia", serif;
+  font-family: "Unna", "Palatino", "Georgia", serif;
+}
+
+@mixin sans-serif {
+  font-family: "Khula", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif;
 }
 
 @mixin oswald {
-  font-family: "Oswald", sans-serif;
+  font-family: "Copse", sans-serif;
 }
 
 @mixin shadow-depth-1 {
@@ -19,11 +23,11 @@ $purple: #8d63ab;
 }
 
 @mixin shadow-depth-2 {
-  box-shadow: 0 6px 12px rgba(0,0,0,.4);
+  box-shadow: 0 8px 12px rgba(0,0,0,.4);
 }
 
 @mixin shadow-depth-3 {
-  box-shadow: 0 10px 24px rgba(0,0,0,.2);
+  box-shadow: 0 20px 36px rgba(0,0,0,.24);
 }
 
 @mixin aliasing {

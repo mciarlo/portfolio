@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="101px" height="89px" viewBox="0 0 101 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="91px" height="116px" viewBox="0 0 91 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+    <title>nav_icon</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <rect id="path-1" x="0" y="19" width="61" height="70" rx="3"></rect>
-        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61" height="70" fill="white">
-            <use xlink:href="#path-1"></use>
-        </mask>
-        <rect id="path-3" x="40" y="0" width="61" height="70" rx="3"></rect>
-        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="61" height="70" fill="white">
-            <use xlink:href="#path-3"></use>
-        </mask>
+        <rect id="path-1" x="0" y="0" width="91" height="104" rx="3"></rect>
+        <path d="M0,3.00035858 C0,1.34330629 1.33804571,0 3.00042629,0 L75.9995737,0 C77.6566634,0 79,1.35298119 79,3.00035858 L79,100.999641 C79,102.656694 77.6619543,104 75.9995737,104 L3.00042629,104 C1.34333661,104 0,102.647019 0,100.999641 L0,3.00035858 Z" id="path-3"></path>
+        <path d="M0,3.00035858 C0,1.34330629 1.3383504,0 3.00901148,0 L63.9909885,0 C65.6528197,0 67,1.35298119 67,3.00035858 L67,100.999641 C67,102.656694 65.6616496,104 63.9909885,104 L3.00901148,104 C1.34718033,104 0,102.647019 0,100.999641 L0,3.00035858 Z" id="path-5"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group" stroke="#B6B5D4" stroke-width="4">
-            <use id="Rectangle" mask="url(#mask-2)" xlink:href="#path-1"></use>
-            <use id="Rectangle" mask="url(#mask-4)" xlink:href="#path-3"></use>
+        <g id="nav_icon">
+            <g id="Page-1">
+                <g id="Group">
+                    <g id="Rectangle-Clipped">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path-1"></g>
+                        <g id="Rectangle" mask="url(#mask-2)" stroke="#B6BCDA" stroke-width="2">
+                            <g transform="translate(0.000000, -0.000000)" id="path-1">
+                                <rect x="0" y="7.10542736e-15" width="91" height="104" rx="3"></rect>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Rectangle-Clipped" transform="translate(6.000000, 6.000000)">
+                        <mask id="mask-4" fill="white">
+                            <use xlink:href="#path-3"></use>
+                        </mask>
+                        <g id="path-3"></g>
+                        <g id="Rectangle" mask="url(#mask-4)" stroke="#B6BCDA" stroke-width="2">
+                            <g transform="translate(0.000000, -14.000000)" id="path-3">
+                                <path d="M-7.10542736e-15,17.0003586 C-7.10542736e-15,15.3433063 1.33804571,14 3.00042629,14 L75.9995737,14 C77.6566634,14 79,15.3529812 79,17.0003586 L79,114.999641 C79,116.656694 77.6619543,118 75.9995737,118 L3.00042629,118 C1.34333661,118 -7.10542736e-15,116.647019 -7.10542736e-15,114.999641 L-7.10542736e-15,17.0003586 Z"></path>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="Rectangle-Clipped" transform="translate(12.000000, 12.000000)">
+                        <mask id="mask-6" fill="white">
+                            <use xlink:href="#path-5"></use>
+                        </mask>
+                        <g id="path-3"></g>
+                        <g id="Rectangle" mask="url(#mask-6)" stroke="#B6BCDA" stroke-width="2">
+                            <g transform="translate(0.000000, 0.000000)" id="path-3">
+                                <path d="M-7.10542736e-15,3.00035858 C-7.10542736e-15,1.34330629 1.3383504,0 3.00901148,0 L63.9909885,0 C65.6528197,0 67,1.35298119 67,3.00035858 L67,100.999641 C67,102.656694 65.6616496,104 63.9909885,104 L3.00901148,104 C1.34718033,104 -7.10542736e-15,102.647019 -7.10542736e-15,100.999641 L-7.10542736e-15,3.00035858 Z"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
         </g>
     </g>
 </svg>
