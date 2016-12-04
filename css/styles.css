@@ -155,7 +155,7 @@ Y8b d88P
 .no-js .process-documentation {
   height: auto;
   opacity: 1;
-  padding: 7em 0 8em 0; }
+  padding: 1em 0 3em 0; }
 .no-js .process-reveal {
   display: none; }
 
@@ -199,6 +199,7 @@ p {
   color: #9273a8;
   padding: 1em 3em .9em;
   border-radius: 3px;
+  font-size: .8em;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 100ms; }
   .process-reveal:hover {
@@ -219,41 +220,39 @@ p {
   padding: 0;
   opacity: 0;
   transition: opacity 200ms ease-in-out, height 200ms ease-in-out; }
-  .process-documentation .content-wrapper, .process-documentation .divider {
-    width: 60%; }
   .process-documentation.active {
     height: auto;
     opacity: 1;
-    padding: 0 0 8em 0; }
+    padding: 0 0 3em 0; }
   .process-documentation h3 {
-    font-size: 2em;
+    font-size: 1.1em;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 2em; }
   .process-documentation h4 {
-    font-size: 1.4em;
+    font-size: 1em;
     margin-bottom: 1em; }
   .process-documentation p {
     margin-bottom: 2em; }
   .process-documentation img {
     display: block;
-    width: 80%;
+    max-width: 626px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px 0 50px; }
+    padding: 20px 0 40px; }
   .process-documentation blockquote {
     font-family: "Unna", "Palatino", "Georgia", serif;
-    font-size: 2em;
+    font-size: 1.3em;
     position: relative;
-    padding: 0 100px 40px 60px;
-    width: 280px;
-    float: left;
+    padding: 0 0 40px 30px;
+    display: block;
     line-height: 1.4; }
     .process-documentation blockquote::before {
       content: "“";
       position: absolute;
       top: -.2em;
       left: 0;
-      font-size: 3em; }
+      font-size: 2em; }
 
 h2, h3, h4 {
   font-family: "Quicksand", sans-serif;
@@ -339,7 +338,8 @@ h2, h3, h4 {
 /*img*/
 .stack-hero {
   max-width: 1265px;
-  width: 90%; }
+  width: 90%;
+  z-index: 0; }
 
 .cardified {
   padding: 1em .4em;
@@ -420,7 +420,7 @@ h2, h3, h4 {
     margin-top: 4em; }
 
 .image-group {
-  height: 900px; }
+  height: 960px; }
 
 .image-01,
 .image-02,
@@ -479,7 +479,10 @@ h2, h3, h4 {
   margin: 0 auto;
   text-align: center; }
 .list-overview h3 {
-  margin: 3em auto 1em; }
+  margin: 1em auto 1em; }
+
+.list-creation-reveal {
+  margin-top: 3em; }
 
 .full-width-image {
   width: 100%;
@@ -635,6 +638,9 @@ h2, h3, h4 {
     display: block;
     margin-top: 40px; }
 
+.stack-hero-overlay {
+  display: none; }
+
 /**
  333333333333333   77777777777777777777555555555555555555 
 3:::::::::::::::33 7::::::::::::::::::75::::::::::::::::5 
@@ -704,7 +710,7 @@ h2, h3, h4 {
      */
 @media screen and (min-width: 500px) {
   .image-group {
-    height: 1280px; }
+    height: 1320px; }
 
   .image-01,
   .image-02,
@@ -784,10 +790,37 @@ h2, h3, h4 {
   h3 {
     font-size: 1.4em; }
 
+  .no-js .process-documentation {
+    padding: 7em 0 8em 0; }
+
   .content-wrapper, .divider {
     width: 700px; }
     .content-wrapper.narrow, .narrow.divider {
       max-width: 620px; }
+
+  .process-reveal {
+    font-size: 1em; }
+
+  .process-documentation {
+    padding: 1em 3em .9em; }
+    .process-documentation.active {
+      padding-bottom: 6em; }
+    .process-documentation .content-wrapper, .process-documentation .divider {
+      width: 680px; }
+    .process-documentation h3 {
+      font-size: 2em; }
+    .process-documentation h4 {
+      font-size: 1.4em; }
+    .process-documentation img {
+      width: 80%;
+      padding: 40px 0 70px; }
+    .process-documentation blockquote {
+      font-size: 2em;
+      padding: 0 100px 40px 60px;
+      width: 280px;
+      float: left; }
+      .process-documentation blockquote::before {
+        font-size: 3em; }
 
   .counter {
     right: 0;
@@ -824,13 +857,15 @@ h2, h3, h4 {
     .introduction-skills li {
       font-size: 14px; }
 
-  .stack-overview h3, .stack-overview p {
-    width: 700px; }
-  .stack-overview p {
-    width: 300px; }
+  .stack-overview {
+    padding-bottom: 3em; }
+    .stack-overview h3, .stack-overview p {
+      width: 700px; }
+    .stack-overview p {
+      width: 300px; }
 
   .stack-gestures {
-    margin-top: 5em; }
+    margin-top: 4em; }
     .stack-gestures li {
       padding: 1em 0 1em 50px; }
 
@@ -839,7 +874,7 @@ h2, h3, h4 {
 
   .brain-description {
     position: absolute;
-    bottom: 2em;
+    bottom: 0em;
     left: 0;
     width: 100%; }
     .brain-description p {
@@ -863,7 +898,7 @@ h2, h3, h4 {
       left: 0;
       margin-left: 0; }
   .creation-overview .image-group {
-    height: 700px; }
+    height: 780px; }
   .creation-overview .image-01,
   .creation-overview .image-02,
   .creation-overview .image-03 {
@@ -944,7 +979,8 @@ h2, h3, h4 {
   .list-creation-reveal {
     position: absolute;
     top: 40px;
-    right: 0; }
+    right: 0;
+    margin: 0; }
 
   .doo-desk {
     width: 100%;
@@ -1140,7 +1176,7 @@ h2, h3, h4 {
   .list-overview .image-group {
     height: 730px; }
   .list-overview p {
-    width: 450px; }
+    width: 400px; }
 
   .doo-workflow {
     padding-bottom: 4em; }
@@ -1203,8 +1239,10 @@ h2, h3, h4 {
     width: 28%;
     margin: 0 4% 0 0; }
 
-  .stack-overview p {
-    width: 420px; }
+  .stack-overview {
+    padding-bottom: 7em; }
+    .stack-overview p {
+      width: 420px; }
 
   .stack-gestures {
     margin-top: 7em; }
@@ -1216,7 +1254,7 @@ h2, h3, h4 {
     top: -200px; }
 
   .brain-description {
-    bottom: 6em; }
+    bottom: 5em; }
     .brain-description h3 {
       font-size: 1.6em;
       background-size: 140px auto; }
@@ -1319,14 +1357,16 @@ h2, h3, h4 {
       padding: 2em 0;
       font-size: 5em; }
 
-  .stack-overview p {
-    width: 460px; }
+  .stack-overview {
+    padding-bottom: 8em; }
+    .stack-overview p {
+      width: 460px; }
 
   .stack-hero {
     top: -200px; }
 
   .brain-description {
-    bottom: 3em; }
+    bottom: 6em; }
 
   .creation-overview .image-group {
     height: 980px; }
@@ -1337,6 +1377,8 @@ h2, h3, h4 {
     height: 860px; }
   .list-overview .image-02 {
     margin-left: -188px; }
+  .list-overview h3, .list-overview p {
+    width: 450px; }
 
   .image-01,
   .image-02,
@@ -1367,3 +1409,24 @@ h2, h3, h4 {
 
   .logos img {
     height: 30px; } }
+@media screen and (min-width: 1464px) {
+  .stack-hero {
+    top: -200px;
+    left: 50%;
+    margin-left: -732px; }
+
+  .stack-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -732px;
+    display: block;
+    width: 300px;
+    z-index: 1;
+    height: 1000px;
+    background: -moz-linear-gradient(left, #f1f1f1 0%, rgba(241, 241, 241, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #f1f1f1 0%, rgba(241, 241, 241, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #f1f1f1 0%, rgba(241, 241, 241, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ } }
