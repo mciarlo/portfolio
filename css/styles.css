@@ -56,10 +56,10 @@ body {
 
 a:link, a:visited {
   text-decoration: none;
-  color: purple; }
+  color: #9273a8; }
 
 a:hover {
-  color: blue; }
+  color: #9b9abc; }
 
 h1, h2, h3, h4 {
   line-height: 1.2; }
@@ -149,6 +149,15 @@ Y8b d88P
     content: "";
     clear: both;
     display: block; }
+  .content-wrapper.centering, .centering.divider {
+    text-align: center; }
+
+.no-js .process-documentation {
+  height: auto;
+  opacity: 1;
+  padding: 7em 0 8em 0; }
+.no-js .process-reveal {
+  display: none; }
 
 section {
   overflow: hidden;
@@ -183,6 +192,68 @@ p {
 
 .white-background {
   background: white; }
+
+.process-reveal {
+  display: inline-block;
+  border: 2px solid #9273a8;
+  color: #9273a8;
+  padding: 1em 3em .9em;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 100ms; }
+  .process-reveal:hover {
+    background-color: #9273a8;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); }
+  .process-reveal .active-label {
+    display: none; }
+  .process-reveal.active .default-label {
+    display: none; }
+  .process-reveal.active .active-label {
+    display: block; }
+
+.process-documentation {
+  overflow: hidden;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out, height 200ms ease-in-out; }
+  .process-documentation .content-wrapper, .process-documentation .divider {
+    width: 60%; }
+  .process-documentation.active {
+    height: auto;
+    opacity: 1;
+    padding: 0 0 8em 0; }
+  .process-documentation h3 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2em; }
+  .process-documentation h4 {
+    font-size: 1.4em;
+    margin-bottom: 1em; }
+  .process-documentation p {
+    margin-bottom: 2em; }
+  .process-documentation img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 50px; }
+  .process-documentation blockquote {
+    font-family: "Unna", "Palatino", "Georgia", serif;
+    font-size: 2em;
+    position: relative;
+    padding: 0 100px 40px 60px;
+    width: 280px;
+    float: left;
+    line-height: 1.4; }
+    .process-documentation blockquote::before {
+      content: "“";
+      position: absolute;
+      top: -.2em;
+      left: 0;
+      font-size: 3em; }
 
 h2, h3, h4 {
   font-family: "Quicksand", sans-serif;
@@ -345,6 +416,8 @@ h2, h3, h4 {
     background: transparent url("../images/brain.svg") center center no-repeat;
     padding: 4em 0 4em;
     margin: 0 auto; }
+  .brain-description .process-reveal {
+    margin-top: 4em; }
 
 .image-group {
   height: 900px; }
@@ -868,6 +941,11 @@ h2, h3, h4 {
       top: 110px;
       right: 0; }
 
+  .list-creation-reveal {
+    position: absolute;
+    top: 40px;
+    right: 0; }
+
   .doo-desk {
     width: 100%;
     max-width: 2200px;
@@ -1248,10 +1326,10 @@ h2, h3, h4 {
     top: -200px; }
 
   .brain-description {
-    bottom: 7em; }
+    bottom: 3em; }
 
   .creation-overview .image-group {
-    height: 900px; }
+    height: 980px; }
   .creation-overview .image-02 {
     margin-left: -188px; }
 

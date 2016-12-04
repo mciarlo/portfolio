@@ -45,6 +45,16 @@ $(function () {
 
 	$('body').removeClass('no-js');
 
+	$('.process-reveal').click(function (ev) {
+		preventDefaultFormAction(ev);
+
+		var el = $(this).attr("data-el"),
+			$el = $("#" + el);
+
+		$el.toggleClass("active");
+		$(this).toggleClass("active");
+	});
+
 	// $workflow.textDynamics(function () {
 	// 	return $window.outerHeight() * 0.5;
 	// }, function () {
