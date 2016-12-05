@@ -42,6 +42,13 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@keyframes process-btn {
+  from {
+    transform: scale(0.1);
+    opacity: 0.6; }
+  to {
+    transform: scale(1);
+    opacity: 0; } }
 html,
 body {
   color: #444444;
@@ -192,26 +199,66 @@ p {
 .white-background {
   background: white; }
 
+.process-toggle-container {
+  position: relative;
+  text-align: center; }
+  .process-toggle-container.sticky {
+    position: absolute;
+    text-align: center;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    z-index: 4; }
+  .process-toggle-container .button-label {
+    font-size: .8em;
+    text-transform: uppercase;
+    text-indent: 0;
+    position: absolute;
+    bottom: -3em;
+    left: 50%;
+    margin-left: -150px;
+    width: 300px;
+    text-align: center;
+    color: #565656;
+    letter-spacing: .2em; }
+
 .process-reveal {
   display: inline-block;
-  border: 2px solid #9273a8;
-  color: #9273a8;
-  padding: 1em 3em .9em;
-  border-radius: 3px;
-  font-size: .8em;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #9273a8 url("../images/show_process_icon.svg") center center no-repeat;
+  background-size: 20px 20px;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 0;
+  text-indent: -9999px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: all ease-in-out 100ms; }
   .process-reveal:hover {
-    background-color: #9273a8;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transform: translateY(-3px); }
-  .process-reveal .active-label {
-    display: none; }
-  .process-reveal.active .default-label {
-    display: none; }
-  .process-reveal.active .active-label {
-    display: block; }
+  .process-reveal.hovering {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); }
+    .process-reveal.hovering:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
+  .process-reveal::after {
+    content: "•";
+    text-indent: -9999px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-left: -54px;
+    top: 50%;
+    margin-top: -52px;
+    border: 4px solid #9273a8;
+    opacity: 0;
+    animation: process-btn 2s ease-in-out infinite; }
+  .process-reveal.active {
+    transform: rotate(45deg); }
+    .process-reveal.active.active::after {
+      animation: none; }
 
 .process-documentation {
   overflow: hidden;
@@ -373,7 +420,7 @@ h2, h3, h4 {
  */
 .stack-overview {
   position: relative;
-  padding-bottom: 0; }
+  padding-bottom: 3em; }
   .stack-overview h3 {
     margin: 3em 0 1em; }
 
@@ -415,11 +462,13 @@ h2, h3, h4 {
     background: transparent url("../images/brain.svg") center center no-repeat;
     padding: 4em 0 4em;
     margin: 0 auto; }
-  .brain-description .process-reveal {
-    margin-top: 4em; }
+  .brain-description .process-toggle-container {
+    margin-top: 3em; }
 
 .image-group {
-  height: 960px; }
+  height: 1070px; }
+  .image-group .process-toggle-container {
+    top: 960px; }
 
 .image-01,
 .image-02,
@@ -473,12 +522,18 @@ h2, h3, h4 {
     width: 80%;
     margin: 0 auto; }
 
-.list-overview h3, .list-overview p {
-  width: 90%;
-  margin: 0 auto;
-  text-align: center; }
-.list-overview h3 {
-  margin: 1em auto 1em; }
+.list-overview {
+  padding-bottom: 7em; }
+  .list-overview h3, .list-overview p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center; }
+  .list-overview h3 {
+    margin: 1em auto 1em; }
+  .list-overview .image-group {
+    height: 950px; }
+  .list-overview .process-toggle-container {
+    margin-top: 3em; }
 
 .list-creation-reveal {
   margin-top: 3em; }
@@ -797,9 +852,6 @@ h2, h3, h4 {
     .content-wrapper.narrow, .narrow.divider {
       max-width: 620px; }
 
-  .process-reveal {
-    font-size: 1em; }
-
   .process-documentation {
     padding: 1em 3em .9em; }
     .process-documentation.active {
@@ -856,7 +908,7 @@ h2, h3, h4 {
       font-size: 14px; }
 
   .stack-overview {
-    padding-bottom: 3em; }
+    padding-bottom: 8em; }
     .stack-overview h3, .stack-overview p {
       width: 700px; }
     .stack-overview p {
@@ -872,7 +924,7 @@ h2, h3, h4 {
 
   .brain-description {
     position: absolute;
-    bottom: 0em;
+    bottom: 4em;
     left: 0;
     width: 100%; }
     .brain-description p {
@@ -895,8 +947,10 @@ h2, h3, h4 {
     .creation-overview .section-heading.centered::after {
       left: 0;
       margin-left: 0; }
+  .creation-overview .process-toggle-container {
+    top: 780px; }
   .creation-overview .image-group {
-    height: 780px; }
+    height: 840px; }
   .creation-overview .image-01,
   .creation-overview .image-02,
   .creation-overview .image-03 {
@@ -1037,6 +1091,13 @@ h2, h3, h4 {
       width: 50%;
       margin: 0 auto; }
 
+  .doo-app-icon {
+    transform: scale3d(1, 1, 1);
+    transition: transform 600ms ease-in-out, opacity 600ms ease-in-out;
+    transition-delay: 700ms; }
+    .doo-app-icon.invisible {
+      transform: scale3d(0.8, 0.8, 1); }
+
   .reception .content-wrapper, .reception .divider {
     max-width: 600px; }
   .reception blockquote {
@@ -1157,14 +1218,11 @@ h2, h3, h4 {
     width: 460px; }
 
   .creation-overview .image-group {
-    height: 800px; }
+    height: 930px; }
   .creation-overview .image-02 {
     margin-left: -160px; }
-
-  .list-overview .image-group {
-    height: 760px; }
-  .list-overview .image-02 {
-    margin-left: -160px; }
+  .creation-overview .process-toggle-container {
+    top: 880px; }
 
   .image-01,
   .image-02,
@@ -1172,9 +1230,11 @@ h2, h3, h4 {
     width: 320px; }
 
   .list-overview .image-group {
-    height: 730px; }
+    height: 700px; }
   .list-overview p {
     width: 400px; }
+  .list-overview .image-02 {
+    margin-left: -160px; }
 
   .doo-workflow {
     padding-bottom: 4em; }
@@ -1261,10 +1321,12 @@ h2, h3, h4 {
       background-size: 140px auto; }
 
   .creation-overview .image-group {
-    height: 900px; }
+    height: 920px; }
 
   .list-overview .image-group {
-    height: 780px; }
+    height: 720px; }
+  .list-overview .process-toggle-container {
+    margin-top: 4em; }
 
   .doo-workflow {
     padding-bottom: 6em; }
@@ -1376,16 +1438,20 @@ h2, h3, h4 {
     bottom: 6em; }
 
   .creation-overview .image-group {
-    height: 980px; }
+    height: 1030px; }
   .creation-overview .image-02 {
     margin-left: -188px; }
+  .creation-overview .process-toggle-container {
+    top: 1000px; }
 
   .list-overview .image-group {
-    height: 860px; }
+    height: 830px; }
   .list-overview .image-02 {
     margin-left: -188px; }
   .list-overview h3, .list-overview p {
     width: 450px; }
+  .list-overview .process-toggle-container {
+    margin-top: 5em; }
 
   .image-01,
   .image-02,
@@ -1430,7 +1496,7 @@ h2, h3, h4 {
     display: block;
     width: 300px;
     z-index: 1;
-    height: 1000px;
+    height: 1400px;
     background: -moz-linear-gradient(left, #f1f1f1 0%, rgba(241, 241, 241, 0) 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #f1f1f1 0%, rgba(241, 241, 241, 0) 100%);
