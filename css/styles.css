@@ -361,16 +361,16 @@ h2, h3, h4 {
  */
 nav {
   width: 100%;
-  padding: 1.6em 0;
+  padding: 1em 0;
   text-align: center;
   color: white;
-  background: #2b2c2e;
+  background: #766d95;
   text-transform: uppercase; }
   nav h1 {
-    font-size: .8em;
+    font-size: .7em;
     letter-spacing: .3em; }
     nav h1 span {
-      color: #c1c1c1; }
+      color: #bfb7dd; }
 
 /***
  *****************************
@@ -910,6 +910,11 @@ a.dribble-link {
   h3 {
     font-size: 1.4em; }
 
+  nav {
+    padding: 1.6em 0; }
+    nav h1 {
+      font-size: .8em; }
+
   .no-js .process-documentation {
     padding: 7em 0 8em 0; }
 
@@ -1220,7 +1225,7 @@ a.dribble-link {
       width: 500px; }
 
   a.dribble-link {
-    font-size: 1.6em;
+    font-size: 1.3em;
     margin-top: 2em; } }
 /*
      888888888             66666666        000000000     
