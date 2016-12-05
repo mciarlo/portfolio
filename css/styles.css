@@ -356,6 +356,24 @@ h2, h3, h4 {
 
 /***
  *****************************
+ **** NAV
+ *****************************
+ */
+nav {
+  width: 100%;
+  padding: 1.6em 0;
+  text-align: center;
+  color: white;
+  background: #2b2c2e;
+  text-transform: uppercase; }
+  nav h1 {
+    font-size: .8em;
+    letter-spacing: .3em; }
+    nav h1 span {
+      color: #c1c1c1; }
+
+/***
+ *****************************
  **** Doo Intro Hero
  *****************************
  */
@@ -695,6 +713,45 @@ h2, h3, h4 {
 .stack-hero-overlay {
   display: none; }
 
+.temp-mini-bio {
+  background: #c7e2e6 url("../images/portrait.png") bottom center no-repeat;
+  background-size: 260px auto;
+  padding-bottom: 230px;
+  text-align: center; }
+  .temp-mini-bio .accent {
+    height: 24px;
+    margin: 0 auto;
+    display: block; }
+  .temp-mini-bio h2, .temp-mini-bio h4 {
+    font-family: "Khula", "Avenir Next", "Gill Sans", "Trebuchet MS", sans-serif; }
+  .temp-mini-bio h4 {
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.3em;
+    margin: 3em 0 1em;
+    color: #717171;
+    font-size: .9em; }
+  .temp-mini-bio h2 {
+    font-size: 40px; }
+  .temp-mini-bio p {
+    margin: 4em auto; }
+
+a.dribble-link {
+  border: 3px solid #997849;
+  color: #997849;
+  padding: 1em 3em;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 1em;
+  display: inline-block;
+  line-height: 1.5;
+  font-family: "Arial Black", "Arial", sans-serif;
+  transition: all ease-in-out 150ms; }
+  a.dribble-link:hover {
+    padding: 1em 4em;
+    color: #b28e50;
+    border-color: #b28e50; }
+
 /**
  333333333333333   77777777777777777777555555555555555555 
 3:::::::::::::::33 7::::::::::::::::::75::::::::::::::::5 
@@ -743,7 +800,12 @@ h2, h3, h4 {
     .doo-title h1 {
       background-size: 360px auto;
       padding: 2em 0;
-      font-size: 3em; } }
+      font-size: 3em; }
+
+  .temp-mini-bio {
+    padding-top: 4em; }
+    .temp-mini-bio .accent {
+      height: 30px; } }
 /*
 555555555555555555      000000000          000000000     
 5::::::::::::::::5    00:::::::::00      00:::::::::00   
@@ -787,7 +849,11 @@ h2, h3, h4 {
   .image-03 {
     top: 720px;
     margin-left: -225px;
-    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.24); } }
+    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.24); }
+
+  .temp-mini-bio {
+    background-size: 360px auto;
+    padding-bottom: 330px; } }
 /*
                                                    
                                                    
@@ -1135,7 +1201,27 @@ h2, h3, h4 {
     .corner-accent::before {
       font-size: 2em;
       left: 54px;
-      top: 17px; } }
+      top: 17px; }
+
+  .temp-mini-bio {
+    padding-top: 6em;
+    background-size: 407px auto;
+    padding-bottom: 350px; }
+    .temp-mini-bio .accent {
+      height: 54px; }
+    .temp-mini-bio .block {
+      display: inline; }
+    .temp-mini-bio h4 {
+      margin: 6em 0 1em; }
+    .temp-mini-bio h2 {
+      font-size: 48px; }
+    .temp-mini-bio p {
+      margin: 3em auto;
+      width: 500px; }
+
+  a.dribble-link {
+    font-size: 1.6em;
+    margin-top: 2em; } }
 /*
      888888888             66666666        000000000     
    88:::::::::88          6::::::6       00:::::::::00   
@@ -1363,7 +1449,14 @@ h2, h3, h4 {
     left: -120px; }
     .corner-accent::before {
       left: 40px;
-      top: 30px; } }
+      top: 30px; }
+
+  .temp-mini-bio {
+    padding-top: 8em; }
+    .temp-mini-bio h2 {
+      font-size: 60px; }
+    .temp-mini-bio p {
+      width: 550px; } }
 /*
   1111111        000000000             66666666    222222222222222    
  1::::::1      00:::::::::00          6::::::6    2:::::::::::::::22  
