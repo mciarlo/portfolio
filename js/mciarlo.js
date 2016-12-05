@@ -40,7 +40,7 @@ $(function () {
 	}
 
 	imageActivationOffset = function () {
-		return $window.height() * .25;
+		return $window.height();
 	};
 
 	$('body').removeClass('no-js');

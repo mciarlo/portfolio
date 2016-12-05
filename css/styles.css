@@ -274,7 +274,7 @@ p {
     font-size: 1.1em;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 2em; }
+    margin-bottom: 1em; }
   .process-documentation h4 {
     font-size: 1em;
     margin-bottom: 1em; }
@@ -401,14 +401,14 @@ h2, h3, h4 {
  *****************************
  */
 .project-description {
-  margin-bottom: 2em; }
+  margin-bottom: 4em; }
 
 .introduction-skills {
   display: inline-block;
   width: 100%; }
   .introduction-skills li {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     color: #999;
     letter-spacing: .2em;
     line-height: 2; }
@@ -641,7 +641,7 @@ h2, h3, h4 {
   font-family: "Unna", "Palatino", "Georgia", serif;
   font-size: 2.8em;
   line-height: 1.2;
-  margin: 3em 0 1.6em;
+  margin: 2.5em 0 1.6em;
   position: relative; }
 .reception cite {
   font-family: "Quicksand", sans-serif;
@@ -905,7 +905,7 @@ h2, h3, h4 {
     width: 45%;
     margin: 0 4% 0 0; }
     .introduction-skills li {
-      font-size: 14px; }
+      font-size: 13px; }
 
   .stack-overview {
     padding-bottom: 8em; }
