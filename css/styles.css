@@ -53,12 +53,16 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-h1, p { 
-  font-family: "Inter", sans-serif;
+h1, h2, h3, h4, p, li { 
+  font-family: "DM Mono", sans-serif;
   font-size: 16px;
   font-weight: normal;
   display: block;
   letter-spacing: -0.02em;
+}
+
+h4 {
+  margin-top: 2em;
 }
 
 p {
@@ -73,6 +77,14 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+}
+
+ul {
+  list-style: none;
+  list-style-position: outside;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+  margin-bottom: 2em;
 }
 
 section {
@@ -91,9 +103,23 @@ section {
   flex: 1;
 }
 
+.col:last-child {
+  margin-top: 2em;
+}
+
 html, body {
-  background: #E2D8C3;
-  color: #3E2723;
+  background: #0C1483;
+  color: #FFFFFF;
+}
+
+.blue,
+a:link, a:visited {
+  color: #94E5F1;
+  transition: color 150ms ease-in-out;
+}
+
+a:hover {
+  color: white;
 }
 
 body {
@@ -108,5 +134,9 @@ body {
   section {
     flex-direction: row;
     gap: 20px;
+  }
+
+  .col:last-child {
+    margin-top: 0;
   }
 }
