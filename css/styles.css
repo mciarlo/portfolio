@@ -105,6 +105,7 @@ section {
 
 .col:last-child {
   margin-top: 12em;
+  margin-bottom: 2em;
 }
 
 html, body {
